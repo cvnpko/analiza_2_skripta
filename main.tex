@@ -170,7 +170,7 @@ primitivna funkcija i ako postoji koliko primitivnih funkcija ima.
     \end{stav}
 \end{stavbox}
 \textit{Dokaz}: $G$ je diferencijabilna na $(a, b)$ jer je zbir dve
-diferencijabilne funkcije i $\forall x \in (a, b)$ važi $G'(x) = F'(x) + 0 = f(x)$
+diferencijabilne funkcije i za svako $x$ iz intervala $(a, b)$ važi $G'(x) = F'(x) + 0 = f(x)$
 što smo i hteli da dokažemo.
 \null\hfill $\blacksquare$ \par
 Ovim smo dokazali da ako je $F_1(x)$ primitivna funkcija, onda
@@ -192,6 +192,22 @@ definisana sa $G(x) = F_1(x) - F_2(x)$. Tada važi:
 \begin{equation*}
     G'(x) = F'_1(x) - F'_2(x) = f(x) - f(x) = 0
 \end{equation*}
+
+Izaberimo proizvoljne $x_1, x_2 \in (a, b)$ takve da važi
+$x_1 < x_2$. Dokažimo da je $G(x_1) = G(x_2)$.
+\begin{enumerate}[label=(\arabic*)]
+    \item G je neprekidna na $[x_1, x_2] \subset (a, b)$
+    \item G je diferencijabilna na $(x_1, x_2) \subset (a, b)$
+\end{enumerate}
+Iz $(1)$ i $(2)$, a na osnovu Lagranžove teoreme o srednjoj vrednosti,
+sledi da postoji $x_0 \in (x_1, x_2)$ takvo da:
+$$G(x_1) - G(x_2) = G'(x_0)(x_2-x_1) = 0  (x_2-x_1) = 0$$
+Dakle, $G(x_1) = G(x_2)$. Kako su $x_1$ i $x_2$
+proizvoljni, sledi da je G konstantna funkcija. Važi
+$\exists C\in\mathbb{R}$ takvo da  $\forall x \in (a, b)$ važi
+$C=G(x) =F_1(x) - F_2(x)$ tj.\ $F_1(x) = F_2(x) + C$.
+\null\hfill $\blacksquare$ \par
+
 \begin{teoremabox}
     \textbf{Podsetnik Lagranžove teoreme:} Neka je funkcija
     $f : [a,b]\rightarrow\mathbb{R}$ neprekidna na $[a,b]$
@@ -200,36 +216,19 @@ definisana sa $G(x) = F_1(x) - F_2(x)$. Tada važi:
     $\frac{f(b)-f(a)}{b-a}=f'(x_0)$.
 \end{teoremabox}
 
-Izaberimo proizvoljne $x_1, x_2 \in (a, b)$ takve da važi
-$x_1 < x_2$. Dokažimo da je $G(x_1) = G(x_2)$.\\
-$(1)$ G je neprekidna na $[x_1, x_2] \subset (a, b)$\\
-$(2)$ G je diferencijabilna na $(x_1, x_2) \subset (a, b)$
-%\subsubsection{\textbf{Dodati kako glasi lagranžova teorema o srednjoj vrednosti}}
-Iz $(1)$ i $(2)$, a na osnovu Lagranžove teoreme o srednjoj vrednosti
-sledi da postoji $x_0 \in (x_1, x_2)$ takvo da:
-$$G(x_1) - G(x_2) = G'(x_0)(x_2-x_1) = 0  (x_2-x_1) = 0$$
-Dakle, $G(x_1) = G(x_2)$. Kako su $x_1, x_2 \in (a, b)$
-proizvoljni sledi da je G konstantna funkcija tj.\
-$\exists C\in\mathbb{R}$ takvo da  $\forall x \in (a, b)$ važi
-$G(x) = C$ tj.\ $F_1(x) - F_2(x) = C$ tj.\ $F_1(x) = F_2(x) + C$
-što smo i hteli da dokažemo.
-\null\hfill $\blacksquare$ \par
-Ovim smo pokazali da za svake dve primitivne funkcije
-$F_1, F_2: (a,b) \longrightarrow \mathbb{R}$ funkcije
-$f: (a,b) \longrightarrow \mathbb{R}$ mora da važi
-$\exists C \in \mathbb{R}$ takvo da $F_1=F_2+C$.
 
 \begin{primbox}
     \begin{prim}
         Neka je $f: \mathbb{R} \longrightarrow \mathbb{R}$
-        definisana sa: f(x) = 2x. Odrediti:
-        \begin{enumerate}
-            \item[a)] Sve primitivne funkcije za funkciju f.\par
-                  To su funkcije $x^2 + C$, $ C \in \mathbb{R}$.
-            \item[b)] Funkciju $g: \mathbb{R} \longrightarrow \mathbb{R}$
-                  koja je primitivna za funkciju f i za koju važi
+        definisana sa: $f(x) = 2x$. Odrediti:
+        \begin{enumerate}[label=\alph*)]
+            \item Sve primitivne funkcije za funkciju $f$.\par
+                  To su funkcije $x^2 + C,\  C \in \mathbb{R}$.
+            \item Funkciju $g: \mathbb{R} \longrightarrow \mathbb{R}$
+                  koja je primitivna za funkciju $f$ i za koju važi
                   $g(0) = \sqrt{2}$.\par
-                  $g(x) = x^2 + C$\par$g(0) = 0^2 + C = \sqrt{2} \Rightarrow C = \sqrt{2}$\par
+                  $g(x) = x^2 + C,\ C \in \mathbb{R}$\par
+                  $g(0) = 0^2 + C = \sqrt{2} \Rightarrow C = \sqrt{2}$\par
                   Rešenje je $g(x) = x^2 + \sqrt{2}$.
         \end{enumerate}
     \end{prim}
@@ -242,9 +241,9 @@ $\exists C \in \mathbb{R}$ takvo da $F_1=F_2+C$.
         $\mathbb{R} \longrightarrow \mathbb{R}$ takve da
         $\forall x \in \mathbb{R}$ važi $f''(x) = 0$.\par
         $(f'(x))' = 0$\par
-        $f'(x) = C_1$, $ C_1 \in \mathbb{R}$ \par
-        Rešenje je $f(x) = C_1x + C_2$, $ C_2 \in \mathbb{R}$.
-
+        $f'(x) = C_1,\  C_1 \in \mathbb{R}$ \par
+        $f(x) = C_1x+C_2,\ C_1,C_2 \in \mathbb{R}$ \par
+        Rešenje je $f(x) = C_1x + C_2,\ C_1, C_2 \in \mathbb{R}$.
     \end{prim}
 \end{primbox}
 
@@ -252,42 +251,42 @@ $\exists C \in \mathbb{R}$ takvo da $F_1=F_2+C$.
 \begin{definicijabox}
     \begin{definicija}
         Neka je $f: (a, b) \longrightarrow \mathbb{R}$.
-        Neodređeni integral funkcije f na intervalu $(a, b)$ je
-        skup svih primitivnih funkcija za funkciju f na intervalu
-        $(a, b)$. Neodređeni integral funkcije f obeležavamo sa
+        Neodređeni integral funkcije $f$ na intervalu $(a, b)$ je
+        skup svih primitivnih funkcija za funkciju $f$ na intervalu
+        $(a, b)$. Neodređeni integral funkcije $f$ obeležavamo sa
         $\int f(x)dx$.\par
         $$\int f(x) dx = \{F \mid F: (a, b) \longrightarrow \mathbb{R},\
             (\forall x\in(a,b)) F'(x) = f(x)\}$$\par
-        Neka je $F: (a, b) \longrightarrow \mathbb{R}$ proizvoljna
-        primitivna funkcija za funkciju f na (a, b). Tada je: \par
+        Neka je $F: (a,b) \longrightarrow \mathbb{R}$ proizvoljna
+        primitivna funkcija za funkciju $f$ na $(a,b)$. Tada je: \par
 
         \setcounter{equation}{0}
 
-        \begin{equation} \label{def_1.1.1}
+        \begin{equation} \label{eq_1.1.1}
             \int f(x) \, dx =\{G \mid G: (a, b)
             \longrightarrow \mathbb{R}, \\
             (\exists C \in \mathbb{R}) (\forall x \in (a, b))
             \, G(x) = F(x) + C\}
         \end{equation}
 
-        Jednakost \eqref{def_1.1.1} skraćeno zapisujemo na sledeći način:
-        \begin{equation}\label{def_1.1.2}
+        Jednakost \eqref{eq_1.1.1} skraćeno zapisujemo na sledeći način:
+        \begin{equation}\label{eq_1.1.2}
             \int f(x)dx = F(x) + C, C\in\mathbb{R}
         \end{equation}
     \end{definicija}
-    Napomena: U jednakosti \eqref{def_1.1.2} ne vidi se interval $(a, b)$.
-    Tu se stvara potencijalna opasnost.
+    Napomena: U jednakosti \eqref{eq_1.1.2} ne vidi se interval $(a, b)$ što
+    stvara potencijalnu opasnost.
 \end{definicijabox}
 
 \begin{primbox}
     \begin{prim}
         Neka je $n \in \mathbb{N}$ i neka su $a_n, a_{n-1},
             ..., a_1, a_0 \in \mathbb{R}$. Naći integral:
-        $\int (a_n  x^n + ... + a_1 x + a_0)dx$.
+        $\int (a_n  x^n + ... + a_0)dx$.
     \end{prim}
-    Nagađanjem možemo da dođemo do rešenja:\\
-    $\frac{a_n}{n+1}x^{n+1} + ... +
-        \frac{a_1}{2}x^2 + a_0x + C,\ C\in\mathbb{R}$.
+    Nagađanjem možemo da dođemo do rešenja:
+    $\int (a_n  x^n + ... + a_0)dx=\frac{a_n}{n+1}x^{n+1} + ... +
+        a_0x + C,\ C\in\mathbb{R}$.
 \end{primbox}
 
 
@@ -295,38 +294,38 @@ $\exists C \in \mathbb{R}$ takvo da $F_1=F_2+C$.
     \begin{prim}
         Naći $\int\frac{1}{x}dx$.
     \end{prim}
-
-    Rešenje: $f(x) = \frac{1}{x}$,
+    Neka je $f(x) = \frac{1}{x}$.
+    Nije naglašeno koji interval posmatramo zbog čega uzimamo domen
+    funkcije.
     $D_f= \mathbb{R}\backslash \{0\} =
         (-\infty, 0)\cup(0, +\infty)$\par
     Imamo dva intervala pa posmatramo dva slučaja:
     \begin{enumerate}[leftmargin=2cm, label=\arabic*. slučaj:]
         \item $x \in (0, +\infty)$ $\int \frac{1}{x}dx =
-                  \ln x + C$
+                  \ln x + C_1=\ln|x| + C_1,\ C_1\in\mathbb{R}$
         \item $x \in (-\infty, 0)$ $\int \frac{1}{x}dx =
-                  \ln(-x) + C$
+                  \ln(-x) + C_2=\ln|x| + C_2,\ C_2\in\mathbb{R}$
     \end{enumerate}
-    Važi $\ln x = \ln |x|$ za $x\in(0,+\infty)$  i
-    $\ln (-x) = \ln |x|$ za $x\in(-\infty,0)$.
-    Dakle dobijamo $\int\frac{1}{x}dx=\ln|x| + C$,
-    $x\in(-\infty, 0)\cup(0, +\infty)$. Bitno je
-    naglasiti da se $C$ odnosi na interval, a ne na
-    uniju intervala.
 \end{primbox}
+Bitno je naglasiti da se konstante $C_1$ i $C_2$ odnose na intervale. One
+u opštem slučaju ne moraju da budu jednake.
+U sledećem primeru vidimo gde može da nastane problem.
 
 \begin{primbox}
     \begin{prim}
         Odrediti funkciju $f: (-\infty, 0)\cup(0, +\infty)
-            \longrightarrow \mathbb{R}$ takvu da $f(1) = 0$,
+            \longrightarrow \mathbb{R}$, takvu da $f(1) = 0$,
         $f(-1) = 1$ i za svako $x \in (-\infty, 0)
             \cup(0, +\infty)$ važi
-        $f'(x) = \frac{1}{x}$.\par
+        $f'(x) = \frac{1}{x}$.
     \end{prim}
-    Pogrešno rešenje: $f(x) = \int \frac{1}{x}dx = \ln x + C$\\
+    \textbf{Pogrešno rešenje:}\par
+    $f(x) = \int \frac{1}{x}dx = \ln|x| + C$\\
     $f(1) = 0 = \ln(1) + C \implies C = 0$\\
     $f(-1) = 1 = \ln(1) + C \implies C = 1$\\
-    Dobijamo $C=0=1$. Ovo je kontradikcija.\par
-    Tačno rešenje: Posmatrajmo $f: (-\infty, 0)\cup(0, +\infty)$
+    Dobijamo da je $C=0=1$ što je kontradikcija.\par
+    \textbf{Tačno rešenje:}\par
+    Posmatrajmo $f: (-\infty, 0)\cup(0, +\infty)$
     definisanu sa:
     $$
         f(x) =
@@ -335,22 +334,17 @@ $\exists C \in \mathbb{R}$ takvo da $F_1=F_2+C$.
             \ln (-x) + 1,\ x < 0
         \end{cases}
     $$
-    Tada je njen izvod:
-
+    Njen izvod je:
     $$f'(x) =
         \begin{cases}
             \frac{1}{x},\ x > 0 \\
             \frac{1}{x},\ x < 0
         \end{cases}$$
 
-    Dakle važi $f(1) = 0$, $f(-1) = 1$. Kao što smo napomenuli,
-    C se odnosi na interval.
+    Dakle funkcija $f$ je tražena funkcija jer važi
+    $f(1) = 0,\ f(-1) = 1$. U ovom primeru je $C_1=0$, a $C_2=1$.
 \end{primbox}
-Neka je $f:(a, b)\cup(c, d) \longrightarrow
-    \mathbb{R}$ pri čemu $(a, b) \bigcap (c, d) = \emptyset$.\\
-Tada $\int f(x) dx = F_1(x) + C_1$ na
-$(a, b)$ i $\int f(x) dx = F_2(x) + C_2$ na $(c, d)$.
-Pri tome u opštem slučaju ne mora da važi $C_1 = C_2$.
+
 \begin{stavbox}
     \begin{stav}
         Neka su $f_1, f_2 : (a, b) \longrightarrow \mathbb{R}$
@@ -385,7 +379,6 @@ Iz \eqref{stav_1.2.1} i \eqref{stav_1.2.2} zaključujemo:
 
 Ako krenemo od desne strane jednakosti koju dokazujemo i
 primenimo prethodne jednakosti dobijamo:
-
 \begin{align*}
     D & = \lambda_1\int f_1(x) dx + \lambda_2\int f_2(x) dx \\ &=
     \lambda_1(F_1(x) + C_1) + \lambda_2(F_2(x) + C_2)       \\ &=
@@ -396,47 +389,48 @@ primenimo prethodne jednakosti dobijamo:
     \int (\lambda_1 f_1+ \lambda_2 f_2)(x)dx                \\ &=
     L
 \end{align*}
-čime završavamo dokaz.
+gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završavamo dokaz.
 \null\hfill $\blacksquare$ \par
 \begin{primbox}
     \begin{prim}
         Naći $\int (\frac{3}{\sqrt{x}} +
-            \cos\frac{x}{3} - 52^x)dx$, $x > 0$.
+            \cos\frac{x}{3} - 52^x)dx,\ x > 0$.
     \end{prim}
     \begin{align*}
         I & = \int\frac{3}{\sqrt{x}} dx + \int \cos\frac{x}{3} dx - 5\int 2^x dx
         \\ & = 6\sqrt{x} + C_1 + 3\sin\frac{x}{3} + C_2 - 5\frac{2^x}{\ln{2}} - 5C_3
         \\ & = 6\sqrt{x} + 3\sin\frac{x}{3} - 5\frac{2^x}{\ln{2}} + C
     \end{align*}
+    gde su $C_1,C_2,C_3\in\mathbb{R}$, a $C=C_1+C_2-5C_3$.
 \end{primbox}
 
 \setlength{\tabcolsep}{2.65em}
 \renewcommand{\arraystretch}{2.3}
-\begin{tabular}{ |c|c|  }
+\begin{tabular}{ |c|c| }
     \hline
-    \multicolumn{2}{|c|}{Tablica integrala:}                                                                                                                                                                                    \\ \hline
-    $\alpha \in \mathbb{R} \backslash \{-1\},\ x\in(0, +\infty)\quad \int x^{\alpha} dx$                                               & $\frac{1}{\alpha + 1} x^{\alpha + 1} + C$                                              \\ \hline
-    $n \in \mathbb{N},\ x \in \mathbb{R} \quad \int x^{n} dx$                                                                          & $\frac{1}{n + 1} x^{n + 1} + C$                                                        \\ \hline
-    $n \in \mathbb{N}\backslash\{1\},\ x \in (-\infty, 0)\cup (0, +\infty)\quad \int x^{-n} dx $                                       &
+    \multicolumn{2}{|c|}{Tablica integrala:}                                                                                                                                                               \\ \hline
+    $\alpha \in \mathbb{R} \backslash \{-1\},\ x\in(0, +\infty)\quad \int x^{\alpha} dx$                          & $\frac{1}{\alpha + 1} x^{\alpha + 1} + C$                                              \\ \hline
+    $n \in \mathbb{N},\ x \in \mathbb{R} \quad \int x^{n} dx$                                                     & $\frac{1}{n + 1} x^{n + 1} + C$                                                        \\ \hline
+    $n \in \mathbb{N}\backslash\{1\},\ x \in\mathbb{R}\backslash\{0\}\quad \int x^{-n} dx $                       &
     \makecell{
-    $\frac{1}{1-n} x^{1-n} + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                          \\
+    $\frac{1}{1-n} x^{1-n} + C_1,\ x \in (-\infty, 0)$                                                                                                                                                     \\
         $\frac{1}{1-n} x^{1-n} + C_2,\ x \in (0, +\infty)$
-    }                                                                                                                                                                                                                           \\  \hline
-    $x \in (-\infty, 0)\cup(0, +\infty)\quad \int x^{-1} dx$                                                                           &
-    \makecell{ $\ln |x| + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                             \\
-    $\ln |x| + C_2,\ x \in (0, +\infty)$}                                                                                                                                                                                       \\ \hline
-    $a > 0, a\neq 1, x \in \mathbb{R} \quad \int a^x dx                        $                                                       & $ \frac{1}{\ln a} a^x + C$                                                             \\ \hline
-    $x \in \mathbb{R} \quad \int \sin x dx                                     $                                                       & $ -\cos x + C$                                                                         \\ \hline
-    $x \in \mathbb{R} \quad \int \cos x dx                                     $                                                       & $ \sin x + C$                                                                          \\ \hline
-    $x \in \cup_{k \in \mathbb{Z}} (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi)\quad \int \frac{1}{\cos^2 x} dx$                      & $ tg x + C_k,\ x \in (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi),\ k \in \mathbb{Z}$ \\ \hline
-    $x \in \cup_{k \in \mathbb{Z}} (k\pi, \pi + k\pi)\quad \int \frac{1}{\sin^2 x} dx                                                $ & $ -ctg x + C_k,\ x \in (k\pi, \pi + k\pi),\ k \in \mathbb{Z}$                          \\ \hline
-    $x \in (-1, 1) \quad \int \frac{1}{\sqrt{(1 - x^2)}} dx                      $                                                     & $ arcsinx + C$                                                                         \\ \hline
-    $x \in \mathbb{R} \quad \int \frac{1}{1+x^2} dx                              $                                                     & $ arctg x + C$                                                                         \\ \hline
-    $x \in \mathbb{R}\backslash \{0\} \quad \int x^{0} dx$                                                                             &
+    }                                                                                                                                                                                                      \\  \hline
+    $x \in (-\infty, 0)\cup(0, +\infty)\quad \int x^{-1} dx$                                                      &
+    \makecell{ $\ln |x| + C_1,\ x \in (-\infty, 0)$                                                                                                                                                        \\
+    $\ln |x| + C_2,\ x \in (0, +\infty)$}                                                                                                                                                                  \\ \hline
+    $a > 0, a\neq 1, x \in \mathbb{R} \quad \int a^x dx                        $                                  & $ \frac{1}{\ln a} a^x + C$                                                             \\ \hline
+    $x \in \mathbb{R} \quad \int \sin x dx                                     $                                  & $ -\cos x + C$                                                                         \\ \hline
+    $x \in \mathbb{R} \quad \int \cos x dx                                     $                                  & $ \sin x + C$                                                                          \\ \hline
+    $x \in \cup_{k \in \mathbb{Z}} (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi)\quad \int \frac{1}{\cos^2 x} dx$ & $ tg x + C_k,\ x \in (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi),\ k \in \mathbb{Z}$ \\ \hline
+    $x \in \cup_{k \in \mathbb{Z}} (k\pi, \pi + k\pi)\quad \int \frac{1}{\sin^2 x} dx$                            & $ -ctg x + C_k,\ x \in (k\pi, \pi + k\pi),\ k \in \mathbb{Z}$                          \\ \hline
+    $x \in (-1, 1) \quad \int \frac{1}{\sqrt{(1 - x^2)}} dx                      $                                & $ arcsinx + C$                                                                         \\ \hline
+    $x \in \mathbb{R} \quad \int \frac{1}{1+x^2} dx                              $                                & $ arctg x + C$                                                                         \\ \hline
+    $x \in \mathbb{R}\backslash \{0\} \quad \int x^{0} dx$                                                        &
     \makecell{
-    $x + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                                              \\
+    $x + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                         \\
         $x + C_2,\ x \in (0, +\infty)$
-    }                                                                                                                                                                                                                           \\ \hline
+    }                                                                                                                                                                                                      \\ \hline
 \end{tabular}
 
 \subsection{Metode integracije}
@@ -781,7 +775,7 @@ Neka je $P = -\frac{Mb}{2} + N$ i $\alpha = \frac{\sqrt{4c-b^2}}{2}$
     = & \frac{M}{2} \frac{1}{1-n}s^{1-n} + C + \frac{2s}{(s^2 + 1)^n} - 2I_n + 2I_{n+1}
 \end{align*}
 \begin{primbox}
-    Neka su $P, Q: R \longrightarrow R$ polinomi. pri cemu je stepen od $P >= 0$, $Q >= 1$.
+    Neka su $P, Q: R \longrightarrow R$ polinomi. pri cemu je stepen od $P >= 0,\ Q >= 1$.
     Algoritam za nalazenje $\int \frac{P(x)}{Q(x)}dx$.
 \end{primbox}
 
@@ -797,7 +791,7 @@ Ako su $a_1 < a_2 < ... < a_l$ realne nule polinoma Q, primitivnu funkciju, za f
     \item[K2:] $Q(x) = q(x - a1)^{k_1}...(x-as)^{k_s}(x^2 + b_1x + c_1)^{n_1}...(x^2 + b_tx + c_t)^{n_t}$\\
           $q \in \mathbb{R}\backslash0$ najstariji koeficijent polinoma Q.\\
           $a_1$...$a_s$ razlicite nule polinoma Q\\
-          $b_1$...$b_t$, $c_1$....,$c_t$ $\in \mathbb{R}$ i $b_i^2 * 4c_i < 0$ za i iz $1..t$\\
+          $b_1$...$b_t,\ c_1$....,$c_t$ $\in \mathbb{R}$ i $b_i^2 * 4c_i < 0$ za i iz $1..t$\\
           $k_1$...$k_s \in \mathbb{N}_0$\\
           $n_1$...$n_t \in \mathbb{N}_0$\\
           $k_1+..+k_s+2(n_1+...+n_t) = \text{st }Q$.\\
@@ -881,7 +875,7 @@ $F((2l+1)\pi) = \displaystyle{\lim_{x\to(2l+1)\pi+}}\frac{1}{\sqrt{5}}\text{arct
 $C_{l+1} = \frac{\pi}{\sqrt{5}} + C_l$\\
 $C_{l+1} = \frac{(l+1)\pi}{\sqrt{5}} + C_0$\\
 $(2l-1)\pi < x < (2l+1)\pi$\\
-$\frac{x-\pi}{2\pi} < l < \frac{x+\pi}{2\pi}$, $l \in \mathbb{Z}$\\
+$\frac{x-\pi}{2\pi} < l < \frac{x+\pi}{2\pi},\ l \in \mathbb{Z}$\\
 $l = [\frac{x+\pi}{2\pi}]$\\
 $C_l = [\frac{x+\pi}{2\pi}]\frac{\pi}{\sqrt{5}} + C_0$\\
 $$
@@ -904,7 +898,7 @@ $\displaystyle S_n = \sum_{k=1}^{n} f(x_k)(x_k - x_{k-1}) = \sum_{k=1}^{n} (\fra
 $n\rightarrow\infty$ sledi da je $S_n = \frac{1}{3}$\\
 $P(\phi) = \frac{1}{3}$ Kasnije ćemo zapisivati $\displaystyle \int_0^1 x^2\text{dx} = \frac{x^3}{3} \Bigg|^1_{x=0} = \frac{1}{3} - 0$\\
 $\displaystyle \int^b_a f(x)\text{dx} = F(b) - F(a)$\\
-$t \in [a, b]$, $C(a_1, b_1)$, $f: (a_1, b_1) \rightarrow [0, +\infty)$ i definišemo $A(t) = \{(x, y) \in \mathbb{R}^2 | a\leq x \leq t, 0\leq y \leq f(x)\}$ i neka je P(t) površina figure A(t).\\
+$t \in [a, b],\ C(a_1, b_1),\ f: (a_1, b_1) \rightarrow [0, +\infty)$ i definišemo $A(t) = \{(x, y) \in \mathbb{R}^2 | a\leq x \leq t, 0\leq y \leq f(x)\}$ i neka je P(t) površina figure A(t).\\
 Primetimo da je $P(t)$ funkcija koja slika $[a, b]$ u $[0, +\infty]$ tj. $P(a) = 0$ i $P(b)$ je površina figure $\phi$.\\
 Dodatno pretpostavimo da $t \in [a, b)$ i da je $h > 0$ takvo da je $t + h \in [a, b)$.\\
 Neka je $\displaystyle M = \max_{t\leq x\leq t+ h} f(x)$ i $m = \min_{t \leq x leq t+h} f(x)$ zbog neprekidnosti funkcije f, postoje $\theta_1 = \theta_1(t, h)$ i $\theta_2 = \theta_2(t, h)$ takvi da je $0\leq \theta_1 \leq 1$ i $0\leq \theta_2 \leq 1$ i $M = f(t + \theta_1h)$ i $m = f(t + \theta_2h)$\\
@@ -1103,7 +1097,7 @@ $\Phi = \{(x,y)\in\mathbb{R}^2\quad|\quad a\leq x\leq b,\quad 0\leq y\leq f(x)\}
 Tada je površina $P(\Phi)$ figure $\Phi$ jednaka $\displaystyle\int^b_a f(x)\text{dx}$.\\
 Neka su $f,g:[a,b]\rightarrow\mathbb{R}$ neprekidne funkcije na $[a,b]$ takve da za svako $x\in[a,b]$ važi $f(x) \geq g(x)$. Neka je $\Phi = \{(x,y)\in\mathbb{R}^2\quad|\quad a\leq x\leq b,\quad g(x)\leq y\leq f(x)\}$\\
 Tada je površina $P(\Phi)$ figure $\Phi$ jednaka $\displaystyle\int^b_a (f-g)(x)\text{dx}$.\\
-Neka je $\displaystyle m = \min_{x\in[a,b]} g(x)$, $F(x) = f(x) - m$, $G(x) = g(x) - m$ i\\
+Neka je $\displaystyle m = \min_{x\in[a,b]} g(x),\ F(x) = f(x) - m,\ G(x) = g(x) - m$ i\\
 $\Phi_1 = \{(x,y)\in\mathbb{R}^2\quad|\quad a\leq x\leq b,\quad G(x)\leq y\leq F(x)\}$\\
 Jasno je da je $P(\Phi) = P(\Phi_1) = \displaystyle\int^b_aF(x)\text{dx} - \int^b_aG(x)\text{dx} =\\= \int^b_a (f(x)-m)\text{dx}-\int^b_a(g(x)-m)\text{dx} = \int^b_a(f(x)-g(x))\text{dx}$\\
 
