@@ -256,7 +256,7 @@ $C=G(x) =F_1(x) - F_2(x)$ tj.\ $F_1(x) = F_2(x) + C$.
         $(a, b)$. Neodređeni integral funkcije $f$ obeležavamo sa
         $\int f(x)dx$.\par
         $$\int f(x) dx = \{F \mid F: (a, b) \longrightarrow \mathbb{R},\
-            (\forall x\in(a,b)) F'(x) = f(x)\}$$\par
+            (\forall x\in(a,b))(F'(x) = f(x))\}$$\par
         Neka je $F: (a,b) \longrightarrow \mathbb{R}$ proizvoljna
         primitivna funkcija za funkciju $f$ na $(a,b)$. Tada je: \par
 
@@ -266,7 +266,7 @@ $C=G(x) =F_1(x) - F_2(x)$ tj.\ $F_1(x) = F_2(x) + C$.
             \int f(x) \, dx =\{G \mid G: (a, b)
             \longrightarrow \mathbb{R}, \\
             (\exists C \in \mathbb{R}) (\forall x \in (a, b))
-            \, G(x) = F(x) + C\}
+            (G(x) = F(x) + C)\}
         \end{equation}
 
         Jednakost \eqref{eq_1.1.1} skraćeno zapisujemo na sledeći način:
@@ -352,8 +352,8 @@ U sledećem primeru vidimo gde može da nastane problem.
         su $\lambda_1 , \lambda_2 \in \mathbb{R}$. Tada funkcija
         $\lambda_1 f_1 + \lambda_2 f_2 : (a, b) \longrightarrow
             \mathbb{R}$ ima primitivnu funkciju na $(a, b)$ i važi:\par
-        $\int (\lambda_1 f_1 + \lambda_2 f_2)(x)dx = \lambda_1\int
-            f_1(x) dx + \lambda_2\int f_2(x) dx$
+        $$\int (\lambda_1 f_1 + \lambda_2 f_2)(x)dx = \lambda_1\int
+            f_1(x) dx + \lambda_2\int f_2(x) dx$$
     \end{stav}
 \end{stavbox}
 \setcounter{equation}{0}
@@ -631,39 +631,11 @@ Drugi smer dokaza je potpuno analogan.
     \end{align*}
     Dobijamo jednakost $\int \frac{1}{x} dx = \frac{x}{x} + \int \frac{1}{x} = 1+ \int\frac{1}{x}$. Greška koja se
     često pravi je da se integrali skrate i da se dobije $1 = 0$, što znači da ovaj integral ne postoji.
-    Ovo nije tačno jer ovu jednakost možemo da zapišemo i kao $F+C_1 = \frac{x}{x} + \int \frac{1}{x} = 1+F+C_2$.
+    Ovo nije tačno jer ovu jednakost možemo da zapišemo i kao $F+C_1 = \frac{x}{x} + \int \frac{1}{x} = 1+F+C_2,\ C_1,C_2\in\mathbb{R}$.
     Ako skratimo primitivne funkcije dobijamo
 
 \end{primbox}
 
-$A \subseteq \mathbb{R}$ $A + 5 = \{a+5 | a \in A\}$\\
-$A = \{1,2,3\}\quad A + 5 = \{6, 7, 8\}$\\
-$A = \mathbb{R}\quad A + 5 = \mathbb{R}$\\
-$\mathbb{R} + 5 \subseteq \mathbb{R}$\\
-$\mathbb{R} \subseteq \mathbb{R} + 5 ?$\\
-$x \in \mathbb{R}$ proizvoljno\quad $x = (x-5) + 5 \in \mathbb{R}$
-\begin{primbox}
-    \begin{prim}
-        Naći $\int e^x \sin x dx$
-    \end{prim}
-    \begin{align*}
-        \int e^x \sin x dx =
-        \left [ \begin{alignedat}{2}
-                        u(x) = e^x     & du = e^x dx \\
-                        dv = \sin x dx & v = -\cos x
-                    \end{alignedat} \right ]
-        = -e^x\cos x - \int (-e^x \cos x)dx
-        =  -e^x\cos x + \int (e^x \cos x) dx         \\
-        = \left [ \begin{alignedat}{2}
-                          u = e^x \quad  & dv = \cos x dx \\
-                          du = e^x \quad & v = \sin x
-                      \end{alignedat} \right ]
-        =  -e^x\cos x + (e^x \sin x - \int e^x\sin x dx)
-        =  e^x(\sin x - \cos x) - \int e^x \sin x dx \\
-        F(x) = e^x(\sin x - \cos x) - (F(x) + C_1)   \\
-        F(x) = \frac{1}{2} e^x(\sin x - \cos x) - \frac{C_1}{2}
-    \end{align*}
-\end{primbox}
 \subsection{Integracija racionalnih funkcija}
 \begin{primbox}
     $A, a \in \mathbb{R}$\\

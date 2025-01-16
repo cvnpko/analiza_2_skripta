@@ -1,7 +1,7 @@
 # Fdb version 4
-["pdflatex"] 1737017039.87122 "/home/cwpko/Desktop/MATF/3_semestar/A2/analiza2_skripta/main.tex" "main.pdf" "main" 1737017040.81213 0
+["pdflatex"] 1737020072.00079 "/home/cwpko/Desktop/MATF/3_semestar/A2/analiza2_skripta/main.tex" "main.pdf" "main" 1737020072.88216 0
   "/etc/texmf/web2c/texmf.cnf" 1729275013.35261 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/cwpko/Desktop/MATF/3_semestar/A2/analiza2_skripta/main.tex" 1737017039.59994 59649 2cc2e390bfd99647db247e88dd1919e9 ""
+  "/home/cwpko/Desktop/MATF/3_semestar/A2/analiza2_skripta/main.tex" 1737020071.83286 58497 acf16d6fcb4afbc8c855aa5478ef3e30 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm" 1136768653 3584 2d666ecf6d466d8b007246bc2f94d9da ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm" 1136768653 3584 402da0b29eafbad07963b1224b222f18 ""
@@ -186,10 +186,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1729275652.72073 5349216 bf3a80e68d946c7acd95ff030fd9bb63 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1729275753 6831175 b276a6fdbec604d4e839afc30b8e3deb ""
-  "main.aux" 1737017040.73594 2935 3c93d88ab699e90c9242829e4ce16f45 "pdflatex"
-  "main.out" 1737017040.73694 3062 00447c65c5fa538d55ddc65c054ca062 "pdflatex"
-  "main.tex" 1737017039.59994 59649 2cc2e390bfd99647db247e88dd1919e9 ""
-  "main.toc" 1737017040.73694 1305 631d1fbbd928f6aa48dfeabd5a266c5e "pdflatex"
+  "main.aux" 1737020072.79786 2935 738839dbff9799c1c0add9bf16b4a43d "pdflatex"
+  "main.out" 1737020072.79886 3062 00447c65c5fa538d55ddc65c054ca062 "pdflatex"
+  "main.tex" 1737020071.83286 58497 acf16d6fcb4afbc8c855aa5478ef3e30 ""
+  "main.toc" 1737020072.79886 1305 404fdb806a9bd9bf944cbbaf63def5dd "pdflatex"
   (generated)
   "main.aux"
   "main.log"
