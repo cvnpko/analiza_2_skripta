@@ -341,7 +341,7 @@ U sledećem primeru vidimo gde može da nastane problem.
             \frac{1}{x},\ x < 0
         \end{cases}$$
 
-    Dakle funkcija $f$ je tražena funkcija jer važi
+    Dakle, funkcija $f$ je tražena funkcija jer važi
     $f(1) = 0,\ f(-1) = 1$. U ovom primeru je $C_1=0$, a $C_2=1$.
 \end{primbox}
 
@@ -524,7 +524,7 @@ koristimo \hyperref[teorema_1.3]{teoremu 1.3}.\par
     Funkcija $g$ je diferencijabilna
     na svom domenu. Ostaje da proverimo da li je i funkcija $g^{-1}$. Proverimo da li je ona diferencijabilna u nuli:
     $(g^{-1})'(0) = \lim\limits_{h\rightarrow 0}\frac{g^{-1}(h) - g^{-1}(0)}{h} = \lim\limits_{h\rightarrow 0}\frac{^3\sqrt{h} - 0}{h} = \lim\limits_{h\rightarrow 0}\frac{1}{^3\sqrt{h^2}} = +\infty$.
-    Dakle nije diferencijabilno, zbog čega ne može primeniti teoremu.\par
+    Dakle, nije diferencijabilno, zbog čega ne može primeniti teoremu.\par
 \end{primbox}
 \begin{primbox}
     \begin{prim}
@@ -564,7 +564,6 @@ Sledi primer korišćenja \hyperref[teorema_1.3]{teoreme 1.3}.
     \end{align*}
     \label{napomena_1_primer_1.9}Napomena: Iako važi da je $\sin(\arcsin(x))=x$, ne mora da važi da je $\arcsin(\sin(x))=x$.\par
     Na kraju možemo da proverimo da li smo dobili tačno rešenje tako što uradimo izvod primitivne funkcije.
-    Ako dobijemo polaznu funkciju, rešenje je tačno.
 \end{primbox}
 
 Opisali smo kako se ponaša integral linearnih kombinacije funkcija i kako se uvode smene. Ostaje da vidimo
@@ -631,61 +630,73 @@ Drugi smer dokaza je potpuno analogan.
     \end{align*}
     Dobijamo jednakost $\int \frac{1}{x} dx = \frac{x}{x} + \int \frac{1}{x} = 1+ \int\frac{1}{x}$. Greška koja se
     često pravi je da se integrali skrate i da se dobije $1 = 0$, što znači da ovaj integral ne postoji.
-    Ovo nije tačno jer ovu jednakost možemo da zapišemo i kao $F+C_1 = \frac{x}{x} + \int \frac{1}{x} = 1+F+C_2,\ C_1,C_2\in\mathbb{R}$.
-    Ako skratimo primitivne funkcije dobijamo
-
+    Ovo nije tačno jer ovu jednakost možemo da zapišemo i kao $F+C_1 = 1+F+C_2,\ C_1,C_2\in\mathbb{R}$.
+    Ako skratimo primitivne funkcije dobijamo vezu između konstanti što nam nije od pomoći. Ovaj integral
+    je tablični, pa možemo da rešimo metodom pogađanja rešenja.
 \end{primbox}
 
 \subsection{Integracija racionalnih funkcija}
-\begin{primbox}
-    $A, a \in \mathbb{R}$\\
-    $\int \frac{A}{x-a}dx = A\ln|x-a| + C, \quad C \in \mathbb{R}$
-\end{primbox}
+Integraciju racionalnih funkcija možemo da rešavamo po algoritmu.
+Za algoritam je potrebno da znamo rešenja integrala oblika:
+$\int \frac{A}{x-a}dx$, $\int\frac{1}{(x-a)^k}dx$,
+$\int \frac{Mx+N}{x^2+bx + c}dx$ i $\int \frac{Mx + N}{(x^2 + bx + c)^n}dx$,
+gde su $A,a,M,N,b,c\in\mathbb{R}$, $b^2-4c<0$, $k\in\mathbb{N}\backslash\{1\}$.\par
 
-Napomena: $C$ za $x > a$ i $C$ za $x < a$ se mogu razlikovati
-\begin{primbox}
-    $A, a \in \mathbb{R}$\\
-    $\int\frac{1}{(x-a)^k}dx = \frac{A}{(1-k)(x-a)^{-k+1}} + C$
-\end{primbox}
-$\int\frac{1}{(x-a)^k}dx = \int(x-a)^{-k}dx =\frac{A}{(1-k)(x-a)^{-k+1}} + C$
-\begin{primbox}
-    $M, N, b, c \in \mathbb{R}, b^2 - 4c < 0$\\
-    $\int \frac{Mx+N}{x^2+bx + c} = $
-\end{primbox}
-\begin{align*}
-    \int \frac{Mx+N}{x^2+bx + c}
-    = \int \frac{Mx + N}{(x + \frac{b}{2})^2-\frac{b^2}{4}+c}
-    =\int\frac{M(x+\frac{b}{2})-\frac{Mb}{2} + N}{(x+\frac{b}{2})^2 + \frac{4c-b^2}{4}} = \\
-\end{align*}
-Neka je $P = -\frac{Mb}{2} + N$ i $\alpha = \frac{\sqrt{4c-b^2}}{2}$
-\begin{align*}
-    = & \int \frac{M(x + \frac{b}{2}) + P}{(x + \frac{b}{2})^2 + \alpha^2} =
-    \left | \begin{alignedat}{3}
-                   & \text{Smena} \\
-                t  & = x + b/2    \\
-                dt & = dx         \\
-            \end{alignedat} \right |
-    = \int \frac{Mt + P}{t^2 + \alpha ^2}
-    = M\int\frac{t}{t^2 + \alpha ^2}+P\int\frac{1}{t^2 + \alpha^2}
-    = \left | \begin{alignedat}{3}
-                     & \text{smena prvi deo} \\
-                  s  & = t^2 + \alpha^2      \\
-                  ds & = 2t dt
-              \end{alignedat} \right |                                                                                       \\
-    = & M\int\frac{ds}{2s} + P\int\frac{1}{\alpha^2}\frac{1}{(\frac{t}{\alpha})^2 + 1}
-    = \left | \begin{alignedat}{3}
-                     & \text{smena drugi deo} \\
-                  y  & = \frac{t}{\alpha}     \\
-                  dy & = \frac{dt}{\alpha}
-              \end{alignedat}\right |
-    = \frac{M}{2}\ln{s} + C + \frac{P}{\alpha}\int\frac{dy}{y^2 + 1}
-    = \frac{M}{2}\ln{(t^2 + \alpha^2)} + \frac{P}{\alpha}\text{arctan}y + C                                                    \\
-    = & \frac{M}{2}\ln{((x + \frac{b}{2})^2 + \alpha^2)} + \frac{P}{\alpha}\text{arctan}(\frac{(x + \frac{b}{2})}{\alpha}) + C \\
-    = & \frac{M}{2}\ln{(x^2 + bx + c)} + \frac{2N-Mb}{\sqrt{4c - b^2}}\text{arctan}(\frac{2x+b}{\sqrt{4c-b^2}}) + C
-\end{align*}
+\begin{lemabox}
+    \begin{lema}
+        $\int \frac{A}{x-a}dx$, gde su $A,a\in \mathbb{R}$.
+    \end{lema}
+    Neka je funkcija $f:\mathbb{R}\backslash\{0\}\rightarrow\mathbb{R}$ definisana sa
+    $f(t)=\frac{A}{t}$ i funkcija $g:\mathbb{R}\backslash\{a\}\rightarrow\mathbb{R}\backslash\{0\}$
+    definisana sa $g(x)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=1$, a primitivna funkcija
+    funkcije $f$ je funkcija $F(t)=A\ln|t|$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
+    \begin{equation*}
+        \int \frac{A}{x-a}dx = \int ((f\circ g) g')(x)dx = F(g(x)) + C=A\ln|x-a| + C,\ C\in\mathbb{R}
+    \end{equation*}
+    Napomenimo da $C$ za $x > a$ i $C$ za $x < a$ mogu biti različiti.
+\end{lemabox}
+
+\begin{lemabox}
+    \begin{lema}
+        $\int \frac{A}{(x-a)^k}dx$, gde su $A,a\in \mathbb{R},\ k\in\mathbb{N}\backslash\{1\}$.
+    \end{lema}
+    Neka je funkcija $f:\mathbb{R}\backslash\{0\}\rightarrow\mathbb{R}$ definisana sa
+    $f(t)=\frac{A}{t^k}$ i funkcija $g:\mathbb{R}\backslash\{a\}\rightarrow\mathbb{R}\backslash\{0\}$
+    definisana sa $g(x)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=1$, a primitivna funkcija
+    funkcije $f$ je funkcija $F(t)=\frac{A}{(1-k)t^{k-1}}$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
+    \begin{equation*}
+        \int \frac{A}{(x-a)^k}dx = \int ((f\circ g) g')(x)dx = F(g(x)) + C= \frac{A}{(1-k)(x-a)^{k-1}}+ C,\ C\in\mathbb{R}
+    \end{equation*}
+\end{lemabox}
+
+\begin{lemabox}
+    \begin{lema}
+        \label{lema_1.1.3}
+        $\int \frac{Mx+N}{x^2+bx+c}dx$, gde su $M,N,b,c\in\mathbb{R},\ b^2 - 4c < 0$.
+    \end{lema}
+    Neka je funkcija $f:\mathbb{R}\rightarrow\mathbb{R}$ definisana sa
+    $f(t)=\frac{Mt}{t^2+1}+\frac{2N-bM}{(t^2+1)\sqrt{4c-b^2}}$ i funkcija $g:\mathbb{R}\rightarrow\mathbb{R}$
+    definisana sa $g(x)=\frac{2x+b}{\sqrt{4c-b^2}}$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=\frac{2}{\sqrt{4c-b^2}}$.
+    Potrebno je da izračunamo primitivnu funkciju:
+    \begin{align*}
+        \int f(t)dt & =\int \frac{Mt}{t^2+1}+\frac{2N-bM}{(t^2+1)\sqrt{4c-b^2}}dt                          \\
+                    & =\frac{M}{2}\int \frac{2t}{t^2+1}dt+\frac{2N-bM}{\sqrt{4c-b^2}}\int\frac{1}{t^2+1}dt \\
+                    & =\frac{M}{2}\ln(t^2+1)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan{t}+C,\ C\in\mathbb{R}      \\
+                    & =F(t)+C
+    \end{align*}
+    Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
+    \begin{align*}
+        \int \frac{Mx+N}{x^2+bx+c}dx & = \int ((f\circ g) g')(x)dx                                                                                                               \\
+                                     & = F(g(x)) + C                                                                                                                             \\
+                                     & = \frac{M}{2}\ln((\frac{2x+b}{\sqrt{4c-b^2}})^2+1)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C,\ C\in\mathbb{R}   \\
+                                     & = \frac{M}{2}\ln(\frac{4x^2+4xb+b^2+4c}{4c-b^2})+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C                      \\
+                                     & = \frac{M}{2}(\ln(x^2+xb+c)-\ln(c-\frac{b^2}{4}))+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C                     \\
+                                     & = \frac{M}{2}\ln(x^2+xb+c)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C_1,\ C_1=C+ \frac{M}{2}\ln(c-\frac{b^2}{4}) \\
+    \end{align*}
+\end{lemabox}
 \begin{primbox}
     $M, N, b, c \in \mathbb{R}$,
-    $b^2 - 4c < 0, n \in \mathbb{N}\backslash\{0\}$\\
+    $, n \in \mathbb{N}\backslash\{0\}$\\
     $\int \frac{Mx + N}{(x^2 + bx + c)^n}$
 \end{primbox}
 \begin{align*}
@@ -843,8 +854,8 @@ $m h \leq P(t + h) - P(t) \leq M h$ tj $f(t + \theta_2h)h \leq P(t+h) - P(t) \le
 $f(t+\theta_2h) \leq \frac{P(t + h) - P(t)}{h}\leq f(t+\theta_1h)$\\
 $\displaystyle \lim_{h\rightarrow 0^+} f(t+\theta_2h) \leq \lim_{h\rightarrow 0^+} \frac{P(t + h) - P(t)}{h} \leq \lim_{h\rightarrow 0^+} f(t+\theta_1h)$\\
 $f(t) \leq P'(t) \leq f(t)$\\
-Dakle za $t \in [a, b)$ imamo $P'(t) = f(t)$. Drugim rečima $P$ je primitivna funkcija za $f:$ na intervalu $(a, b)$.\\
-Neka je $F: (a, b) \rightarrow \mathbb{R}$ proizvoljna primitvna funkcija funkcije f.Tada je $P(t) = F(t) + C$ gde je $C \in \mathbb{R}$. Ali kako je $P(a) = 0$. Imamo $C = -F(a)$.\\
+Dakle, za $t \in [a, b)$ imamo $P'(t) = f(t)$. Drugim rečima $P$ je primitivna funkcija za $f:$ na intervalu $(a, b)$.\\
+Neka je $F: (a, b) \rightarrow \mathbb{R}$ proizvoljna primitvna funkcija funkcije f. Tada je $P(t) = F(t) + C$ gde je $C \in \mathbb{R}$. Ali kako je $P(a) = 0$. Imamo $C = -F(a)$.\\
 Dakle, $P(b) = \displaystyle \int^b_a f(x) \text{dx} = F(b) - F(a)$.
 \subsection{Integrabilnost nekih klasa funkcija}
 \begin{teoremabox}
