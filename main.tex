@@ -78,6 +78,9 @@
 \newtheorem{alg}{Algoritam}[section]
 \newtheorem{prim}{Primer}[section]
 
+\DeclareMathOperator{\tg}{tg}
+\DeclareMathOperator{\arctg}{arctg}
+
 \begin{document}
 
 \begin{titlepage}
@@ -843,17 +846,18 @@ integrale ovih vrsta.
 \end{algbox}
 
 \subsection{Integracija trigonometrijskih funkcija}
-Oznaku $\int\text{R}(u, v)$ koristimo za oznaku racionalnih funkcija argumenata u i v. Npr. $\text{R}(u, v) = \frac{u+v}{u-v+2}$.\\
-$\int\text{R}(\sin{x}, \cos{x})$dx rešavamo smenom:\\
-$t = \text{tg}\frac{x}{2}$ definisano svuda sem u $\frac{\pi}{2}, \frac{3\pi}{2},\frac{5\pi}{2}...$\\
-$x = 2\text{arctg}t$\\
+Oznaku $R(u, v)$ koristimo za predstavljanje
+racionalnih funkcija argumenata $u$ i $v$. Na primer, $R(u, v) = \frac{u+v}{u-v+2}$.
+Integrale oblika $\int R(\sin{x},\cos{x})dx$ rešavamo smenom
+$t = \tg\frac{x}{2}$, definisanom svuda sem u $x\in\{(2l+1)\pi\ |\ l\in\mathbb{Z}\}$.
+$x = 2\arctg t$
 Neka $x \in (-\pi, \pi)$ tj $\frac{x}{2} \in (-\frac{\pi}{2}, \frac{\pi}{2})$ Ove funkcije su uzajamno inverzne na ovom domenu.\\
-Neophodan nam je sledeći deo za izvođenje:\\
+Neophodan nam je sledeći deo za izvođenje:
 \begin{align*}
     \frac{1}{\cos^2 s}
     = \frac{\cos^2 s + \sin^2 s}{\cos^2 s}
     = 1 + (\frac{\sin s}{\cos s})^2
-    = 1 + \text{tg}^2 s
+    = 1 + tg^2 s
 \end{align*}
 Izvedimo prvo sin x:
 \begin{align*}
