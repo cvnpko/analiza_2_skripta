@@ -780,9 +780,11 @@ par takođe nula. Zbog toga važi sledeće tvrđenje:
         može se zapisati u obliku:
         $$P(x)=p(x-a_1)^{s_1}\dotsc(x-a_k)^{s_k}(x-d_{11})^{t_1}(x-d_{12})^{t_1}\dotsc(x-d_{l1})^{t_l}(x-d_{l2})^{t_l}$$
         gde je $p$ koeficijent uz najstariji član,
-        $a_i$, $i\in\{1\dotsc k\}$, realna nula polinoma $P$ mnogostrukosti $s_i$, a $d_{j1}$ i $d_{j2}$,
+        $a_i$, $i\in\{1\dotsc k\}$, realna nula polinoma $P$ mnogostrukosti $s_i$, važi $(\forall i_1,i_2\in\{1\dotsc k\})(a_{i_1}=a_{i_2}\iff i_1=i_2)$,
+        a $d_{j1}$ i $d_{j2}$,
         $j\in\{1\dotsc l\}$, konjugovano kompleksne ne-realne nule polinoma $P$
-        mnogostrukosti $t_j$. Takođe, zbog \hyperref[OSA]{osnovnog stava algebre}, važi jednakost $n=s_1+\dotsc+s_k+2(t_1+\dotsc+t_l)$. Dodatno,
+        mnogostrukosti $t_j$, važi $(\forall j_1,j_2\in\{1\dotsc l\})((d_{j_11}=d_{j_21}\iff j_1=j_2)\land(d_{j_11}\neq d_{j_22}))$.
+        Takođe, zbog \hyperref[OSA]{osnovnog stava algebre}, važi jednakost $n=s_1+\dotsc+s_k+2(t_1+\dotsc+t_l)$. Dodatno,
         množenjem konjugovano kompleksnih nula dobijamo izraze oblika $x^2+bx+c$, $b,c\in{R}$, $b^2-4c<0$,
         pa izraz možemo da zapišemo u obliku:
         $$P(x)=p(x-a_1)^{s_1}\dotsc(x-a_k)^{s_k}(x^2+b_1x+c_1)^{t_1}\dotsc(x^2+b_lx+c_l)^{t_l}$$
@@ -818,11 +820,14 @@ integrale ovih vrsta.
               U \hyperref[tvrđenje_1.1]{tvrđenju 1.1} smo naveli da se
               svaki polinom, pa i polinom $Q$, može zapisati u obliku:
               $$Q(x) = q(x - a_1)^{s_1}...(x-a_k)^{s_k}(x^2 + b_1x + c_1)^{t_1}...(x^2 + b_lx + c_l)^{t_l}$$
-              gde je $q$ koeficijent uz najstariji član, $a_i$, $i\in\{1\dotsc k\}$, realna nula polinoma $Q$
-              mnogostrukosti $s_i$, a $x^2+b_jx+c_j$, $j\in\{1\dotsc l\}$,
-              proizvod $(x-d_{j1})$ i $(x-d_{j2})$, gde su $d_{j1}$ i $d_{j2}$
-              konjugovano kompleksne ne-realne nule polinoma $Q$
-              mnogostrukosti $t_j$. Posle faktorizacije polinoma $Q$ prelazimo na \hyperref[Algoritam_1_K3]{K3}.
+              gde je $q$ koeficijent uz najstariji član,
+              $a_i$, $i\in\{1\dotsc k\}$, realna nula polinoma $Q$ mnogostrukosti $s_i$, važi $(\forall i_1,i_2\in\{1\dotsc k\})(a_{i_1}=a_{i_2}\iff i_1=i_2)$,
+              a $x^2+b_jx+c_j$, $j\in\{1\dotsc l\}$,
+              proizvod $(x-d_{j1})$ i $(x-d_{j2})$,
+              gde su $d_{j1}$ i $d_{j2}$ konjugovano kompleksne ne-realne nule polinoma $Q$
+              mnogostrukosti $t_j$, važi $(\forall j_1,j_2\in\{1\dotsc l\})((d_{j_11}=d_{j_21}\iff j_1=j_2)\land(d_{j_11}\neq d_{j_22}))$.
+              Takođe, zbog \hyperref[OSA]{osnovnog stava algebre}, važi jednakost $n=s_1+\dotsc+s_k+2(t_1+\dotsc+t_l)$.
+              Posle faktorizacije polinoma $Q$ prelazimo na \hyperref[Algoritam_1_K3]{K3}.
         \item[K3:]\label{Algoritam_1_K3}
               U ovom koraku je cilj da odredimo konstante u brojiocu takve da važi jednakost:
               $$\frac{P(x)}{Q(x)}=\sum_{i = 1}^k(\frac{A_{i1}}{(x-a_i)}+\dotsc+\frac{A_{is_i}}{(x-a_i)^{s_i}}) + \sum_{j = 1}^l( \frac{M_{j1}x + N_{j1}}{(x^2+b_jx+c_j)}+\dotsc+\frac{M_{jt_j}x + N_{jt_j}}{(x^2 + b_jx + c_j)^{t_j}})$$
