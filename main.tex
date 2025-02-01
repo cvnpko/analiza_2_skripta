@@ -100,8 +100,7 @@
             \large
             \textit{Radili}\\
             Lazar Jovanović 34/2023\\
-            Jana Vuković 124/2022\\
-            Igor Stojanović 159/2022
+            Jana Vuković 124/2022
         \end{flushleft}
     \end{minipage}
     \hspace*{1cm}
@@ -158,6 +157,18 @@ $$
 $$
 Takvo $f$ ne postoji, jer funkcija $sgn$ ima prekid prve vrste.
 
+\begin{teoremabox}
+    \textbf{Podsetnik teoreme:} Neka je $f: \mathbb{R}\longrightarrow\mathbb{R}$ diferencijabilna funkcija.
+    Tada funkcija $f'$ ne može imati prekide prve vrste.
+\end{teoremabox}
+\begin{defbox}
+    \textbf{Podsetnik definicije prekida prve vrste:} Za funkciju $f$,
+    tačka $x_0$ je prekid prve vrste ako postoje konačni $\lim_{x\rightarrow x_0^+}f(x)$
+    i $\lim_{x\rightarrow x_0^-}f(x)$ i različiti su.
+\end{defbox}
+
+
+
 \begin{defbox}
     \begin{definicija}
         Neka je $f:(a, b) \longrightarrow \mathbb{R}$.
@@ -169,6 +180,7 @@ Takvo $f$ ne postoji, jer funkcija $sgn$ ima prekid prve vrste.
 \end{defbox}
 Prirodno se postavljaju pitanja da li za datu funkciju postoji
 primitivna funkcija i ako postoji koliko primitivnih funkcija ima.
+O broju primitivnih funkcija nam govori sledeći stav.
 \begin{stavbox}
     \begin{stav}
         Neka je $f: (a, b) \longrightarrow \mathbb{R}$
@@ -194,7 +206,7 @@ O tome nam govori sledeća teorema.
         neka su $F_1, F_2: (a,b) \longrightarrow \mathbb{R}$
         primitivne funkcije za funkciju f na intervalu (a, b).
         Tada postoji $C \in \mathbb{R}$ takvo da
-        $\forall x \in (a, b)$ važi $F_1(x) = F_2(x) + C$.
+        za svako $x\in(a, b)$ važi $F_1(x) = F_2(x) + C$.
     \end{teorema}
 \end{teoremabox}
 
@@ -215,12 +227,12 @@ sledi da postoji $x_0 \in (x_1, x_2)$ takvo da:
 $$G(x_1) - G(x_2) = G'(x_0)(x_2-x_1) = 0  (x_2-x_1) = 0$$
 Dakle, $G(x_1) = G(x_2)$. Kako su $x_1$ i $x_2$
 proizvoljni, sledi da je G konstantna funkcija. Važi
-$\exists C\in\mathbb{R}$ takvo da  $\forall x \in (a, b)$ važi
-$C=G(x) =F_1(x) - F_2(x)$ tj.\ $F_1(x) = F_2(x) + C$.
+da postoji $C\in\mathbb{R}$ takvo da za svako $x\in(a, b)$ važi
+jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
 \null\hfill $\blacksquare$ \par
 
 \begin{teoremabox}
-    \textbf{Podsetnik Lagranžove teoreme:} Neka je funkcija
+    \textbf{Podsetnik Lagranžove teoreme o srednjoj vrednosti:} Neka je funkcija
     $f : [a,b]\longrightarrow\mathbb{R}$ neprekidna na $[a,b]$
     i difernecijabilna na $(a,b)$. Tada će
     postojati tačka $x_0\in(a,b)$ takva da važi
@@ -282,7 +294,7 @@ $C=G(x) =F_1(x) - F_2(x)$ tj.\ $F_1(x) = F_2(x) + C$.
 
         Jednakost \eqref{eq_1.1.1} skraćeno zapisujemo na sledeći način:
         \begin{equation}\label{eq_1.1.2}
-            \int f(x)dx = F(x) + C, C\in\mathbb{R}
+            \int f(x)dx = F(x) + C,\ C\in\mathbb{R}
         \end{equation}
     \end{definicija}
     Napomena: U jednakosti \eqref{eq_1.1.2} ne vidi se interval $(a, b)$ što
@@ -306,10 +318,9 @@ $C=G(x) =F_1(x) - F_2(x)$ tj.\ $F_1(x) = F_2(x) + C$.
         Naći $\int\frac{1}{x}dx$.
     \end{prim}
     Neka je $f(x) = \frac{1}{x}$.
-    Nije naglašeno koji interval posmatramo zbog čega uzimamo domen
-    funkcije.
-    $D_f= \mathbb{R}\backslash \{0\} =
-        (-\infty, 0)\cup(0, +\infty)$\par
+    Nije naglašeno na kom intervalu rešavamo integral, zbog čega uzimamo domen
+    funkcije
+    $D_f= \mathbb{R}\backslash \{0\} = (-\infty, 0)\cup(0, +\infty)$.\par
     Imamo dva intervala pa posmatramo dva slučaja:
     \begin{enumerate}[leftmargin=2cm, label=\arabic*. slučaj:]
         \item $x \in (0, +\infty)$ $\int \frac{1}{x}dx =
@@ -330,10 +341,12 @@ U sledećem primeru vidimo gde može da nastane problem.
             \cup(0, +\infty)$ važi
         $f'(x) = \frac{1}{x}$.
     \end{prim}
-    \textbf{Pogrešno rešenje:}\par
-    $f(x) = \int \frac{1}{x}dx = \ln|x| + C$\\
-    $f(1) = 0 = \ln(1) + C \implies C = 0$\\
-    $f(-1) = 1 = \ln(1) + C \implies C = 1$\\
+    \textbf{Pogrešno rešenje:}
+    \begin{align*}
+        f(x)  & = \int \frac{1}{x}dx = \ln|x| + C \\
+        f(1)  & = 0 = \ln(1) + C \implies C = 0   \\
+        f(-1) & = 1 = \ln(1) + C \implies C = 1
+    \end{align*}
     Dobijamo da je $C=0=1$ što je kontradikcija.\par
     \textbf{Tačno rešenje:}\par
     Posmatrajmo $f: (-\infty, 0)\cup(0, +\infty)$
@@ -391,21 +404,18 @@ Iz \eqref{stav_1.2.1} i \eqref{stav_1.2.2} zaključujemo:
 Ako krenemo od desne strane jednakosti koju dokazujemo i
 primenimo prethodne jednakosti dobijamo:
 \begin{align*}
-    D & = \lambda_1\int f_1(x) dx + \lambda_2\int f_2(x) dx \\ &=
-    \lambda_1(F_1(x) + C_1) + \lambda_2(F_2(x) + C_2)       \\ &=
-    \lambda_1  F_1(x) + \lambda_2  F_2(x) +
-    \lambda_1  C_1 + \lambda_2  C_2                         \\ &=
-    \lambda_1  F_1(x) + \lambda_2  F_2(x) + C               \\ &=
-    (\lambda_1 F_1 + \lambda_2 F_2)(x) + C                  \\ &=
-    \int (\lambda_1 f_1+ \lambda_2 f_2)(x)dx                \\ &=
-    L
+    \lambda_1\int f_1(x) dx + \lambda_2\int f_2(x) dx & =\lambda_1(F_1(x) + C_1) + \lambda_2(F_2(x) + C_2)                       \\
+                                                      & =\lambda_1  F_1(x) + \lambda_2  F_2(x) + \lambda_1  C_1 + \lambda_2  C_2 \\
+                                                      & =\lambda_1  F_1(x) + \lambda_2  F_2(x) + C                               \\
+                                                      & =(\lambda_1 F_1 + \lambda_2 F_2)(x) + C                                  \\
+                                                      & =\int (\lambda_1 f_1+ \lambda_2 f_2)(x)dx
 \end{align*}
 gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završavamo dokaz.
 \null\hfill $\blacksquare$ \par
 \begin{primbox}
     \begin{prim}
         Naći $\int (\frac{3}{\sqrt{x}} +
-            \cos\frac{x}{3} - 52^x)dx,\ x > 0$.
+            \cos\frac{x}{3} - 5\cdot 2^x)dx,\ x > 0$.
     \end{prim}
     \begin{align*}
         I & = \int\frac{3}{\sqrt{x}} dx + \int \cos\frac{x}{3} dx - 5\int 2^x dx
