@@ -147,8 +147,7 @@ $f'(x) = 2 x$. Iz prošlog primera možemo da zaključimo da je $f(x) = x^2$ jed
 se da li je i jedino. Nije, na primer funkcija $f(x) = x^2 + 1$
 je takođe rešenje.\par
 Pokušajmo da odredimo funkciju $f: \mathbb{R} \longrightarrow \mathbb{R}$ ako je
-poznato da je funkcija $f': \mathbb{R} \longrightarrow \mathbb{R}$
-definisana sa:
+poznato da je:
 $$
     f'(x) = sgn(x)=
     \begin{cases}
@@ -157,7 +156,7 @@ $$
         -1\text{, }x < 0
     \end{cases}
 $$
-Takvo $f$ ne postoji, jer $f'$ ima prekid prve vrste.
+Takvo $f$ ne postoji, jer funkcija $sgn$ ima prekid prve vrste.
 
 \begin{defbox}
     \begin{definicija}
@@ -717,7 +716,7 @@ pokazati proces nalaženja ovih integrala. \textbf{Nije potrebno
 \begin{lemabox}
     \begin{lema}
         \label{lema_1.1.4}
-        $\int \frac{Mx+N}{(x^2+bx+c)^k}dx$, gde su $M,N,b,c\in\mathbb{R}$, $b^2 - 4c < 0$, $k\in\mathbb{N}\backslash{1}$.
+        $\int \frac{Mx+N}{(x^2+bx+c)^k}dx$, gde su $M,N,b,c\in\mathbb{R}$, $b^2 - 4c < 0$, $k\in\mathbb{N}\backslash\{1\}$.
     \end{lema}
     Prvo ćemo početni integral razložiti na dva lakša:
     \begin{align*}
@@ -850,84 +849,57 @@ Oznaku $R(u, v)$ koristimo za predstavljanje
 racionalnih funkcija argumenata $u$ i $v$. Na primer, $R(u, v) = \frac{u+v}{u-v+2}$.
 Integrale oblika $\int R(\sin{x},\cos{x})dx$ rešavamo smenom
 $t = \tg\frac{x}{2}$, definisanom svuda sem u $x\in\{(2l+1)\pi\ |\ l\in\mathbb{Z}\}$.
-$x = 2\arctg t$
-Neka $x \in (-\pi, \pi)$ tj $\frac{x}{2} \in (-\frac{\pi}{2}, \frac{\pi}{2})$ Ove funkcije su uzajamno inverzne na ovom domenu.\\
-Neophodan nam je sledeći deo za izvođenje:
+Formalno, neka je funkcija $f: \mathbb{R}\longrightarrow \mathbb{R}$ definisana sa $f(x)=R(\sin{x},\cos{x})$ i
+neka je funkcija $g_0:\mathbb{R}\longrightarrow(-\pi,\pi)$
+definisana sa $g_0(x)=2\arctg{x}$. Funkcija $g_0$ je bijektivna
+pa postoji inverz $g_0^{-1}: (-\pi,\pi)\longrightarrow\mathbb{R}$ definisan
+sa $g_0^{-1}(x)=\tg{\frac{x}{2}}$. Važi i da su $g_0$ i $g_0^{-1}$ diferencijabilne.
+Potrebno je još da odredimo $(f\circ g_0)(x)$. Važe jednakosti
+$(f\circ g_0)(x)=f(g_0(x))=R(\sin(g_0(x)),\cos(g_0(x)))=R(\sin(2\arctg(x)), \cos(2\arctg(x)))$. Ostaje da redukujemo izraze $\sin(2\arctg(x))$ i $\cos(2\arctg(x))$:
 \begin{align*}
-    \frac{1}{\cos^2 s}
-    = \frac{\cos^2 s + \sin^2 s}{\cos^2 s}
-    = 1 + (\frac{\sin s}{\cos s})^2
-    = 1 + tg^2 s
+    \sin(2\arctg(x)) & =2\sin(arctg(x))\cos(\arctg(x))=2\tg(arctg(x))\cos^2(\arctg(x))                                                                   \\
+                     & =\frac{2x}{\frac{\sin^2(x)+\cos^2(x)}{\cos^2(x)}}=\frac{2x}{\tg^2(\arctg(x))+1} =\frac{2x}{x^2+1}                                 \\
+    \cos(2\arctg(x)) & =\cos^2(\arctg(x))-\sin^2(\arctg(x))=\cos^2(\arctg(x))(1-\tg^2(\arctg(x)))                                                        \\
+                     & =\frac{1-x^2}{\frac{\sin^2(\arctg(x))+\cos^2(\arctg(x))}{\cos^2(\arctg(x))}}=\frac{1-x^2}{\tg^2(\arctg(x))+1}=\frac{1-x^2}{x^2+1}
 \end{align*}
-Izvedimo prvo sin x:
-\begin{align*}
-    \sin{x} = & \sin{(2\text{arctg} t)} = 2\sin{(\text{arctg} t)}\cos{(\text{arctg} t)}
-    = 2\text{tg}(\text{arctg} t)\cos^2(\text{arctg}t)                                   \\
-    =         & 2t\cos^2(\text{arctg}t)
-    = \frac{2t}{1+\text{tg}^2(\text{arctg}t)}
-    = \frac{2t}{1+t^2}
-\end{align*}
-Izvedimo sada cos x:
-\begin{align*}
-    \cos{x} = & \cos{(2\text{arctg} t)}
-    = \cos^2 (\text{arctg} t) - \sin^2 (\text{arctg} t)
-    = 2\cos^2{(\text{arctg} t)} - 1                          \\
-    =         & \frac{2}{1 + \text{tg}^2(\text{arctg}t)} - 1
-    = \frac{1-t^2}{1+t^2}
-\end{align*}
-$\int\text{R}(\sin{x}, \cos{x})\text{dx}
-    = \int\text{R}(\frac{2t}{1+t^2}, \frac{1-t^2}{1+t^2})\frac{2}{1+t^2}\text{dt}$\\
-Smena je bijektivna pa je smemo vratiti.\\
+Odavde dobijamo $(f\circ g_0)(x)=R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})$.\par
+Možemo da odredimo integral $\int((f\circ g_0)g_0')(x)dx=\int R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})\frac{2}{1+x^2}dx=F(x)+C_0,\ C_0\in\mathbb{R}$,
+jer je to integral racionalne funkcije. Primenom \hyperref[teorema_1.3]{teoreme 1.3} dobijamo
+$\int f(x)dx=F(g_0^{-1}(x))+C_0$.\par
+Rešili smo integral na intervalu $(-\pi,\pi)$. Posmatrajmo intervale
+oblika $((2m-1)\pi,(2m+1)\pi),\ m\in\mathbb{Z}$. Funkcija $g_m(x)=2arctg(x)+2m\pi$
+je diferencijabilna i ima inverz $g_m^{-1}(x)=\tg(\frac{x+2m\pi}{2})=\tg(\frac{x}{2})$. Analogno kao za
+$g_0$ dobijamo $(f\circ g_m)(x)=R(\sin(2\arctg(x)+2m\pi),\cos(2\arctg(x)+2m\pi))=R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})$.\par
+Dakle, analogno rešavanju integrala na intervalu $(-\pi,\pi)$ dobijamo  $\int f(x)dx=F(g_m^{-1}(x))+C_m$.\par
+Rešili smo integrale na $\mathbb{R}\backslash\{(2l+1)\pi\ |\ l\in\mathbb{Z}\}$. Zbog neprekidnosti mora da važi da
+je $$(\forall l\in\mathbb{Z})(\lim_{x\to (2l+1)\pi^{-}}F(g_l^{-1}(x))+C_{l}=\lim_{x\to (2l+1)\pi^{+}}F(g_{l+1}^{-1}(x))+C_{l+1})$$
+Nalaženjem veze između konstanti $C_l$ i $C_{l+1}$ rešavamo integral i u tačkama $(2l+1)\pi$, gde je $l$ ceo broj, čime smo rešili integral
+na celom $\mathbb{R}$.\par
+Napomenimo da izvođenje zavisi od konkretne funkcije $f$. Za $f$ koje nije definisano na celom $\mathbb{R}$ ćemo raditi presek $\mathbb{R}$ sa $D_f$ i
+posmatrati drugačije intervale, ali će postupak ostati analogan.
 \begin{primbox}
     \begin{prim}
-        $\int\frac{1}{2\sin{x}-\cos{x}+5}\text{dx}$
+        Odrediti integral $\int\frac{1}{2\sin{x}-\cos{x}+5}\text{dx}$.
     \end{prim}
+    Neka je $f(x)=\frac{1}{2\sin{x}-\cos{x}+5}$. Domen funkcije je $\mathbb{R}$. Primenjujemo prethodnu diskusiju
+    $$(\forall l\in\mathbb{R})\ (f\circ g_l)(x)=R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})= \frac{1}{\frac{4x}{1+x^2}-\frac{1-x^2}{1+x^2}+5}=\frac{1+x^2}{6x^2+4x+4}$$
+    Ima $l$ integrala oblika:
+    \begin{align*}
+        \int ((f\circ g_l)g_l')(x)dx & =\int\frac{1+x^2}{6x^2+4x+4}\frac{2}{1+x^2}dx=\int \frac{dx}{3(x^2+2\frac{1}{3}x+\frac{1}{9}+\frac{5}{9})}=\int\frac{dx}{3(x+\frac{1}{3})^2+\frac{5}{3}} \\
+                                     & =\frac{3}{5}\int\frac{dx}{(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}})^2+1}=\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}})+C_l
+    \end{align*}
+    Dobijamo da je $I_l =\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+C_l$. Ostaje da nađemo leve i desne limese u nedefinisanim tačkama.
+    \begin{align*}
+        \lim_{x\to (2l+1)\pi^{-}}\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+C_l & =\lim_{x\to (2l+1)\pi^{+}}\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+C_{l+1} \\
+        \frac{\pi}{2\sqrt{5}}+C_l                                                                                    & =-\frac{\pi}{2\sqrt{5}}+C_{l+1}                                                                                   \\
+        C_{l+1}=C_l+\frac{\pi}{\sqrt{5}}
+    \end{align*}
+    Tada je $C_l=\frac{l\pi}{\sqrt{5}}+C_0$. Važi da je $(2l-1)\pi<x<(2l+1)\pi$ odakle je
+    $\frac{x-\pi}{2\pi}<l<\frac{x+\pi}{2\pi}$, $l=[\frac{x+\pi}{2\pi}]$.
+    Dobijamo da je rešenje integrala
+    $$\int f(x)dx=\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+[\frac{x+\pi}{2\pi}]\frac{\pi}{\sqrt{5}}+C_0$$
 \end{primbox}
-$D_f = \mathbb{R}$ i tražimo $F: \mathbb{R}\longrightarrow\mathbb{R}$ tkd. $F'(x) = f(x)$ za svako $x \in \mathbb{R}$\\
-Primenom smene dobijamo sledeće, s tim da smo ograničeni tj. $x \in (-\pi, \pi)$\\
-\begin{align*}
-    \int\frac{1}{2\frac{2t}{1+t^2}-\frac{1-t^2}{1+t^2}+5}\frac{2}{1+t^2}\text{dt}
-    = & \int\frac{2}{\frac{4t-1+t^2+5+5t^2}{1+t^2}}\frac{1}{1+t^2}\text{dt}
-    =\int\frac{\text{dt}}{3t^2+2t+2}                                        \\
-    = & \int\frac{\text{dt}}{3((t+\frac{1}{3})^2 + \frac{5}{9})}
-    =\frac{1}{\sqrt{5}}\text{arctg}(\frac{3\text{tg}\frac{x}{2}+1}{\sqrt{5}}) + C
-\end{align*}
-$C \in \mathbb{R}, x\in(-\pi, \pi)$ ovo $F:(-\pi,\pi)\longrightarrow\mathbb{R}$\\
-Razmatrajmo zadatak na sledeći način:\\
-$G(x) = \frac{1}{\sqrt{5}}\text{arctg}\frac{3\text{tg}\frac{x}{2}+10}{\sqrt{5}}$\\
-$D_G = \mathbb{R}\backslash\{(2l+1)\pi | l \in \mathbb{Z}\}$\\
-$G'(x) = f(x)$ za svako $x \in D_G$\\
-Primetimo da je funkcija definisana na svakom intervalu oblika $((2l+1)\pi, (2l+3)\pi)$ $l\in\mathbb{Z}$ samim tim za $x \in ((2l-1)\pi, (2l+1)\pi)$ će važiti:\\
-$\int\frac{1}{2\sin{x}-\cos{x}+5}\text{dx} = \frac{1}{\sqrt{5}}\text{arctg}\frac{3\text{tg}\frac{x}{2}+1}{\sqrt{5}} + C_l$ $C_l\in\mathbb{R}$\\
-$$
-    F(x) =
-    \begin{cases}
-        \dots \                                                                                               \\
-        \frac{1}{\sqrt{5}}\text{arctg}\frac{3\text{tg}\frac{x}{2}+1}{\sqrt{5}} + C_{-1},\ x \in (-3\pi, -\pi) \\
-        \frac{1}{\sqrt{5}}\text{arctg}\frac{3\text{tg}\frac{x}{2}+1}{\sqrt{5}} + C_0,\ x \in (-\pi,\pi)       \\
-        \dots \
-    \end{cases}
-$$\\
-$F(\pi) = ? F(-\pi) = ? ...$ Obzirom da je $f:(a, b)$ neprekidna, sledi da postoji $F:(a, b) \longrightarrow \mathbb{R}$ tkd. $F'(x) = f(x)$ za svako $x \in (a, b)$\\
-Da bi funkcija bila neprekidna u neko x mora zadovoljiti sledeće:\\
-$F(x) = \displaystyle{\lim_{x\to-\pi-}}F(x) = \displaystyle{\lim_{x\to-\pi+}}F(x)$\\
-$\displaystyle{\lim_{x\to\pi-} F(x)} = \frac{\pi}{2\sqrt{5}}+C_0$\\
-$\displaystyle{\lim_{x\to\pi+} F(x)} = \frac{-\pi}{2\sqrt{5}}+C_1$\\
-$C_1 = \frac{\pi}{\sqrt{5}} +C_0$\\
-$F((2l+1)\pi) = \displaystyle{\lim_{x\to(2l+1)\pi+}}\frac{1}{\sqrt{5}}\text{arctg}\frac{3\text{tg}\frac{x}{2}+1}{\sqrt{5}}+C_l = \frac{-\pi}{2\sqrt{5}} + C_{l+1} = \frac{\pi}{2\sqrt{5}}+C_l$\\
-$C_{l+1} = \frac{\pi}{\sqrt{5}} + C_l$\\
-$C_{l+1} = \frac{(l+1)\pi}{\sqrt{5}} + C_0$\\
-$(2l-1)\pi < x < (2l+1)\pi$\\
-$\frac{x-\pi}{2\pi} < l < \frac{x+\pi}{2\pi},\ l \in \mathbb{Z}$\\
-$l = [\frac{x+\pi}{2\pi}]$\\
-$C_l = [\frac{x+\pi}{2\pi}]\frac{\pi}{\sqrt{5}} + C_0$\\
-$$
-    F(x) =
-    \begin{cases}
-        \frac{1}{\sqrt{5}}\text{arctg}\frac{3\text{tg}\frac{x}{2}+1}{\sqrt{5}} + [\frac{x+\pi}{2\pi}]\frac{\pi}{\sqrt{5}} + C_0,\ x \in \mathbb{R}\backslash\{(2l+1)\pi | l \in \mathbb{Z}\} \\
-        \frac{(2l+1)\pi}{2\sqrt{5}}+C_0,\ x = (2l+1)\pi, l\in\mathbb{Z}
-    \end{cases}
-$$
+
 \section{Određeni integrali}
 Motivacija: Neka je $f: [a,b] \longrightarrow [0, +\infty)$ neprekidna funkcija, i neka je $\phi = \{ (x, y) \in \mathbb{R}^2 | a \leq x \leq f(x)\}$\\
 P($\phi$) je povrsina figure $\phi$\\
