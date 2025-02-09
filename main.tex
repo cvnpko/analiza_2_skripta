@@ -135,10 +135,10 @@ $\lim\limits_{h \to 0} \frac{(x_0+h)^2 - (x_0)^2}{h} = $
 $\lim\limits_{h \to 0} 2 x_0 + h = 2 x_0$.
 Dakle, koeficijent pravca funkcije $f$ u tački $x_0$ jeste broj $2 x_0$.
 Na ovaj način imamo određenu novu funkciju
-$\phi : \mathbb{R} \longrightarrow \mathbb{R}$ definisanu
-sa $\phi(x) = 2 x$. Uobičajeno je da funkciju $\phi$ nazivamo
+$\varphi : \mathbb{R} \longrightarrow \mathbb{R}$ definisanu
+sa $\varphi(x) = 2 x$. Uobičajeno je da funkciju $\varphi$ nazivamo
 izvodna funkcija (izvod, prvi izvod) funkcije $f$.
-Funkciju $\phi$ drugačije označavamo sa $f'$.\par
+Funkciju $\varphi$ drugačije označavamo sa $f'$.\par
 Sada razmotrimo obratan problem. Odredimo funkciju $f: \mathbb{R} \longrightarrow \mathbb{R}$,
 ako je poznato da je funkcija
 $f': \mathbb{R} \longrightarrow \mathbb{R}$ definisana sa
@@ -911,8 +911,12 @@ posmatrati drugačije intervale, ali će postupak ostati analogan.
 \end{primbox}
 
 \section{Određeni integrali}
-Motivacija: Neka je $f: [a,b] \longrightarrow [0, +\infty)$ neprekidna funkcija, i neka je $\phi = \{ (x, y) \in \mathbb{R}^2 | a \leq x \leq f(x)\}$\\
-P($\phi$) je povrsina figure $\phi$\\
+Motivacija za uvođenje pojma određenog integrala je računanje površine figura
+ograničenih funkcijama $x=a$, $x=b$, $y=0$ i $f: [a,b]\longrightarrow$.
+$\varphi\in\{ (x,y)\in\mathbb{R}^2 | a\leq x\leq b, 0\leq y\leq f(x)\}$.
+
+Neka je $f: [a,b] \longrightarrow [0, +\infty)$ neprekidna funkcija, i neka je $\varphi = \{ (x, y) \in \mathbb{R}^2 | a \leq x \leq f(x)\}$\\
+P($\varphi$) je povrsina figure $\varphi$\\
 $f: [0, 1] \longrightarrow [0, +\infty)$\\
 $f(x) = x^2$\\
 $n \in \mathbb{N}, x_k = \frac{k}{n}, k \in \{0, ..., n\}$\\
@@ -921,10 +925,10 @@ $P_k = [x_{k-1}, x_k]\times [0, f(x_k)], k=1,...,n$\\
 $S_n$ je suma površine svih pravougaonika $P_k$ pri čemu $k = 1,.., n$\\
 $\displaystyle S_n = \sum_{k=1}^{n} f(x_k)(x_k - x_{k-1}) = \sum_{k=1}^{n} (\frac{k}{n})^2\frac{1}{n} = \frac{1}{n^3}\sum_{k=1}^n k^2 = \frac{1}{n^3}\frac{(2n+1)n(n+1)}{6}$\\
 $n\longrightarrow\infty$ sledi da je $S_n = \frac{1}{3}$\\
-$P(\phi) = \frac{1}{3}$ Kasnije ćemo zapisivati $\displaystyle \int_0^1 x^2\text{dx} = \frac{x^3}{3} \Bigg|^1_{x=0} = \frac{1}{3} - 0$\\
+$P(\varphi) = \frac{1}{3}$ Kasnije ćemo zapisivati $\displaystyle \int_0^1 x^2\text{dx} = \frac{x^3}{3} \Bigg|^1_{x=0} = \frac{1}{3} - 0$\\
 $\displaystyle \int^b_a f(x)\text{dx} = F(b) - F(a)$\\
 $t \in [a, b],\ C(a_1, b_1),\ f: (a_1, b_1) \longrightarrow [0, +\infty)$ i definišemo $A(t) = \{(x, y) \in \mathbb{R}^2 | a\leq x \leq t, 0\leq y \leq f(x)\}$ i neka je P(t) površina figure A(t).\\
-Primetimo da je $P(t)$ funkcija koja slika $[a, b]$ u $[0, +\infty]$ tj. $P(a) = 0$ i $P(b)$ je površina figure $\phi$.\\
+Primetimo da je $P(t)$ funkcija koja slika $[a, b]$ u $[0, +\infty]$ tj. $P(a) = 0$ i $P(b)$ je površina figure $\varphi$.\\
 Dodatno pretpostavimo da $t \in [a, b)$ i da je $h > 0$ takvo da je $t + h \in [a, b)$.\\
 Neka je $\displaystyle M = \max_{t\leq x\leq t+ h} f(x)$ i $m = \min_{t \leq x leq t+h} f(x)$ zbog neprekidnosti funkcije f, postoje $\theta_1 = \theta_1(t, h)$ i $\theta_2 = \theta_2(t, h)$ takvi da je $0\leq \theta_1 \leq 1$ i $0\leq \theta_2 \leq 1$ i $M = f(t + \theta_1h)$ i $m = f(t + \theta_2h)$\\
 $m h \leq P(t + h) - P(t) \leq M h$ tj $f(t + \theta_2h)h \leq P(t+h) - P(t) \leq f(t + \theta_1h)h$\\
@@ -934,36 +938,233 @@ $f(t) \leq P'(t) \leq f(t)$\\
 Dakle, za $t \in [a, b)$ imamo $P'(t) = f(t)$. Drugim rečima $P$ je primitivna funkcija za $f:$ na intervalu $(a, b)$.\\
 Neka je $F: (a, b) \longrightarrow \mathbb{R}$ proizvoljna primitvna funkcija funkcije f. Tada je $P(t) = F(t) + C$ gde je $C \in \mathbb{R}$. Ali kako je $P(a) = 0$. Imamo $C = -F(a)$.\\
 Dakle, $P(b) = \displaystyle \int^b_a f(x) \text{dx} = F(b) - F(a)$.
+\subsection{Definicija određenog integrala}
+Neka je $f:[a,b]\longrightarrow\mathbb{R}$. Želimo da definišemo $\displaystyle\int_{a}^{b}f(x)dx$.\par
+\begin{defbox}
+    \begin{definicija}
+        Neka su $x_0,x_1,\dotsc,x_n\in[a,b]$ tačke takve da važi $a=x_0<x_1<\dotsc<x_n=b$. Tada:
+        \begin{itemize}
+            \item skup intervala $\mathcal{P}=\{[x_0,x_1],\dotsc,[x_{n-1},x_n]\}$ nazivamo \textbf{podela} intervala $[a,b]$;
+            \item tačke $x_0,x_1,\dotsc,x_n$ nazivamo \textbf{podeone tačke} podele $\mathcal{P}$;
+            \item sa $\varDelta x_i=x_i-x_{i-1}$, gde je $i\in\{1,\dotsc n\}$, obeležavamo dužinu intervala $[x_{i-1},x_i]$;
+            \item skup svih podela intervala $[a,b]$ obeležavamo sa $\mathcal{P}[a,b]$;
+            \item funkciju $\lambda: \mathcal{P}[a,b]\longrightarrow \mathbb{R}$ definisanu sa $\lambda(\mathcal{P})=\underset{i \in \{1, \dots, n\}}{\max}\varDelta x_i$ nazivamo \textbf{parametar} podele $\mathcal{P}$;
+            \item za podele $\mathcal{P},\mathcal{P}'\in\mathcal{P}[a,b]$ kažemo da je podela $\mathcal{P}'$ finija od podele $\mathcal{P}$, odnosno da
+                  je podela $\mathcal{P}$ grublja od podele $\mathcal{P}'$ ako je skup podeonih tačaka podele $\mathcal{P}$ podskup skupa
+                  podeonih tačaka podele $\mathcal{P}'$;
+            \item uređenu $n$-torku $\xi=\{\xi_1,\dotsc\xi_n\}$, $\xi_i\in[x_{i-1},x_i]$, $i\in\{1,\dotsc,n\}$ nazivamo \textbf{istaknute tačke} podele $\mathcal{P}$;
+            \item uređen par $(\mathcal{P},\xi)$ nazivamo \textbf{podela sa istaknutim tačkama} intervala $[a,b]$.
+        \end{itemize}
+    \end{definicija}
+\end{defbox}
+
+\begin{defbox}
+    \begin{definicija}
+        Neka je $f:[a,b]\longrightarrow\mathbb{R}$ i $(\mathcal{P},\xi)$ podela sa istaknutim tačkama intervala $[a,b]$. Tada zbir
+        $\sigma(f,\mathcal{P},\xi)=\sum_{i=1}^{n}f(\xi_i)\varDelta x_i$ nazivamo \textbf{integralna suma} funkije $f$ za datu podelu
+        sa istaknutim tačkama $(\mathcal{P},\xi)$ intervala $[a,b]$.
+    \end{definicija}
+\end{defbox}
+\begin{defbox}
+    \label{definicija_2.3}
+    \begin{definicija}
+        Ako za $f: [a,b]\longrightarrow\mathbb{R}$ i $I\in\mathbb{R}$ važi:
+        $$(\forall\varepsilon>0)(\exists\delta>0)(\forall(\mathcal{P},\xi)\big|\mathcal{P}\in\mathcal{P}[a,b])\ \lambda(\mathcal{P})<\delta\implies|\sigma(f,\mathcal{P},\xi)-I|<\varepsilon$$
+        tada kažemo da je $I$ \textbf{Rimanov integral funkcije $f$} na intervalu $[a,b]$ i pišemo:
+        $$I=\lim_{\lambda(\mathcal{P})\rightarrow 0}\sigma(f,\mathcal{P},\xi)=\int_{a}^{b}f(x)dx$$
+        Rimanov integral nazivamo i \textbf{određeni integral}.
+    \end{definicija}
+\end{defbox}
+Ako za funkciju $f:[a,b]\longrightarrow\mathbb{R}$ postoji Rimanov integral, kažemo da je funkcija $f$ \textbf{R-integrabilna} na intervalu $[a,b]$.
+\subsubsection{Uraditi}
+\begin{primbox}
+    \begin{prim}
+        $f(x)=c$
+    \end{prim}
+\end{primbox}
+\begin{primbox}
+    \begin{prim}
+        $f(x)=
+            \begin{cases}
+                1, & x \in \mathbb{Q} \cap [a,b]                        \\
+                0, & x \in (\mathbb{R} \setminus \mathbb{Q}) \cap [a,b]
+            \end{cases}$
+    \end{prim}
+\end{primbox}
+
+\begin{primbox}
+    \begin{prim}
+        $f(x)=
+            \begin{cases}
+                \frac{1}{\sqrt{x}}, & x \in (0,1] \\
+                0,                  & x =0
+            \end{cases}$
+    \end{prim}
+    Negacija definicije Rimanovog integrala za $f:[a,b]\longrightarrow\mathbb{R}$ i $I\in\mathbb{R}$:
+    $$(\exists\varepsilon>0)(\forall\delta>0)(\exists(\mathcal{P},\xi)\big|\mathcal{P}\in\mathcal{P}[a,b])\ \lambda(\mathcal{P})<\delta\land|\sigma(f,\mathcal{P},\xi)-I|\geq\varepsilon$$
+\end{primbox}
+\begin{teoremabox}
+    \begin{teorema}
+        Ako $f: [a,b]\longrightarrow\mathbb{R}$ nije ograničena na $[a,b]$, onda ona nije R-integrabilna.
+    \end{teorema}
+\end{teoremabox}
+\begin{defbox}
+    \begin{definicija}
+        Neka je $f:[a,b]\longrightarrow\mathbb{R}$ ograničena na svom intervalu i neka je $\mathcal{P}$ podela
+        intervala. Za $i\in\{1,\dotsc,n\}$ definišemo $m_i=inf\{f(x)|x\in[x_{i-1},x_i]\}$ i $M_i=sup\{f(x)|x\in[x_{i-1},x_i]\}$.
+        Tada:
+        \begin{itemize}
+            \item zbir $s(f,\mathcal{P})=\sum_{i=1}^{n}m_i\Delta x_i$ nazivamo \textbf{donja Darbuova suma} funkcije $f$ za datu podelu $\mathcal{P}$ intervala $[a,b]$;
+            \item zbir $S(f,\mathcal{P})=\sum_{i=1}^{n}M_i\Delta x_i$ nazivamo \textbf{gornja Darbuova suma} funkcije $f$ za datu podelu $\mathcal{P}$ intervala $[a,b]$.
+        \end{itemize}
+    \end{definicija}
+\end{defbox}
+
+\begin{defbox}
+    \begin{definicija}
+        Za svake dve podele $\mathcal{P}', \mathcal{P}''\in\mathcal{P}[a,b]$ postoji finija
+        podela $\mathcal{P}\in\mathcal{P}[a,b]$. Ako je skup podeonih tačaka podele $\mathcal{P}$
+        unija podeonih tačaka podela $\mathcal{P}'$ i $\mathcal{P}''$, tada se podela $\mathcal{P}$
+        naziva \textbf{superpozicija} podela $\mathcal{P}'$ i $\mathcal{P}''$.
+    \end{definicija}
+\end{defbox}
+
+\begin{stavbox}
+    \begin{stav}
+        \label{Stav_2.1}
+        Dokazati da za $f: [a,b]\longrightarrow\mathbb{R}$ i
+        $\mathcal{P},\mathcal{P'}\in \mathcal{P}[a,b]$, gde je skup podeonih tačaka podele $\mathcal{P}$ podskup
+        skupa podeonih tačaka podele $\mathcal{P}'$, važi
+        $$s(f,P)\leq s(f,P')\leq S(f,P')\leq S(f,P).$$
+    \end{stav}
+    Dovoljno je dokazati slučaj kad je skup podeonih tačaka podele $\mathcal{P}$
+    $\{x_0,\dotsc,x_n\}$, a skup podeonih tačaka podele $\mathcal{P}'$
+    $\{x_0,\dotsc,x_{k-1},x',x_k,\dotsc,x_n\}$. Neka je $\displaystyle s'=\sum_{i=1}^{k-1}m_i\Delta x_i+\sum_{i=k+1}^{n}m_i\Delta x_i$ i neka su
+    $m_k'=inf\{f(x)\big|x\in[x_{k-1},x']\}$ i $m_k''=inf\{f(x)\big|x\in[x',x_k]$\}.
+    Tada je $$s(f,\mathcal{P})=s'+m_k(x_k-x_{k-1})$$
+    i
+    $$s(f,\mathcal{P}')=s'+m_k'(x'-x_{k-1})+x_k''(x_k-x').$$
+    Važi da je $m_k=min(m_k',m_k'')$, odakle dobijamo:
+    \begin{align*}
+        m_k(x_k-x')+m_k(x'-x_{k-1}) & \leq m_k''(x_k-x')+m_k'(x'-x_{k-1})    \\
+        s'+m_k(x_k-x_{k-1})         & \leq s'+m_k''(x_k-x')+m_k'(x'-x_{k-1}) \\
+        s(f,P)                      & \leq s(f,P').
+    \end{align*}
+    Treća nejednakost se slično dokazuje.
+\end{stavbox}
+
+\begin{stavbox}
+    \label{stav_2.2}
+    \begin{stav}
+        Neka su $\mathcal{P}',\mathcal{P}''\in\mathcal{P}[a,b]$. Tada je $s(f,\mathcal{P}')\leq S(f,\mathcal{P}'')$.
+    \end{stav}
+    \textit{Dokaz:} Neka je $\mathcal{P}$ superpozicija podela $\mathcal{P}'$ i $\mathcal{P}''$. Iz
+    \hyperref[Stav_2.1]{prethodnog stava} važi da je
+    $$s(f,P')\leq s(f,P)\leq S(f,P)$$
+    i da je
+    $$s(f,P)\leq S(f,P)\leq S(f,P'')$$
+    odakle dobijamo
+    $$s(f,P')\leq S(f,P'').$$
+\end{stavbox}
+Za $f: [a,b]\longrightarrow\mathbb{R}$ skup $\{s(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}$
+je neprazan i prema \hyperref[stav_2.2]{prethodnom stavu} ograničen odozgo brojem $S(f,\mathcal{P})$ za proizvoljno $\mathcal{P}\in\mathcal{P}[a,b]$,
+pa prema aksiomi o egzistenciji supremuma postoji supremum ovog
+skupa.
+
+\begin{defbox}
+    \begin{definicija}
+        \textbf{Donji Rimanov integral} funkcije $f: [a,b]\longrightarrow\mathbb{R}$ jeste
+        $$\underline{\int_{a}^{b}}f(x)dx=sup\{s(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}.$$
+    \end{definicija}
+\end{defbox}
+Za $f: [a,b]\longrightarrow\mathbb{R}$ skup $\{S(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}$
+je neprazan i prema \hyperref[stav_2.2]{prethodnom stavu} ograničen odozdo brojem $s(f,\mathcal{P})$ za proizvoljno $\mathcal{P}\in\mathcal{P}[a,b]$,
+pa prema teoremi o egzistenciji infimuma postoji infimum ovog
+skupa.
+
+\begin{defbox}
+    \begin{definicija}
+        \textbf{Gornji Rimanov integral} funkcije $f: [a,b]\longrightarrow\mathbb{R}$ jeste
+        $$\overline{\int_{a}^{b}}f(x)dx=inf\{S(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}.$$
+    \end{definicija}
+\end{defbox}
+
+Jasno je da važi $\displaystyle\underline{\int_{a}^{b}}f(x)dx\leq\overline{\int_{a}^{b}}f(x)dx$.
+
+\begin{defbox}
+    \label{definicija_2.8}
+    \begin{definicija}
+        Ako važi da je $\displaystyle\underline{\int_{a}^{b}}f(x)dx=\overline{\int_{a}^{b}}f(x)dx=I$,
+        onda broj $I$ nazivamo \textbf{Rimanov integral} funkcije $f$ na $[a,b]$ i pišemo:
+        $$I=\int_{a}^{b}f(x)dx.$$
+    \end{definicija}
+\end{defbox}
+
+\begin{teoremabox}
+    \begin{teorema}
+        \hyperref[definicija_2.3]{Epsilon-delta definicija Rimanovog integrala} i \hyperref[definicija_2.8]{definicija Rimanovog integrala preko gornjeg i donjeg Rimanovog integrala}
+        su ekvivalentne.
+    \end{teorema}
+\end{teoremabox}
+\begin{stavbox}
+    \label{Stav_2.3}
+    \begin{stav}
+        Neka je $f: [a,b]\longrightarrow\mathbb{R}$ ograničena. Tada je funkcija $f$
+        R-integrabilna na $[a,b]$ ako i samo ako za svako $\varepsilon>0$ postoji
+        $\mathcal{P}\in\mathcal{P}[a,b]$ takvo da je $S(f,\mathcal{P})-s(f,\mathcal{P})<\varepsilon$.
+    \end{stav}
+    \subsubsection{Dokazati}
+\end{stavbox}
+
 \subsection{Integrabilnost nekih klasa funkcija}
 \begin{teoremabox}
     \begin{teorema}
         Neka je $f: [a, b] \longrightarrow \mathbb{R}$ neprekidna funckija na $[a, b]$. Tada je funkcija f Riman integrabilna na $[a, b]$.
     \end{teorema}
-    Bez dokaza! :)
 \end{teoremabox}
+
+\begin{defbox}
+    \textbf{Podsetnik definicije monotonosti funkcije:} Funkcija $f:[a,b]\longrightarrow\mathbb{R}$
+    je monotono rastuća ako važi
+    $$(\forall x_1,x_2\in[a,b])(x_1\leq x_2)\implies (f(x_1)\leq f(x_2)),$$
+    a monotono opadajuća ako važi
+    $$(\forall x_1,x_2\in[a,b])(x_1\leq x_2)\implies (f(x_1)\geq f(x_2)),$$
+\end{defbox}
+
 \begin{teoremabox}
     \begin{teorema}
         Neka je $f: [a, b] \longrightarrow \mathbb{R}$ monotona funkcija na $[a, b]$. Tada je funkcija Riman integrabilna na $[a, b]$.
     \end{teorema}
 \end{teoremabox}
-Šta znači da je funckija $f:[a, b] \longrightarrow \mathbb{R}$ monotona?\\
-Ako za svako $x_1, x_2 \in [a, b]$ iz $x_1 < x_2$ sledi $f(x_1) \leq f(x_2)$ odnosno $f(x_1) \geq f(x_2)$ onda je funkcija monotono rastuća odnosno monotono opadajuća na $[a, b]$.\\
-Bez umanjenja opštosti pretpostavimo da je funkcija monotono rastuća na $[a, b]$. Primetimo najpre da je funkcija ograničena na $[a,b]$. Zaista za svako $x \in [a, b]$ važi $f(a) \leq f(x) \leq f(b)$.\\
-Pretpostavimo da funkcija nije const.\\
-Neka je $\varepsilon > 0$ proizvoljno i neka je $P \in \text{P}[a, b]$??? $P =\{[x_0, x_1], ..., [x_{n-1}, x_n]\}$ takav da je parametar podele $\lambda(P) < \frac{\varepsilon}{f(b) - f(a)}$. Tada je: \\
-$S(f, P) - s(f, P) = \displaystyle \sum^n_{i = 1}\sup_{x\in[x_{i-1}, x_i]}f(x)(x_i - x_{i-1}) - \sum^n_{i = 1}\inf_{x\in[x_{i-1}, x_i]}f(x)(x_i - x_{i-1}) = \sum_{i=1}^n(f(x_i)-f(x_{i-1})(x_i - x_{i-1}) < \sum^n_{i=1}(f(x_i) - f(x_{i-1}))\frac{\varepsilon}{f(b) - f(a)} = \frac{\varepsilon}{f(b) - f(a)}\sum^n_{i=1}(f(x_i) - f(x_{i-1})) = \frac{\varepsilon}{f(b) - f(a)} (f(b) - f(a)) = \varepsilon$
+Bez umanjenja opštosti pretpostavimo da je funkcija monotono rastuća na $[a, b]$.
+Primetimo najpre da je funkcija ograničena na $[a,b]$. Zaista, za svako $x \in [a, b]$ važi $f(a) \leq f(x) \leq f(b)$.
+Pretpostavimo da funkcija nije konstantna, za konstantne funkcije već znamo da su R-integrabilne.
+Neka je $\varepsilon > 0$ proizvoljno i neka je podela $\mathcal{P} \in \mathcal{P}[a, b]$ takva da je parametar podele
+$\lambda(\mathcal{P}) < \frac{\varepsilon}{f(b) - f(a)}$. Tada je
+\begin{align*}
+    S(f, P) - s(f, P) & = \sum^n_{i = 1}\sup_{x\in[x_{i-1}, x_i]}f(x)(x_i - x_{i-1}) - \sum^n_{i = 1}\inf_{x\in[x_{i-1}, x_i]}f(x)(x_i - x_{i-1}) \\
+                      & = \sum_{i=1}^n(f(x_i)-f(x_{i-1}))(x_i - x_{i-1}) < \sum^n_{i=1}(f(x_i) - f(x_{i-1}))\frac{\varepsilon}{f(b) - f(a)}       \\
+                      & = \frac{\varepsilon}{f(b) - f(a)}\sum^n_{i=1}(f(x_i) - f(x_{i-1})) = \frac{\varepsilon}{f(b) - f(a)} (f(b) - f(a))        \\
+                      & = \varepsilon.
+\end{align*}
+Dakle, važi $S(f, P) - s(f, P)<\varepsilon$ za proizvoljno $\varepsilon$, pa po \hyperref[Stav_2.3]{stavu 2.3} važi da je $f$
+R-integrabilna na $[a,b]$.
 \begin{teoremabox}
     \begin{teorema}
-        Neka je $f:[a, b] \longrightarrow \mathbb{R}$ ograničena funkcija na $[a, b]$ takva da je skup tačaka u kojima nije neprekidna konačan. Tada je funkcija f Riman integrabilna na $[a, b]$. Bez dokaza :). Kolege, to bi trebalo vec da znate, kako ste ovde zavrsili bez toga. Sramota!
+        Neka je $f:[a, b] \longrightarrow \mathbb{R}$ ograničena funkcija na $[a, b]$ takva da je skup tačaka u kojima nije neprekidna konačan. Tada je funkcija f Riman integrabilna na $[a, b]$.
     \end{teorema}
 \end{teoremabox}
 \begin{teoremabox}
     \begin{teorema}
-        Neka su $f, g: [a, b] \longrightarrow \mathbb{R}$ integrabilne funkcije na $[a, b]$ koje se razlikuju samo u konačno mnogo tačaka. Tada je:\\
-        $\displaystyle \int_a^b f(x)\text{d}x - \int_a^b g(x)\text{d}x$. Bez dokaza.
+        Neka su $f, g: [a, b] \longrightarrow \mathbb{R}$ R-integrabilne funkcije na $[a, b]$ koje se razlikuju samo u konačno mnogo tačaka. Tada je:
+        $$\displaystyle \int_a^b f(x)\text{d}x = \int_a^b g(x)\text{d}x.$$
     \end{teorema}
 \end{teoremabox}
-$R[a, b] = \{f:[a, b] \longrightarrow \mathbb{R} | f \text{je Riman integrabilna na } [a, b]\}$
+\begin{defbox}
+    \begin{definicija}
+        Skup svih Riman integrabilnih funkcija na intervalu $[a,b]$ označavamo sa $R[a, b]$.
+    \end{definicija}
+\end{defbox}
 \subsection{Svojstva određenog integrala}
 \begin{stavbox}
     \begin{stav}
@@ -1043,21 +1244,37 @@ Dakle $\exists\mu\in[m, M]$ takvo da je $\displaystyle \mu=\frac{1}{b-a}\int^b_a
 \end{stavbox}
 Kako je funkcija f neprekidna na $[a, b]$ sledi da je f ograničena na $[a, b]$ i važi $\displaystyle \inf_{x\in[a,b]} f(x) = \min_{x \in [a, b] f(x)}$ i $\displaystyle \sup_{x\in[a,b]} f(x) = \max_{x \in [a, b] f(x)}$. Neka su $\displaystyle m = \min_{x\in[a,b]} f(x)$ i  $\displaystyle M = \max_{x\in[a,b]} f(x)$.\\
 Na osnovu prethodnog stava sledi da postoji $\mu \in [m, M]$ takvo da je $\displaystyle \int^b_a f(x) \text{dx} = \mu (b-a)$. Kako je funkcija f neprekidna na $[a, b]$ sledi da je $f([a,b]) = [m, M]$. Otuda za postojeće $\mu \in [m, M]$ postoji $c \in [a, b]$ takvo da je $f(c) = \mu$.
+
 \subsection{Veza određenog integrala i izvoda. Njutn-Lajbnicova formula}
-Neka je $f \in R[a, b]$. Ima smisla razmatrati funkciju $\varphi:[a, b] \longrightarrow \mathbb{R}$ definisanu sa $\varphi (x) = \displaystyle \int^x_a f(t)\text{dt}$.\\
-Funkciju $\varphi$ nazivamo integral sa promenljivom gornjom granicom.
+\begin{defbox}
+    \begin{definicija}
+        Neka je $f \in R[a, b]$. Ima smisla razmatrati funkciju $\varphi:[a, b] \longrightarrow \mathbb{R}$ definisanu sa $\varphi (x) = \displaystyle \int^x_a f(t)\text{dt}$. Tada funkciju
+        $\varphi$ nazivamo integral sa promenljivom gornjom granicom.
+    \end{definicija}
+\end{defbox}
+
 \begin{teoremabox}
     \begin{teorema}
-        Funkcija $\varphi$ je neprekidna na $[a, b]$
+        Funkcija $\varphi$ je neprekidna na $[a, b]$.
     \end{teorema}
 \end{teoremabox}
-Neka je $x_0 \in [a ,b]$ proizvoljno. Dokažimo da je funkcija $\varphi$ neprekidna u $x_0$. Neka je $M = \displaystyle \sup_{x\in[a,b]} | f(x) |$ i neka je $\varepsilon > 0$ proizvoljno. Tada za $x\in[a,b]$ važi:\\
-$\displaystyle |\varphi(x) - \varphi(x_0)| = \bigg|\int^x_a f(t)\text{dt} - \int^{x_0}_a f(t)\text{dt}\bigg| = \bigg|\int^x_{x_0}f(t)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f(t)|\text{dt}\bigg| \leq M|x - x_0|$\\
-Otuda ako je $|x-x_0| < \frac{\varepsilon}{M} = \delta$ sledi da je $|\varphi(x) - \varphi(x_0)| < \frac{M\varepsilon}{M} = \varepsilon$, pa na osnovu $\varepsilon - \delta$ definicije neprekidnosti funkcije sledi da je neprekidna u $x_0$.\\
-$\displaystyle (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x\in [a, b])(|x-x_0| < \delta \longrightarrow |\varphi(x) - \varphi(x_0)| < \varepsilon)$
+\textit{Dokaz:} Neka je $x_0 \in [a ,b]$ proizvoljno.
+Dokažimo da je funkcija $\varphi$ neprekidna u $x_0$.
+Neka je $M = \displaystyle \sup_{x\in[a,b]} | f(x) |$ i neka je $\varepsilon > 0$
+proizvoljno. Tada za $x\in[a,b]$ važi:
+\begin{equation*}
+    \displaystyle |\varphi(x) - \varphi(x_0)| = \bigg|\int^x_a f(t)\text{dt} - \int^{x_0}_a f(t)\text{dt}\bigg| = \bigg|\int^x_{x_0}f(t)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f(t)|\text{dt}\bigg| \leq M|x - x_0|
+\end{equation*}
+Neka je $\delta=\frac{\varepsilon}{M}$. Tada na osnovu $\varepsilon - \delta$ definicije važi:
+\begin{equation*}
+    \displaystyle (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x\in [a, b])(|x-x_0| < \delta \longrightarrow |\varphi(x) - \varphi(x_0)| < \varepsilon)
+\end{equation*}
+čime smo dokazali da je $\varphi$ neprekidna u proizvoljnoj tački, zbog čega je neprekidna i na celom intervalu.
 \begin{teoremabox}
     \begin{teorema}
-        Ako je funkcija f neprekidna na $[a, b]$ onda je funkcija $\varphi$ neprekidno diferencijabilna na $[a, b]$ i $\forall x \in [a, b]$ važi $\varphi'(x) = f(x)$ preciznije $\forall x \in [a, b]$ važi $\varphi'(x) = f(x),\quad \varphi_+'(a) = f(a)\quad$ i $\quad \varphi'_-(b) = f(b)$.
+        Ako je funkcija $f$ neprekidna na $[a, b]$ onda je funkcija $\varphi$
+        diferencijabilna (i neprekidna) na $[a, b]$ i za svako $x \in (a, b)$ važi
+        $\varphi'(x) = f(x)$ i važi $\varphi_+'(a) = f(a)$ i $\varphi'_-(b) = f(b)$.
     \end{teorema}
 \end{teoremabox}
 Neka je $x \in [a, b]$ proizvoljno i $h \in \mathbb{R}$ takvo da je $x+h\in[a,b]$. Tada  je:\\
@@ -1088,60 +1305,48 @@ $f(x) = \begin{cases}
         (Njutn-Lajbnicova formula) Neka je $f:[a, b]\longrightarrow \mathbb{R}$ neprekidna funkcija na $[a,b]$ i neka je $F:[a, b]\longrightarrow\mathbb{R}$ primitivna funkcija funkcije f na $[a,b]$. Pri čemu važi $F'_+ (a) = f(a)\,\,\,F'_-(b) = f(b)$. Tada je: $\displaystyle \int^b_a f(x)\text{dx} = F(b) - F(a)$.
     \end{teorema}
 \end{teoremabox}
-Neka je $\Phi: [a, b] \longrightarrow \mathbb{R}$ definisana sa $\Phi(x) = \displaystyle\int^x_a f(t)\text{dt}$. Na osnovu prethodnih teorema znamo da za svako $x\in [a, b]$ važi $\Phi'(x) = f(x)$ tj $\Phi$ je primitivna funkcija funkcije f. Stoga postoji $c \in \mathbb{R}$ takvo da za svako $x \in [a, b]$ važi:\\
-$\Phi(x) = F(x) + c$. Kako je $\Phi(a) = 0\quad \Phi(a) = F(a) +c$\\
-$\Phi(b) = \displaystyle\int^b_a f(t)\text{dt}$ i $\Phi(b) = F(b) + c$ Sledi da je:\\
-$\displaystyle\int^b_a f(t)\text{dt} = \Phi(b) = F(b) + c = F(b) + \Phi(a) - F(a) = F(b) - F(a)$
+Neka je $\varphi: [a, b] \longrightarrow \mathbb{R}$ definisana sa $\varphi(x) = \displaystyle\int^x_a f(t)\text{dt}$. Na osnovu prethodnih teorema znamo da za svako $x\in [a, b]$ važi $\varphi'(x) = f(x)$ tj $\varphi$ je primitivna funkcija funkcije f. Stoga postoji $c \in \mathbb{R}$ takvo da za svako $x \in [a, b]$ važi:\\
+$\varphi(x) = F(x) + c$. Kako je $\varphi(a) = 0\quad \varphi(a) = F(a) +c$\\
+$\varphi(b) = \displaystyle\int^b_a f(t)\text{dt}$ i $\varphi(b) = F(b) + c$ Sledi da je:\\
+$\displaystyle\int^b_a f(t)\text{dt} = \varphi(b) = F(b) + c = F(b) + \varphi(a) - F(a) = F(b) - F(a)$
 \subsection{Smena promenljive i parcijalna integracija u određenom integralu}
 \begin{teoremabox}
     \begin{teorema}
-        (O smeni promenljive) Neka je $f:[a, b]\longrightarrow \mathbb{R}$ neprekidna funkcija na $[a,b]$ i neka je $\varphi: [\alpha, \beta] \longrightarrow [a, b]$ neprekidno diferencijabilna funkcija na $[\alpha, \beta]$ tada je:\\
-        $\displaystyle \int^{\varphi(\beta)}_{\varphi(\alpha)} f(x)\text{dx} = \int^\beta_\alpha (f\circ\varphi\varphi')(t)\text{dt}$.
+        (Teorema o smeni promenljive) Neka je $f:[a, b]\longrightarrow \mathbb{R}$ neprekidna funkcija na $[a,b]$ i neka je $\varphi: [\alpha, \beta] \longrightarrow [a, b]$ neprekidna funkcija na $[\alpha, \beta]$. Tada je:
+        $$\displaystyle \int^{\varphi(\beta)}_{\varphi(\alpha)} f(x)\text{dx} = \int^\beta_\alpha ((f\circ\varphi)\varphi')(t)\text{dt}$$
     \end{teorema}
 \end{teoremabox}
-Neka je $F:[a,b]\longrightarrow \mathbb{R}$ primitivna funkcija funkcije $f:[a,b]\longrightarrow\mathbb{R}$. Tada je:\\
-$\displaystyle\int^{\varphi(\beta)}_{\varphi(\alpha)}f(x)\text{dx} = F(\varphi(\beta))-F(\varphi(\alpha))$ (1)\\
-S druge strane za funkciju $\psi:[\alpha,\beta]\longrightarrow\mathbb{R}$ definisanu sa $\phi(t) = F(\varphi(t))$ važi: \\
-$\psi'(t) = F'(\varphi(t))\varphi'(t) = f(\varphi(t))\varphi'(t)\quad\forall t\in[\alpha, \beta]$. Dakle funkcija $\psi$ je primitivna funkcija funkcije $(f\circ\varphi)\varphi'$ na $[\alpha,\beta]$. Pa važi:\\
-$\displaystyle\int^\beta_\alpha ((f\circ\varphi)\varphi')(t)\text{dt} = \psi(\beta) - \psi(\alpha) = F(\varphi(\beta)) - F(\varphi(\alpha))$ (2)\\
-Iz (1) i (2) dobijamo $\displaystyle\int^{\varphi(\beta)}_{\varphi(\alpha)} f(x)\text{dx} = \int^\beta_\alpha ((f\circ\varphi)\varphi')(t)\text{dt}$
+\textit{Dokaz:} Neka je $F:[a,b]\longrightarrow \mathbb{R}$ primitivna funkcija funkcije $f:[a,b]\longrightarrow\mathbb{R}$. Tada je po Njutn-Lajbnicovoj formuli:
+\begin{equation}
+    \displaystyle\int^{\varphi(\beta)}_{\varphi(\alpha)}f(x)\text{dx} = F(\varphi(\beta))-F(\varphi(\alpha))
+    \label{Teorema2.8:ek1}
+\end{equation}
+S druge strane za funkciju $\psi:[\alpha,\beta]\longrightarrow\mathbb{R}$ definisanu sa $\psi(t) = F(\varphi(t))$ važi:
+\begin{equation*}
+    \psi'(t) = F'(\varphi(t))\varphi'(t) = ((f\circ\varphi)\varphi')(t)
+\end{equation*}
+Dakle, funkcija $\psi$ je primitivna funkcija funkcije $(f\circ\varphi)\varphi'$ na intervalu $[\alpha,\beta]$, odakle važi:
+\begin{equation}
+    \displaystyle\int^\beta_\alpha ((f\circ\varphi)\varphi')(t)\text{dt} = \psi(\beta) - \psi(\alpha) = F(\varphi(\beta)) - F(\varphi(\alpha))
+    \label{Teorema2.8:ek2}
+\end{equation}
+Iz \eqref{Teorema2.8:ek1} i \eqref{Teorema2.8:ek2} dobijamo $\displaystyle\int^{\varphi(\beta)}_{\varphi(\alpha)} f(x)\text{dx} = \int^\beta_\alpha ((f\circ\varphi)\varphi')(t)\text{dt}$ što je kraj dokaza.
 \begin{teoremabox}
     \begin{teorema}
-        (O parcijalnoj integraciji) Neka su $u, v: [a, b] \longrightarrow\mathbb{R}$ neprekidno diferencijabilne funkcije na $[a,b]$. Tada je:\\
-        $\displaystyle\int^b_a(uv')(x)\text{dx} = (uv)(b) - (uv)(a) - \int^b_a(u'v)(x)\text{dx}$
+        (Teorema o parcijalnoj integraciji) Neka su $u, v: [a, b] \longrightarrow\mathbb{R}$ neprekidno diferencijabilne funkcije na $[a,b]$. Tada je:
+        $$\displaystyle\int^b_a(uv')(x)\text{dx} = (uv)(b) - (uv)(a) - \int^b_a(u'v)(x)\text{dx}$$
     \end{teorema}
 \end{teoremabox}
-Primetimo da je:\\
-1) $\displaystyle\int^b_a (uv)'(x)\text{dx} = (uv)(b) - (uv)(a)$\\
-I da je:\\
-2) $\displaystyle\int^b_a (uv)'(x)\text{dx} = \int^b_a(u'v + uv')(x)\text{dx} = \int^b_a(u'v)(x)\text{dx} + \int^b_a(uv')(x)\text{dx}$
-\subsection{Primene određenog integrala}
-\subsubsection{Izdračunavanje površine u ravni}
-Neka je $f:[a, b] \longrightarrow[0,+\infty)$ neprekidna funkcija na $[a,b]$ i neka je:\\
-$\Phi = \{(x,y)\in\mathbb{R}^2\quad|\quad a\leq x\leq b,\quad 0\leq y\leq f(x)\}$\\
-Tada je površina $P(\Phi)$ figure $\Phi$ jednaka $\displaystyle\int^b_a f(x)\text{dx}$.\\
-Neka su $f,g:[a,b]\longrightarrow\mathbb{R}$ neprekidne funkcije na $[a,b]$ takve da za svako $x\in[a,b]$ važi $f(x) \geq g(x)$. Neka je $\Phi = \{(x,y)\in\mathbb{R}^2\quad|\quad a\leq x\leq b,\quad g(x)\leq y\leq f(x)\}$\\
-Tada je površina $P(\Phi)$ figure $\Phi$ jednaka $\displaystyle\int^b_a (f-g)(x)\text{dx}$.\\
-Neka je $\displaystyle m = \min_{x\in[a,b]} g(x),\ F(x) = f(x) - m,\ G(x) = g(x) - m$ i\\
-$\Phi_1 = \{(x,y)\in\mathbb{R}^2\quad|\quad a\leq x\leq b,\quad G(x)\leq y\leq F(x)\}$\\
-Jasno je da je $P(\Phi) = P(\Phi_1) = \displaystyle\int^b_aF(x)\text{dx} - \int^b_aG(x)\text{dx} =\\= \int^b_a (f(x)-m)\text{dx}-\int^b_a(g(x)-m)\text{dx} = \int^b_a(f(x)-g(x))\text{dx}$\\
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\textit{Dokaz:} Po Njutn-Lajbnicovoj formuli važi:
+\begin{equation}
+    \displaystyle\int^b_a (uv)'(x)\text{dx} = (uv)(b) - (uv)(a)
+    \label{Teorema2.9:ek3}
+\end{equation}
+Zbog linearnosti određenih integrala važi:
+\begin{equation}
+    \displaystyle\int^b_a (uv)'(x)\text{dx} = \int^b_a(u'v + uv')(x)\text{dx} = \int^b_a(u'v)(x)\text{dx} + \int^b_a(uv')(x)\text{dx}
+    \label{Teorema2.9:ek4}
+\end{equation}
+Iz jednakosti \eqref{Teorema2.9:ek3} i \eqref{Teorema2.9:ek4} važi:
+$$\int^b_a(uv')(x)\text{dx}=\displaystyle\int^b_a (uv)'(x)\text{dx} - \int^b_a(u'v)(x)\text{dx}= (uv)(b) - (uv)(a) - \int^b_a(u'v)(x)\text{dx}$$
 \end{document}
