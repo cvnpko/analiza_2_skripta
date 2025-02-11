@@ -87,14 +87,14 @@
 
     \newcommand{\HRule}{\rule{\linewidth}{0.4mm}}
     \center
-    \textsc{\LARGE Matematički fakultet}\\[5cm]
+    \textsc{\LARGE Matematički fakultet}\\[7cm]
 
     \HRule\\[0.4cm]
     {\LARGE\bfseries Odgovori na teorijska ispitna pitanja iz analize 2}
     \\[0.2cm]
     \HRule\\[2cm]
 
-    \vspace{17\baselineskip}
+    \vspace{20\baselineskip}
     \begin{minipage}[t]{0.4\textwidth}
         \begin{flushleft}
             \large
@@ -195,11 +195,19 @@ O broju primitivnih funkcija nam govori sledeći stav.
 \textit{Dokaz}: $G$ je diferencijabilna na $(a, b)$ jer je zbir dve
 diferencijabilne funkcije i za svako $x$ iz intervala $(a, b)$ važi $G'(x) = F'(x) + 0 = f(x)$
 što smo i hteli da dokažemo.
-\null\hfill $\blacksquare$ \par
+\null\hfill $\blacksquare$\par
 Ovim smo dokazali da ako je $F_1(x)$ primitivna funkcija, onda
 je i $F_1(x)+C$ primitivna funkcija. Sledeće pitanje je da li
 može da postoji neka funkcija $F_2(x)$ koja nije ovog oblika.
 O tome nam govori sledeća teorema.
+
+\begin{teoremabox}
+    \textbf{Podsetnik Lagranžove teoreme o srednjoj vrednosti:} Neka je funkcija
+    $f : [a,b]\longrightarrow\mathbb{R}$ neprekidna na $[a,b]$
+    i difernecijabilna na $(a,b)$. Tada će
+    postojati tačka $x_0\in(a,b)$ takva da važi
+    $\frac{f(b)-f(a)}{b-a}=f'(x_0)$.
+\end{teoremabox}
 \begin{teoremabox}
     \begin{teorema}
         Neka je $f: (a, b) \longrightarrow \mathbb{R}$ i
@@ -224,31 +232,23 @@ $x_1 < x_2$. Dokažimo da je $G(x_1) = G(x_2)$.
 \end{enumerate}
 Iz $(1)$ i $(2)$, a na osnovu Lagranžove teoreme o srednjoj vrednosti,
 sledi da postoji $x_0 \in (x_1, x_2)$ takvo da:
-$$G(x_1) - G(x_2) = G'(x_0)(x_2-x_1) = 0  (x_2-x_1) = 0$$
+$$G(x_1) - G(x_2) = G'(x_0)(x_2-x_1) = 0  (x_2-x_1) = 0.$$
 Dakle, $G(x_1) = G(x_2)$. Kako su $x_1$ i $x_2$
 proizvoljni, sledi da je G konstantna funkcija. Važi
 da postoji $C\in\mathbb{R}$ takvo da za svako $x\in(a, b)$ važi
 jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
-\null\hfill $\blacksquare$ \par
-
-\begin{teoremabox}
-    \textbf{Podsetnik Lagranžove teoreme o srednjoj vrednosti:} Neka je funkcija
-    $f : [a,b]\longrightarrow\mathbb{R}$ neprekidna na $[a,b]$
-    i difernecijabilna na $(a,b)$. Tada će
-    postojati tačka $x_0\in(a,b)$ takva da važi
-    $\frac{f(b)-f(a)}{b-a}=f'(x_0)$.
-\end{teoremabox}
-
+\null\hfill $\blacksquare$\par
 
 \begin{primbox}
     \begin{prim}
         Neka je $f: \mathbb{R} \longrightarrow \mathbb{R}$
         definisana sa: $f(x) = 2x$. Odrediti:
         \begin{enumerate}[label=\alph*)]
-            \item Sve primitivne funkcije za funkciju $f$.\par
+            \item Sve primitivne funkcije za funkciju $f$.
                   To su funkcije $x^2 + C,\  C \in \mathbb{R}$.
             \item Funkciju $g: \mathbb{R} \longrightarrow \mathbb{R}$
-                  koja je primitivna za funkciju $f$ i za koju važi
+                  koja je primitivna za funkciju $f$ i za koju važi.
+
                   $g(0) = \sqrt{2}$.\par
                   $g(x) = x^2 + C,\ C \in \mathbb{R}$\par
                   $g(0) = 0^2 + C = \sqrt{2} \longrightarrow C = \sqrt{2}$\par
@@ -256,7 +256,6 @@ jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
         \end{enumerate}
     \end{prim}
 \end{primbox}
-
 
 \begin{primbox}
     \begin{prim}
@@ -277,8 +276,8 @@ jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
         Neodređeni integral funkcije $f$ na intervalu $(a, b)$ je
         skup svih primitivnih funkcija za funkciju $f$ na intervalu
         $(a, b)$. Neodređeni integral funkcije $f$ obeležavamo sa
-        $\int f(x)dx$.\par
-        $$\int f(x) dx = \{F \mid F: (a, b) \longrightarrow \mathbb{R},\
+        $\int f(x)\text{dx}$.\par
+        $$\int f(x) \text{dx} = \{F \mid F: (a, b) \longrightarrow \mathbb{R},\
             (\forall x\in(a,b))(F'(x) = f(x))\}$$\par
         Neka je $F: (a,b) \longrightarrow \mathbb{R}$ proizvoljna
         primitivna funkcija za funkciju $f$ na $(a,b)$. Tada je: \par
@@ -286,7 +285,7 @@ jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
         \setcounter{equation}{0}
 
         \begin{equation} \label{eq_1.1.1}
-            \int f(x) \, dx =\{G \mid G: (a, b)
+            \int f(x) \, \text{dx} =\{G \mid G: (a, b)
             \longrightarrow \mathbb{R}, \\
             (\exists C \in \mathbb{R}) (\forall x \in (a, b))
             (G(x) = F(x) + C)\}
@@ -294,7 +293,7 @@ jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
 
         Jednakost \eqref{eq_1.1.1} skraćeno zapisujemo na sledeći način:
         \begin{equation}\label{eq_1.1.2}
-            \int f(x)dx = F(x) + C,\ C\in\mathbb{R}
+            \int f(x)\text{dx} = F(x) + C,\ C\in\mathbb{R}
         \end{equation}
     \end{definicija}
     Napomena: U jednakosti \eqref{eq_1.1.2} ne vidi se interval $(a, b)$ što
@@ -304,18 +303,17 @@ jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
 \begin{primbox}
     \begin{prim}
         Neka je $n \in \mathbb{N}$ i neka su $a_n, a_{n-1},
-            ..., a_1, a_0 \in \mathbb{R}$. Naći integral:
-        $\int (a_n  x^n + ... + a_0)dx$.
+            \dotsc, a_1, a_0 \in \mathbb{R}$. Naći integral:
+        $\int (a_n  x^n + \dotsc + a_0)\text{dx}$.
     \end{prim}
     Nagađanjem možemo da dođemo do rešenja:
-    $\int (a_n  x^n + ... + a_0)dx=\frac{a_n}{n+1}x^{n+1} + ... +
+    $\int (a_n  x^n + \dotsc + a_0)\text{dx}=\frac{a_n}{n+1}x^{n+1} + \dotsc +
         a_0x + C,\ C\in\mathbb{R}$.
 \end{primbox}
 
-
 \begin{primbox}
     \begin{prim}
-        Naći $\int\frac{1}{x}dx$.
+        Naći $\int\frac{1}{x}\text{dx}$.
     \end{prim}
     Neka je $f(x) = \frac{1}{x}$.
     Nije naglašeno na kom intervalu rešavamo integral, zbog čega uzimamo domen
@@ -323,12 +321,13 @@ jednakost $C=G(x) =F_1(x) - F_2(x)$, odakle je $F_1(x) = F_2(x) + C$.
     $D_f= \mathbb{R}\backslash \{0\} = (-\infty, 0)\cup(0, +\infty)$.\par
     Imamo dva intervala pa posmatramo dva slučaja:
     \begin{enumerate}[leftmargin=2cm, label=\arabic*. slučaj:]
-        \item $x \in (0, +\infty)$ $\int \frac{1}{x}dx =
-                  \ln x + C_1=\ln|x| + C_1,\ C_1\in\mathbb{R}$
-        \item $x \in (-\infty, 0)$ $\int \frac{1}{x}dx =
-                  \ln(-x) + C_2=\ln|x| + C_2,\ C_2\in\mathbb{R}$
+        \item $x \in (0, +\infty)$ $\int \frac{1}{x}\text{dx} =
+                  \ln x + C_1=\ln|x| + C_1,\ C_1\in\mathbb{R}$;
+        \item $x \in (-\infty, 0)$ $\int \frac{1}{x}\text{dx} =
+                  \ln(-x) + C_2=\ln|x| + C_2,\ C_2\in\mathbb{R}$.
     \end{enumerate}
 \end{primbox}
+
 Bitno je naglasiti da se konstante $C_1$ i $C_2$ odnose na intervale. One
 u opštem slučaju ne moraju da budu jednake.
 U sledećem primeru vidimo gde može da nastane problem.
@@ -343,8 +342,8 @@ U sledećem primeru vidimo gde može da nastane problem.
     \end{prim}
     \textbf{Pogrešno rešenje:}
     \begin{align*}
-        f(x)  & = \int \frac{1}{x}dx = \ln|x| + C \\
-        f(1)  & = 0 = \ln(1) + C \implies C = 0   \\
+        f(x)  & = \int \frac{1}{x}\text{dx} = \ln|x| + C \\
+        f(1)  & = 0 = \ln(1) + C \implies C = 0          \\
         f(-1) & = 1 = \ln(1) + C \implies C = 1
     \end{align*}
     Dobijamo da je $C=0=1$ što je kontradikcija.\par
@@ -376,8 +375,8 @@ U sledećem primeru vidimo gde može da nastane problem.
         su $\lambda_1 , \lambda_2 \in \mathbb{R}$. Tada funkcija
         $\lambda_1 f_1 + \lambda_2 f_2 : (a, b) \longrightarrow
             \mathbb{R}$ ima primitivnu funkciju na $(a, b)$ i važi:\par
-        $$\int (\lambda_1 f_1 + \lambda_2 f_2)(x)dx = \lambda_1\int
-            f_1(x) dx + \lambda_2\int f_2(x) dx$$
+        $$\int (\lambda_1 f_1 + \lambda_2 f_2)(x)\text{dx} = \lambda_1\int
+            f_1(x) \text{dx} + \lambda_2\int f_2(x) \text{dx}$$
     \end{stav}
 \end{stavbox}
 \setcounter{equation}{0}
@@ -404,21 +403,21 @@ Iz \eqref{stav_1.2.1} i \eqref{stav_1.2.2} zaključujemo:
 Ako krenemo od desne strane jednakosti koju dokazujemo i
 primenimo prethodne jednakosti dobijamo:
 \begin{align*}
-    \lambda_1\int f_1(x) dx + \lambda_2\int f_2(x) dx & =\lambda_1(F_1(x) + C_1) + \lambda_2(F_2(x) + C_2)                       \\
-                                                      & =\lambda_1  F_1(x) + \lambda_2  F_2(x) + \lambda_1  C_1 + \lambda_2  C_2 \\
-                                                      & =\lambda_1  F_1(x) + \lambda_2  F_2(x) + C                               \\
-                                                      & =(\lambda_1 F_1 + \lambda_2 F_2)(x) + C                                  \\
-                                                      & =\int (\lambda_1 f_1+ \lambda_2 f_2)(x)dx
+    \lambda_1\int f_1(x) \text{dx} + \lambda_2\int f_2(x) \text{dx} & =\lambda_1(F_1(x) + C_1) + \lambda_2(F_2(x) + C_2)                       \\
+                                                                    & =\lambda_1  F_1(x) + \lambda_2  F_2(x) + \lambda_1  C_1 + \lambda_2  C_2 \\
+                                                                    & =\lambda_1  F_1(x) + \lambda_2  F_2(x) + C                               \\
+                                                                    & =(\lambda_1 F_1 + \lambda_2 F_2)(x) + C                                  \\
+                                                                    & =\int (\lambda_1 f_1+ \lambda_2 f_2)(x)\text{dx}
 \end{align*}
 gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završavamo dokaz.
-\null\hfill $\blacksquare$ \par
+\null\hfill $\blacksquare$\par
 \begin{primbox}
     \begin{prim}
         Naći $\int (\frac{3}{\sqrt{x}} +
-            \cos\frac{x}{3} - 5\cdot 2^x)dx,\ x > 0$.
+            \cos\frac{x}{3} - 5\cdot 2^x)\text{dx},\ x > 0$.
     \end{prim}
     \begin{align*}
-        I & = \int\frac{3}{\sqrt{x}} dx + \int \cos\frac{x}{3} dx - 5\int 2^x dx
+        I & = \int\frac{3}{\sqrt{x}} \text{dx} + \int \cos\frac{x}{3} \text{dx} - 5\int 2^x \text{dx}
         \\ & = 6\sqrt{x} + C_1 + 3\sin\frac{x}{3} + C_2 - 5\frac{2^x}{\ln{2}} - 5C_3
         \\ & = 6\sqrt{x} + 3\sin\frac{x}{3} - 5\frac{2^x}{\ln{2}} + C
     \end{align*}
@@ -429,29 +428,29 @@ gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završava
 \renewcommand{\arraystretch}{2.3}
 \begin{tabular}{ |c|c| }
     \hline
-    \multicolumn{2}{|c|}{Tablica integrala:}                                                                                                                                                                  \\ \hline
-    $\alpha \in \mathbb{R} \backslash \{-1\},\ x\in(0, +\infty)\quad \int x^{\alpha} dx$                             & $\frac{1}{\alpha + 1} x^{\alpha + 1} + C$                                              \\ \hline
-    $n \in \mathbb{N},\ x \in \mathbb{R} \quad \int x^{n} dx$                                                        & $\frac{1}{n + 1} x^{n + 1} + C$                                                        \\ \hline
-    $n \in \mathbb{N}\backslash\{1\},\ x \in\mathbb{R}\backslash\{0\}\quad \int x^{-n} dx $                          &
+    \multicolumn{2}{|c|}{Tablica integrala:}                                                                                                                                                                         \\ \hline
+    $\alpha \in \mathbb{R} \backslash \{-1\},\ x\in(0, +\infty)\quad \int x^{\alpha} \text{dx}$                             & $\frac{1}{\alpha + 1} x^{\alpha + 1} + C$                                              \\ \hline
+    $n \in \mathbb{N},\ x \in \mathbb{R} \quad \int x^{n} \text{dx}$                                                        & $\frac{1}{n + 1} x^{n + 1} + C$                                                        \\ \hline
+    $n \in \mathbb{N}\backslash\{1\},\ x \in\mathbb{R}\backslash\{0\}\quad \int x^{-n} \text{dx} $                          &
     \makecell{
-    $\frac{1}{1-n} x^{1-n} + C_1,\ x \in (-\infty, 0)$                                                                                                                                                        \\
+    $\frac{1}{1-n} x^{1-n} + C_1,\ x \in (-\infty, 0)$                                                                                                                                                               \\
         $\frac{1}{1-n} x^{1-n} + C_2,\ x \in (0, +\infty)$
-    }                                                                                                                                                                                                         \\  \hline
-    $x \in \mathbb{R} \quad \int x^{-1} dx$                                                                          &
-    \makecell{ $\ln |x| + C_1,\ x \in (-\infty, 0)$                                                                                                                                                           \\
-    $\ln |x| + C_2,\ x \in (0, +\infty)$}                                                                                                                                                                     \\ \hline
-    $a > 0,\ a\neq 1,\ x \in \mathbb{R} \quad \int a^x dx$                                                           & $ \frac{1}{\ln a} a^x + C$                                                             \\ \hline
-    $x \in \mathbb{R} \quad \int \sin x dx$                                                                          & $ -\cos x + C$                                                                         \\ \hline
-    $x \in \mathbb{R} \quad \int \cos x dx$                                                                          & $ \sin x + C$                                                                          \\ \hline
-    $x \in \bigcup_{k \in \mathbb{Z}} (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi)\quad \int \frac{1}{\cos^2 x} dx$ & $ tg x + C_k,\ x \in (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi),\ k \in \mathbb{Z}$ \\ \hline
-    $x \in \bigcup_{k \in \mathbb{Z}} (k\pi, \pi + k\pi)\quad \int \frac{1}{\sin^2 x} dx$                            & $ -ctg x + C_k,\ x \in (k\pi, \pi + k\pi),\ k \in \mathbb{Z}$                          \\ \hline
-    $x \in (-1, 1) \quad \int \frac{1}{\sqrt{(1 - x^2)}} dx                      $                                   & $ arcsinx + C$                                                                         \\ \hline
-    $x \in \mathbb{R} \quad \int \frac{1}{1+x^2} dx                              $                                   & $ arctg x + C$                                                                         \\ \hline
-    $x \in \mathbb{R}\backslash \{0\} \quad \int x^{0} dx$                                                           &
+    }                                                                                                                                                                                                                \\  \hline
+    $x \in \mathbb{R} \quad \int x^{-1} \text{dx}$                                                                          &
+    \makecell{ $\ln |x| + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                  \\
+    $\ln |x| + C_2,\ x \in (0, +\infty)$}                                                                                                                                                                            \\ \hline
+    $a > 0,\ a\neq 1,\ x \in \mathbb{R} \quad \int a^x \text{dx}$                                                           & $ \frac{1}{\ln a} a^x + C$                                                             \\ \hline
+    $x \in \mathbb{R} \quad \int \sin x \text{dx}$                                                                          & $ -\cos x + C$                                                                         \\ \hline
+    $x \in \mathbb{R} \quad \int \cos x \text{dx}$                                                                          & $ \sin x + C$                                                                          \\ \hline
+    $x \in \bigcup_{k \in \mathbb{Z}} (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi)\quad \int \frac{1}{\cos^2 x} \text{dx}$ & $ tg x + C_k,\ x \in (\frac{\pi}{2} + k\pi, \frac{3\pi}{2} + k\pi),\ k \in \mathbb{Z}$ \\ \hline
+    $x \in \bigcup_{k \in \mathbb{Z}} (k\pi, \pi + k\pi)\quad \int \frac{1}{\sin^2 x} \text{dx}$                            & $ -ctg x + C_k,\ x \in (k\pi, \pi + k\pi),\ k \in \mathbb{Z}$                          \\ \hline
+    $x \in (-1, 1) \quad \int \frac{1}{\sqrt{(1 - x^2)}} \text{dx}                      $                                   & $ arcsinx + C$                                                                         \\ \hline
+    $x \in \mathbb{R} \quad \int \frac{1}{1+x^2} \text{dx}                              $                                   & $ arctg x + C$                                                                         \\ \hline
+    $x \in \mathbb{R}\backslash \{0\} \quad \int x^{0} \text{dx}$                                                           &
     \makecell{
-    $x + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                            \\
+    $x + C_1,\ x \in (-\infty, 0)$                                                                                                                                                                                   \\
         $x + C_2,\ x \in (0, +\infty)$
-    }                                                                                                                                                                                                         \\ \hline
+    }                                                                                                                                                                                                                \\ \hline
 \end{tabular}
 
 \subsection{Metode integracije}
@@ -459,7 +458,7 @@ gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završava
     \begin{teorema} \label{teorema_1.2}
         (Teorema o smeni promenljive 1) Neka je $F: (a, b) \longrightarrow \mathbb{R}$ primitivna funkcija za funkciju $f:(a, b) \longrightarrow \mathbb{R}$ i neka je $g: (\alpha, \beta) \longrightarrow (a, b)$ diferencijablna funkcija na $(\alpha, \beta)$. Tada postoji primitivna funkcija za funkciju $(f\circ g) g' : (\alpha, \beta) \longrightarrow \mathbb{R}$ i važi:\par
         \begin{equation*}
-            \int ((f\circ g) g')(x)dx = F(g(x)) + C,\ C\in\mathbb{R}
+            \int ((f\circ g) g')(x)\text{dx} = F(g(x)) + C,\ C\in\mathbb{R}
         \end{equation*}
     \end{teorema}
 \end{teoremabox}
@@ -471,15 +470,15 @@ gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završava
                                     & = f(g(x))  g'(x)                                                \\
                                     & = ((f \circ g)  g')(x)
 \end{align*}
-\null\hfill $\blacksquare$ \par
+\null\hfill $\blacksquare$\par
 \begin{primbox}
     \begin{prim}
-        Neka su $a \in \mathbb{R}\backslash\{0\},\ b\in\mathbb{R},\ n \in \mathbb{Z}\backslash\{-1\}$. Naći: $\int(ax + b)^ndx$.
+        Neka su $a \in \mathbb{R}\backslash\{0\},\ b\in\mathbb{R},\ n \in \mathbb{Z}\backslash\{-1\}$. Naći: $\int(ax + b)^n\text{dx}$.
     \end{prim}
     Neka su $f(t) = t^n$ i $g(x) = ax+b$. Tada važi $F(t) = \frac{t^{n+1}}{n+1}$ i $g'(x) = a$.
     \begin{align*}
-        \int(ax + b)^ndx & = \int f(g(x))dx = \int\frac{1}{a}f(g(x))g'(x)dx
-        \\ & = \frac{1}{a}\int f(g(x))g'(x)dx
+        \int(ax + b)^n\text{dx} & = \int f(g(x))\text{dx} = \int\frac{1}{a}f(g(x))g'(x)\text{dx}
+        \\ & = \frac{1}{a}\int f(g(x))g'(x)\text{dx}
         \\ & = \frac{1}{a}F(g(x)) + C
         \\ & = \frac{1}{a}\frac{1}{1+n}(ax + b)^{1+n}
     \end{align*}
@@ -491,11 +490,11 @@ gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završava
 
 \begin{primbox}
     \begin{prim}
-        Naći $\int \frac{e^x}{\sqrt{e^x + 1}}dx$.
+        Naći $\int \frac{e^x}{\sqrt{e^x + 1}}\text{dx}$.
     \end{prim}
     Neka su $f(t) = \frac{1}{\sqrt{t}}$ i $g(x) = e^x+1$. Tada važi $F(t) = 2  \sqrt{t}$ i $g'(x) = e^x$.
     \begin{align*}
-        \int\frac{e^x}{\sqrt{e^x + 1}}dx & = \int f(g(x))e^xdx = \int f(g(x))g'(x)dx
+        \int\frac{e^x}{\sqrt{e^x + 1}}\text{dx} & = \int f(g(x))e^x\text{dx} = \int f(g(x))g'(x)\text{dx}
         \\ & = F(g(x)) + C
         \\ & = 2 \sqrt{ e^x+1}
     \end{align*}
@@ -512,7 +511,7 @@ gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završava
         primitivna funkcija za funkciju
         $(f\circ g) g' : (\alpha, \beta) \longrightarrow \mathbb{R}$.
         Tada postoji primitivna funkcija za funkciju f i važi:
-        $\int f(x) dx = F(g^{-1}(x)) + C,\ C \in \mathbb{R}$.
+        $\int f(x) \text{dx} = F(g^{-1}(x)) + C,\ C \in \mathbb{R}$.
     \end{teorema}
 \end{teoremabox}
 \textit{Dokaz}: Izaberimo proizvoljno $x \in (a, b)$. Tada:
@@ -524,7 +523,7 @@ gde su $C_1,\ C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završava
                         & = f(x) x'                                          \\
                         & = f(x)
 \end{align*}
-\null\hfill $\blacksquare$\par
+\null\hfill $\blacksquare$\par\par
 Pogledajmo sada par primera koji ilustruju kad smemo da
 koristimo \hyperref[teorema_1.3]{teoremu 1.3}.\par
 \begin{primbox}
@@ -561,7 +560,7 @@ koristimo \hyperref[teorema_1.3]{teoremu 1.3}.\par
 Sledi primer korišćenja \hyperref[teorema_1.3]{teoreme 1.3}.
 \begin{primbox}
     \begin{prim}
-        Neka je $a > 0$. Naći $\int\sqrt{a^2 - x^2}dx$.
+        Neka je $a > 0$. Naći $\int\sqrt{a^2 - x^2}\text{dx}$.
     \end{prim}
     Neka je $f:(-a, a)\longrightarrow(0,a]$ definisano sa $f(x) = \sqrt{a^2 - x^2}$ i neka je
     $g:(-\frac{\pi}{2}, \frac{\pi}{2}) \longrightarrow (-a, a)$ definisano sa $g(x) = a \sin x$.
@@ -569,9 +568,9 @@ Sledi primer korišćenja \hyperref[teorema_1.3]{teoreme 1.3}.
     Izvod $g'(x) = a \cos{x}$ je definisan na celom domenu pa možemo da koristimo \hyperref[teorema_1.3]{teoremu 1.3}.
     Zbog preglednijeg zapisa, neka je $g^{-1}(x)=t$.
     \begin{align*}
-        \int  \sqrt{a^2 - x^2} dx & = \int f(x) dx=F(g^{-1}(x))+C =\int ((f\circ g) g')(t)dt = \int a\cos(t) \sqrt{a^2 - a^2\sin^2(t)} dt                            \\
-                                  & = \int  a\cos(t)\sqrt{a^2(1 - \sin ^2(t))} dt = \int a^2 \cos(t) \sqrt{1-\sin^2 (t)}dt = \int a^2 \cos ^2 (t) dt                 \\
-                                  & =\int\frac{a^2}{2}(1+\cos (2 t)) dt= \int\frac{a^2}{2} + \frac{a^2}{2} \cos(2 t) dt= \frac{a^2}{2}t  + \frac{a^2}{4}\sin (2 t)+C \\
+        \int  \sqrt{a^2 - x^2} \text{dx} & = \int f(x) \text{dx}=F(g^{-1}(x))+C =\int ((f\circ g) g')(t)dt = \int a\cos(t) \sqrt{a^2 - a^2\sin^2(t)} dt                     \\
+                                         & = \int  a\cos(t)\sqrt{a^2(1 - \sin ^2(t))} dt = \int a^2 \cos(t) \sqrt{1-\sin^2 (t)}dt = \int a^2 \cos ^2 (t) dt                 \\
+                                         & =\int\frac{a^2}{2}(1+\cos (2 t)) dt= \int\frac{a^2}{2} + \frac{a^2}{2} \cos(2 t) dt= \frac{a^2}{2}t  + \frac{a^2}{4}\sin (2 t)+C \\
     \end{align*}
     Dobili smo rešenje integrala, ali ovo rešenje možemo još da sredimo.
     \begin{align*}
@@ -598,7 +597,7 @@ Opisali smo kako se ponaša integral linearnih kombinacije funkcija i kako se uv
         funkcije. Tada funkcija $u v':(a, b) \longrightarrow \mathbb{R}$
         ima primitivnu funkciju ako i samo ako funkcija $u' v: (a, b) \longrightarrow \mathbb{R}$
         ima primitvnu funkciju. Važi:
-        $$\int u(x)v'(x)dx = u(x)v(x) -\int u'(x)v(x)dx$$
+        $$\int u(x)v'(x)\text{dx} = u(x)v(x) -\int u'(x)v(x)\text{dx}$$
     \end{teorema}
 \end{teoremabox}
 \textit{Dokaz}: Neka je $x \in (a, b)$ proizvoljno.
@@ -612,44 +611,44 @@ Pretpostavimo da $u'v$ ima primitivnu funkciju. Tada iz \eqref{teorema_jednakost
 Kako $(u(x)v(x))'$ i $u'(x)v(x)$ imaju primitivne funkcije,
 iz \eqref{teorema_jednakost_1_4_2} sledi da je i $u(x)v'(x)$. Osim toga važi:
 \begin{equation*}
-    \int u(x)v'(x)dx = \int(u(x)v(x))'dx - \int u'(x)v(x)dx = u(x)v(x) -\int u'(x)v(x)dx
+    \int u(x)v'(x)\text{dx} = \int(u(x)v(x))'\text{dx} - \int u'(x)v(x)\text{dx} = u(x)v(x) -\int u'(x)v(x)\text{dx}
 \end{equation*}
 Drugi smer dokaza je potpuno analogan.
-\null\hfill $\blacksquare$ \par
+\null\hfill $\blacksquare$\par
 \begin{primbox}
     \begin{prim}
-        Naći $\int e^x \sin x dx$.
+        Naći $\int e^x \sin x \text{dx}$.
     \end{prim}
     Primenjujemo \hyperref[teorema_1.4]{teoremu 1.4}.
     \begin{align*}
         u(x) = e^x  & \quad v'(x) = \sin x \\
         u'(x) = e^x & \quad v(x) = -\cos x
     \end{align*}
-    $\int e^x\sin x dx = -e^x\cos x + \int e^x \cos xdx $\par
-    Ostaje da se izračuna $\int e^x\cos x dx$. Ponovo primenjujemo \hyperref[teorema_1.4]{teoremu 1.4}.
+    $\int e^x\sin x \text{dx} = -e^x\cos x + \int e^x \cos x\text{dx} $\par
+    Ostaje da se izračuna $\int e^x\cos x \text{dx}$. Ponovo primenjujemo \hyperref[teorema_1.4]{teoremu 1.4}.
     \begin{align*}
         u(x) = e^x  & \quad v'(x) = \cos x \\
         u'(x) = e^x & \quad v(x) = \sin x
     \end{align*}
-    $\int e^x\cos x dx = e^x\sin x - \int e^x\sin x dx$\\
+    $\int e^x\cos x \text{dx} = e^x\sin x - \int e^x\sin x \text{dx}$\\
     Uvrstimo dobijeni izraz u prethodnu jednakost.
     \begin{align*}
-        \int e^x \sin x dx  & = -e^x\cos x + e^x \sin x - \int e^x \sin x dx             \\
-        2\int e^x \sin x dx & = -e^x\cos x + e^x \sin x +C_1,\ C_1\in\mathbb{R}          \\
-        \int e^x \sin x dx  & = \frac{1}{2}(-e^x\cos x + e^x \sin x)+C,\ C=\frac{C_1}{2}
+        \int e^x \sin x \text{dx}  & = -e^x\cos x + e^x \sin x - \int e^x \sin x \text{dx}      \\
+        2\int e^x \sin x \text{dx} & = -e^x\cos x + e^x \sin x +C_1,\ C_1\in\mathbb{R}          \\
+        \int e^x \sin x \text{dx}  & = \frac{1}{2}(-e^x\cos x + e^x \sin x)+C,\ C=\frac{C_1}{2}
     \end{align*}
 \end{primbox}
 
 \begin{primbox}
     \begin{prim}
-        Naći $\int \frac{1}{x} dx$ za $x > 0$.
+        Naći $\int \frac{1}{x} \text{dx}$ za $x > 0$.
     \end{prim}
     Iskoristićemo \hyperref[teorema_1.4]{teoremu 1.4}.
     \begin{align*}
         u(x)  & = \frac{1}{x}\quad v'(x)   = 1 \\
         u'(x) & = -\frac{1}{x^2}\quad v(x) = x
     \end{align*}
-    Dobijamo jednakost $\int \frac{1}{x} dx = \frac{x}{x} + \int \frac{1}{x} = 1+ \int\frac{1}{x}$. Greška koja se
+    Dobijamo jednakost $\int \frac{1}{x} \text{dx} = \frac{x}{x} + \int \frac{1}{x} = 1+ \int\frac{1}{x}$. Greška koja se
     često pravi je da se integrali skrate i da se dobije $1 = 0$, što znači da ovaj integral ne postoji.
     Ovo nije tačno jer ovu jednakost možemo da zapišemo i kao $F+C_1 = 1+F+C_2,\ C_1,C_2\in\mathbb{R}$.
     Ako skratimo primitivne funkcije dobijamo vezu između konstanti što nam nije od pomoći. Ovaj integral
@@ -659,120 +658,116 @@ Drugi smer dokaza je potpuno analogan.
 \subsection{Integracija racionalnih funkcija}
 Integraciju racionalnih funkcija možemo da rešavamo po algoritmu.
 Potrebno je da znamo rešenja integrala polinoma i integrala
-oblika:
-$\int \frac{A}{x-a}dx$, $\int\frac{1}{(x-a)^k}dx$,
-$\int \frac{Mx+N}{x^2+bx + c}dx$ i $\int \frac{Mx + N}{(x^2 + bx + c)^k}dx$,
+oblika
+$\displaystyle\int \frac{A}{x-a}\text{dx}$, $\displaystyle\int\frac{1}{(x-a)^k}\text{dx}$,
+$\displaystyle\int \frac{Mx+N}{x^2+bx + c}\text{dx}$ i $\displaystyle\int \frac{Mx + N}{(x^2 + bx + c)^k}\text{dx}$,
 gde su $A,a,M,N,b,c\in\mathbb{R}$, $b^2-4c<0$, $k\in\mathbb{N}\backslash\{1\}$.
 Integral polinoma već znamo, a u sledećim lemama ćemo
-pokazati proces nalaženja ovih integrala. \textbf{Nije potrebno
-    znati ove integrale napamet, bitno je zapamtiti
-    postupak.}
-
+pokazati proces nalaženja ovih integrala.
 \begin{lemabox}
+    \label{lema_1.1.1}
     \begin{lema}
-        \label{lema_1.1.1}
-        $\int \frac{A}{x-a}dx$, gde su $A,a\in \mathbb{R}$.
+        Važi $\displaystyle\int \frac{A}{x-a}\text{dx}=A\ln|x-a| + C$, gde su $A,a,C\in \mathbb{R}$.
     \end{lema}
-    Neka je funkcija $f:\mathbb{R}\backslash\{0\}\longrightarrow\mathbb{R}$ definisana sa
-    $f(t)=\frac{A}{t}$ i funkcija $g:\mathbb{R}\backslash\{a\}\longrightarrow\mathbb{R}\backslash\{0\}$
-    definisana sa $g(x)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=1$, a primitivna funkcija
-    funkcije $f$ je funkcija $F(t)=A\ln|t|$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
-    \begin{equation*}
-        \int \frac{A}{x-a}dx = \int ((f\circ g) g')(x)dx = F(g(x)) + C=A\ln|x-a| + C,\ C\in\mathbb{R}
-    \end{equation*}
-    Napomenimo da $C$ za $x > a$ i $C$ za $x < a$ mogu biti različiti.
 \end{lemabox}
+\textit{Dokaz:} Neka je funkcija $f:\mathbb{R}\backslash\{0\}\longrightarrow\mathbb{R}$ definisana sa
+$f(t)=\frac{A}{t}$ i funkcija $g:\mathbb{R}\backslash\{a\}\longrightarrow\mathbb{R}\backslash\{0\}$
+definisana sa $g(x)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=1$, a primitivna funkcija
+funkcije $f$ je funkcija $F(t)=A\ln|t|$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
+$$ \int \frac{A}{x-a}\text{dx} = \int ((f\circ g) g')(x)\text{dx} = F(g(x)) + C=A\ln|x-a| + C.$$
+Napomenimo da $C$ za $x > a$ i $C$ za $x < a$ mogu biti različiti.
+\null\hfill $\blacksquare$\par
 
 \begin{lemabox}
     \begin{lema}
         \label{lema_1.1.2}
-        $\int \frac{A}{(x-a)^k}dx$, gde su $A,a\in \mathbb{R}$, $k\in\mathbb{N}\backslash\{1\}$.
+        Važi $\displaystyle\int \frac{A}{(x-a)^k}\text{dx}=\frac{A}{(1-k)(x-a)^{k-1}}+ C$, gde su $A,a,C\in \mathbb{R}$, $k\in\mathbb{N}\backslash\{1\}$.
     \end{lema}
-    Neka je funkcija $f:\mathbb{R}\backslash\{0\}\longrightarrow\mathbb{R}$ definisana sa
-    $f(t)=\frac{A}{t^k}$ i funkcija $g:\mathbb{R}\backslash\{a\}\longrightarrow\mathbb{R}\backslash\{0\}$
-    definisana sa $g(x)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=1$, a primitivna funkcija
-    funkcije $f$ je funkcija $F(t)=\frac{A}{(1-k)t^{k-1}}$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
-    \begin{equation*}
-        \int \frac{A}{(x-a)^k}dx = \int ((f\circ g) g')(x)dx = F(g(x)) + C= \frac{A}{(1-k)(x-a)^{k-1}}+ C,\ C\in\mathbb{R}
-    \end{equation*}
 \end{lemabox}
 
+\textit{Dokaz:} Neka je funkcija $f:\mathbb{R}\backslash\{0\}\longrightarrow\mathbb{R}$ definisana sa
+$f(t)=\frac{A}{t^k}$ i funkcija $g:\mathbb{R}\backslash\{a\}\longrightarrow\mathbb{R}\backslash\{0\}$
+definisana sa $g(x)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=1$, a primitivna funkcija
+funkcije $f$ je funkcija $F(t)=\frac{A}{(1-k)t^{k-1}}$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
+$$\int \frac{A}{(x-a)^k}\text{dx} = \int ((f\circ g) g')(x)\text{dx} = F(g(x)) + C= \frac{A}{(1-k)(x-a)^{k-1}}+ C.$$
+\null\hfill$\blacksquare$\par
 \begin{lemabox}
+    \label{lema_1.1.3}
     \begin{lema}
-        \label{lema_1.1.3}
-        $\int \frac{Mx+N}{x^2+bx+c}dx$, gde su $M,N,b,c\in\mathbb{R}$, $b^2 - 4c < 0$.
+        Važi $\displaystyle\int \frac{Mx+N}{x^2+bx+c}\text{dx}= \frac{M}{2}\ln(x^2+xb+c)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg({\frac{2x+b}{\sqrt{4c-b^2}}})+ C$, gde su $M,N,b,c,C\in\mathbb{R}$, $b^2 - 4c < 0$.
     \end{lema}
-    Neka je funkcija $f:\mathbb{R}\longrightarrow\mathbb{R}$ definisana sa
-    $f(t)=\frac{Mt}{t^2+1}+\frac{2N-bM}{(t^2+1)\sqrt{4c-b^2}}$ i funkcija $g:\mathbb{R}\longrightarrow\mathbb{R}$
-    definisana sa $g(x)=\frac{2x+b}{\sqrt{4c-b^2}}$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=\frac{2}{\sqrt{4c-b^2}}$.
-    Potrebno je da izračunamo primitivnu funkciju:
-    \begin{align*}
-        \int f(t)dt & =\int \frac{Mt}{t^2+1}+\frac{2N-bM}{(t^2+1)\sqrt{4c-b^2}}dt                          \\
-                    & =\frac{M}{2}\int \frac{2t}{t^2+1}dt+\frac{2N-bM}{\sqrt{4c-b^2}}\int\frac{1}{t^2+1}dt \\
-                    & =\frac{M}{2}\ln(t^2+1)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan{t}+C,\ C\in\mathbb{R}      \\
-                    & =F(t)+C
-    \end{align*}
-    Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
-    \begin{align*}
-        \int \frac{Mx+N}{x^2+bx+c}dx & = \int ((f\circ g) g')(x)dx                                                                                                               \\
-                                     & = F(g(x)) + C                                                                                                                             \\
-                                     & = \frac{M}{2}\ln((\frac{2x+b}{\sqrt{4c-b^2}})^2+1)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C,\ C\in\mathbb{R}   \\
-                                     & = \frac{M}{2}\ln(\frac{4x^2+4xb+b^2+4c}{4c-b^2})+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C                      \\
-                                     & = \frac{M}{2}(\ln(x^2+xb+c)-\ln(c-\frac{b^2}{4}))+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C                     \\
-                                     & = \frac{M}{2}\ln(x^2+xb+c)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctan({\frac{2x+b}{\sqrt{4c-b^2}}})+ C_1,\ C_1=C+ \frac{M}{2}\ln(c-\frac{b^2}{4}) \\
-    \end{align*}
 \end{lemabox}
 
+
+Neka je funkcija $f:\mathbb{R}\longrightarrow\mathbb{R}$ definisana sa
+$f(t)=\frac{Mt}{t^2+1}+\frac{2N-bM}{(t^2+1)\sqrt{4c-b^2}}$ i funkcija $g:\mathbb{R}\longrightarrow\mathbb{R}$
+definisana sa $g(x)=\frac{2x+b}{\sqrt{4c-b^2}}$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'(x)=\frac{2}{\sqrt{4c-b^2}}$.
+Potrebno je da izračunamo primitivnu funkciju:
+\begin{align*}
+    \int f(t)dt & =\int \frac{Mt}{t^2+1}+\frac{2N-bM}{(t^2+1)\sqrt{4c-b^2}}dt                          \\
+                & =\frac{M}{2}\int \frac{2t}{t^2+1}dt+\frac{2N-bM}{\sqrt{4c-b^2}}\int\frac{1}{t^2+1}dt \\
+                & =\frac{M}{2}\ln(t^2+1)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg{t}+C_1,\ C_1\in\mathbb{R}   \\
+                & =F(t)+C_1
+\end{align*}
+Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}:
+\begin{align*}
+    \int \frac{Mx+N}{x^2+bx+c}\text{dx} & = \int ((f\circ g) g')(x)\text{dx}                                                                                                         \\
+                                        & = F(g(x)) + C_1                                                                                                                            \\
+                                        & = \frac{M}{2}\ln((\frac{2x+b}{\sqrt{4c-b^2}})^2+1)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg({\frac{2x+b}{\sqrt{4c-b^2}}})+ C_1,\ C_1\in\mathbb{R} \\
+                                        & = \frac{M}{2}\ln(\frac{4x^2+4xb+b^2+4c}{4c-b^2})+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg({\frac{2x+b}{\sqrt{4c-b^2}}})+ C_1                      \\
+                                        & = \frac{M}{2}(\ln(x^2+xb+c)-\ln(c-\frac{b^2}{4}))+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg({\frac{2x+b}{\sqrt{4c-b^2}}})+ C_1                     \\
+                                        & = \frac{M}{2}\ln(x^2+xb+c)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg({\frac{2x+b}{\sqrt{4c-b^2}}})+ C,\ C=C_1+ \frac{M}{2}\ln(c-\frac{b^2}{4})
+\end{align*}
+\null\hfill $\blacksquare$\par
+
 \begin{lemabox}
+    \label{lema_1.1.4}
     \begin{lema}
-        \label{lema_1.1.4}
-        $\int \frac{Mx+N}{(x^2+bx+c)^k}dx$, gde su $M,N,b,c\in\mathbb{R}$, $b^2 - 4c < 0$, $k\in\mathbb{N}\backslash\{1\}$.
+        Važi $\displaystyle\int \frac{Mx+N}{(x^2+bx+c)^k}\text{dx}=\frac{M}{2}\frac{1}{(1-k)(x^2+bx+c)^{k-1}}+(N-\frac{Mb}{2})I_k$, gde su $M,N,b,c\in\mathbb{R}$, $b^2 - 4c < 0$, $k\in\mathbb{N}\backslash\{1\}$,
+        $\displaystyle I_k=\int\frac{1}{(x^2+bx+c)^k}\text{dx}$ i naći vezu između $I_k$ i $I_{k-1}$.
     \end{lema}
-    Prvo ćemo početni integral razložiti na dva lakša:
-    \begin{align*}
-        \int \frac{Mx+N}{(x^2+bx+c)^k}dx & =\int \frac{\frac{M}{2}(2x+b)-\frac{Mb}{2}+N}{(x^2+bx+c)^k}dx                             \\
-                                         & =\int \frac{\frac{M}{2}(2x+b)}{(x^2+bx+c)^k}dx+\int\frac{N-\frac{Mb}{2}}{(x^2+bx+c)^k}dx  \\
-                                         & =\frac{M}{2}\int \frac{2x+b}{(x^2+bx+c)^k}dx+(N-\frac{Mb}{2})\int\frac{1}{(x^2+bx+c)^k}dx
-    \end{align*}
-    Prvi integral možemo da rešimo \hyperref[teorema_1.2]{teoremom 1.2}. Neka je
-    funkcija $f: \mathbb{R}^{+}\longrightarrow\mathbb{R}^{+}$ definisana sa
-    $f(t)=\frac{1}{t^k}$ i neka je funkcija $g: \mathbb{R}\longrightarrow\mathbb{R}^{+}$
-    definisana sa $g(x)=x^2+bx+c$. Funkcija $g$ je diferencijabilna na svom domenu
-    i važi $g'(x)=2x+b$. Jedna od primitivnih funkcija funkcije $f$ je $F(t)=\frac{1}{(1-k)t^{k-1}}$.
-    Primenom \hyperref[teorema_1.2]{teoreme 1.2} dobijamo:
-    \begin{align*}
-        \int \frac{2x+b}{(x^2+bx+c)^k}dx & =\int((f\circ g)g')(x)dx           \\
-                                         & =F(g(x))+C,\ C\in\mathbb{R}        \\
-                                         & =\frac{1}{(1-k)(x^2+bx+c)^{k-1}}+C
-    \end{align*}
-    Za drugi integral koristimo nov metod rešavanja.
-    Neka je $I_k=\int\frac{1}{(x^2+bx+c)^k}dx$. Želimo da nađemo vezu
-    između $I_k$ i $I_{k-1}$ jer onda rekurzivno možemo da
-    rešimo integral $I_k$ (znamo rešenje $I_1$ iz \hyperref[lema_1.1.3]{leme 1.1.3}). Koristićemo \hyperref[teorema_1.4]{teoremu 1.4}.
-    Neka su $u,v:\mathbb{R}\longrightarrow\mathbb{R}$ definisane sa $u(x)=\frac{1}{(x^2+bx+c)^k}$
-    i $v(x)=x$. Funkcije $u$ i $v$ su diferencijabilne na svojim domenima i
-    važe jednakosti $u'(x)=-\frac{(2x+b)k}{(x^2+bx+c)^{k+1}}$ i $v'(x)=1$.
-    Primenom \hyperref[teorema_1.4]{teoereme 1.4} dobijamo:
-    \begin{align*}
-        I_k       & =\int\frac{1}{(x^2+bx+c)^k}dx =\int u(x)v'(x)dx =u(x)v(x)-\int u'(x)v(x)dx                                       \\
-                  & =\frac{x}{(x^2+bx+c)^k}+k\int\frac{2x^2+2bx+2c-bx-2c}{(x^2+bx+c)^{k+1}} dx                                       \\
-                  & =\frac{x}{(x^2+bx+c)^k}+2k\int\frac{1}{(x^2+bx+c)^k}dx-k\int\frac{bx+2c}{(x^2+bx+c)^{k+1}} dx                    \\
-        (1-2k)I_k & =\frac{x}{(x^2+bx+c)^k}-k\int\frac{bx+2c}{(x^2+bx+c)^{k+1}} dx                                                   \\
-                  & =\frac{x}{(x^2+bx+c)^k}-k\int\frac{\frac{b}{2}(2x+b)-\frac{b^2}{2}+2c}{(x^2+bx+c)^{k+1}} dx                      \\
-                  & =\frac{x}{(x^2+bx+c)^k}+\frac{b}{2}\frac{1}{(x^2+bx+c)^{k}}-(2c-\frac{b^2}{2})k\int\frac{1}{(x^2+bx+c)^{k+1}} dx \\
-                  & =\frac{x+\frac{b}{2}}{(x^2+bx+c)^k}-(2c-\frac{b^2}{2})kI_{k+1}                                                   \\
-    \end{align*}
-    Odredili smo vezu između $I_k$ i $I_{k+1}$, pomeranjem indeksa za jedan
-    naniže dobijamo odnos između $I_{k-1}$ i $I_k$.
-    \begin{align*}
-        (1-2k)I_{k-1} & =\frac{x+\frac{b}{2}}{(x^2+bx+c)^k}-(2c-\frac{b^2}{2})kI_k    \\
-        I_k           & =\frac{2x+b}{(4c-b^2)(x^2+bx+c)^k}-\frac{2-4k}{4c-b^2}I_{k-1}
-    \end{align*}
-    Na kraju, vraćanjem svega u početni integral dobijamo:
-    \begin{align*}
-        \int \frac{Mx+N}{(x^2+bx+c)^k}dx=\frac{M}{2}\frac{1}{(1-k)(x^2+bx+c)^{k-1}}+(N-\frac{Mb}{2})I_k
-    \end{align*}
 \end{lemabox}
+
+\textit{Dokaz:} Prvo ćemo početni integral razložiti na dva lakša:
+\begin{align*}
+    \int \frac{Mx+N}{(x^2+bx+c)^k}\text{dx} & =\int \frac{\frac{M}{2}(2x+b)-\frac{Mb}{2}+N}{(x^2+bx+c)^k}\text{dx}                                    \\
+                                            & =\int \frac{\frac{M}{2}(2x+b)}{(x^2+bx+c)^k}\text{dx}+\int\frac{N-\frac{Mb}{2}}{(x^2+bx+c)^k}\text{dx}  \\
+                                            & =\frac{M}{2}\int \frac{2x+b}{(x^2+bx+c)^k}\text{dx}+(N-\frac{Mb}{2})\int\frac{1}{(x^2+bx+c)^k}\text{dx}
+\end{align*}
+Prvi integral možemo da rešimo \hyperref[teorema_1.2]{teoremom 1.2}. Neka je
+funkcija $f: \mathbb{R}^{+}\longrightarrow\mathbb{R}^{+}$ definisana sa
+$f(t)=\frac{1}{t^k}$ i neka je funkcija $g: \mathbb{R}\longrightarrow\mathbb{R}^{+}$
+definisana sa $g(x)=x^2+bx+c$. Funkcija $g$ je diferencijabilna na svom domenu
+i važi $g'(x)=2x+b$. Jedna od primitivnih funkcija funkcije $f$ je $F(t)=\frac{1}{(1-k)t^{k-1}}$.
+Primenom \hyperref[teorema_1.2]{teoreme 1.2} dobijamo:
+\begin{align*}
+    \int \frac{2x+b}{(x^2+bx+c)^k}\text{dx} & =\int((f\circ g)g')(x)\text{dx}    \\
+                                            & =F(g(x))+C,\ C\in\mathbb{R}        \\
+                                            & =\frac{1}{(1-k)(x^2+bx+c)^{k-1}}+C
+\end{align*}
+Za drugi integral koristimo nov metod rešavanja.
+Neka je $I_k=\int\frac{1}{(x^2+bx+c)^k}\text{dx}$. Želimo da nađemo vezu
+između $I_k$ i $I_{k-1}$ jer onda rekurzivno možemo da
+rešimo integral $I_k$ (znamo rešenje $I_1$ iz \hyperref[lema_1.1.3]{leme 1.1.3}). Koristićemo \hyperref[teorema_1.4]{teoremu 1.4}.
+Neka su $u,v:\mathbb{R}\longrightarrow\mathbb{R}$ definisane sa $u(x)=\frac{1}{(x^2+bx+c)^k}$
+i $v(x)=x$. Funkcije $u$ i $v$ su diferencijabilne na svojim domenima i
+važe jednakosti $u'(x)=-\frac{(2x+b)k}{(x^2+bx+c)^{k+1}}$ i $v'(x)=1$.
+Primenom \hyperref[teorema_1.4]{teoereme 1.4} dobijamo:
+\begin{align*}
+    I_k       & =\int\frac{1}{(x^2+bx+c)^k}\text{dx} =\int u(x)v'(x)\text{dx} =u(x)v(x)-\int u'(x)v(x)\text{dx}                         \\
+              & =\frac{x}{(x^2+bx+c)^k}+k\int\frac{2x^2+2bx+2c-bx-2c}{(x^2+bx+c)^{k+1}} \text{dx}                                       \\
+              & =\frac{x}{(x^2+bx+c)^k}+2k\int\frac{1}{(x^2+bx+c)^k}\text{dx}-k\int\frac{bx+2c}{(x^2+bx+c)^{k+1}} \text{dx}             \\
+    (1-2k)I_k & =\frac{x}{(x^2+bx+c)^k}-k\int\frac{bx+2c}{(x^2+bx+c)^{k+1}} \text{dx}                                                   \\
+              & =\frac{x}{(x^2+bx+c)^k}-k\int\frac{\frac{b}{2}(2x+b)-\frac{b^2}{2}+2c}{(x^2+bx+c)^{k+1}} \text{dx}                      \\
+              & =\frac{x}{(x^2+bx+c)^k}+\frac{b}{2}\frac{1}{(x^2+bx+c)^{k}}-(2c-\frac{b^2}{2})k\int\frac{1}{(x^2+bx+c)^{k+1}} \text{dx} \\
+              & =\frac{x+\frac{b}{2}}{(x^2+bx+c)^k}-(2c-\frac{b^2}{2})kI_{k+1}
+\end{align*}
+Odredili smo vezu između $I_k$ i $I_{k+1}$, pomeranjem indeksa za jedan
+naniže dobijamo odnos između $I_{k-1}$ i $I_k$
+$$I_k =\frac{2x+b}{(4c-b^2)(x^2+bx+c)^k}-\frac{2-4k}{4c-b^2}I_{k-1}.$$
+Na kraju, vraćanjem svega u početni integral dobijamo:
+$$    \int \frac{Mx+N}{(x^2+bx+c)^k}\text{dx}=\frac{M}{2}\frac{1}{(1-k)(x^2+bx+c)^{k-1}}+(N-\frac{Mb}{2})I_k.$$
+\null\hfill $\blacksquare$\par
 
 \begin{stavbox}
     \begin{stav}\label{OSA}
@@ -814,24 +809,24 @@ integrale ovih vrsta.
         Neka su dati polinomi $P, Q: \mathbb{R} \longrightarrow \mathbb{R}$, pri čemu
         važi $st(P)\geq0$, $st(Q)\geq1$. Ako polinom $Q$ nema realnih nula, primitivnu funkciju
         za funkciju $\frac{P}{Q}$ nalazimo na intervalu $(-\inf, +\inf)$. Inače,
-        ako su $a_1 < a_2 < ... < a_k$ realne nule polinoma $Q$, primitivnu funkciju
+        ako su $a_1 < a_2 < \dotsc < a_k$ realne nule polinoma $Q$, primitivnu funkciju
         tražimo na intervalima $(-\inf, a_1),(a_1, a_2),\dotsc,(a_{k-1},a_k),(a_k,+\inf)$.
-        Integral $\int \frac{P(x)}{Q(x)}dx$ nalazimo sledećim koracima:
+        Integral $\int \frac{P(x)}{Q(x)}\text{dx}$ nalazimo sledećim koracima:
     \end{alg}
     \begin{enumerate}[label=\text{K\arabic*}]
         \item\label{Algoritam_1_K1}
-              Ako je $st(P) < st(Q)$ primenjujemo \hyperref[Algoritam_1_K2]{K2} na integral $\int \frac{P(x)}{Q(x)}dx$.\\
+              Ako je $st(P) < st(Q)$ primenjujemo \hyperref[Algoritam_1_K2]{K2} na integral $\int \frac{P(x)}{Q(x)}\text{dx}$.\\
               Inače, vršimo deljenje polinoma $P$ polinomom $Q$.
               Neka je $S$ rezultat deljenja, a $Q$ ostatak pri deljenju.
               Tada važi $P(x) = S(x)Q(x) + R(x)$, $st(R)<st(Q)$.
-              Zbog linearnosti integrala važi jednakost $\int\frac{P(x)}{Q(x)}dx = \int S(x)dx + \int\frac{R(x)}{Q(x)}dx$.
+              Zbog linearnosti integrala važi jednakost $\int\frac{P(x)}{Q(x)}\text{dx} = \int S(x)\text{dx} + \int\frac{R(x)}{Q(x)}\text{dx}$.
               Znamo da izračunamo integral polinoma $S(x)$, primenjujemo \hyperref[Algoritam_1_K2]{K2}
-              na integral $\int \frac{R(x)}{Q(x)}dx$.
+              na integral $\int \frac{R(x)}{Q(x)}\text{dx}$.
 
         \item[K2:]\label{Algoritam_1_K2}
               U \hyperref[tvrđenje_1.1]{tvrđenju 1.1} smo naveli da se
               svaki polinom, pa i polinom $Q$, može zapisati u obliku:
-              $$Q(x) = q(x - a_1)^{s_1}...(x-a_k)^{s_k}(x^2 + b_1x + c_1)^{t_1}...(x^2 + b_lx + c_l)^{t_l}$$
+              $$Q(x) = q(x - a_1)^{s_1}\dotsc(x-a_k)^{s_k}(x^2 + b_1x + c_1)^{t_1}\dotsc(x^2 + b_lx + c_l)^{t_l}$$
               gde je $q$ koeficijent uz najstariji član,
               $a_i$, $i\in\{1\dotsc k\}$, realna nula polinoma $Q$ mnogostrukosti $s_i$, važi $(\forall i_1,i_2\in\{1\dotsc k\})(a_{i_1}=a_{i_2}\iff i_1=i_2)$,
               a $x^2+b_jx+c_j$, $j\in\{1\dotsc l\}$,
@@ -857,7 +852,7 @@ integrale ovih vrsta.
 \subsection{Integracija trigonometrijskih funkcija}
 Oznaku $R(u, v)$ koristimo za predstavljanje
 racionalnih funkcija argumenata $u$ i $v$. Na primer, $R(u, v) = \frac{u+v}{u-v+2}$.
-Integrale oblika $\int R(\sin{x},\cos{x})dx$ rešavamo smenom
+Integrale oblika $\int R(\sin{x},\cos{x})\text{dx}$ rešavamo smenom
 $t = \tg\frac{x}{2}$, definisanom svuda sem u $x\in\{(2l+1)\pi\ |\ l\in\mathbb{Z}\}$.
 Formalno, neka je funkcija $f: \mathbb{R}\longrightarrow \mathbb{R}$ definisana sa $f(x)=R(\sin{x},\cos{x})$ i
 neka je funkcija $g_0:\mathbb{R}\longrightarrow(-\pi,\pi)$
@@ -873,16 +868,16 @@ $(f\circ g_0)(x)=f(g_0(x))=R(\sin(g_0(x)),\cos(g_0(x)))=R(\sin(2\arctg(x)), \cos
                      & =\frac{1-x^2}{\frac{\sin^2(\arctg(x))+\cos^2(\arctg(x))}{\cos^2(\arctg(x))}}=\frac{1-x^2}{\tg^2(\arctg(x))+1}=\frac{1-x^2}{x^2+1}
 \end{align*}
 Odavde dobijamo $(f\circ g_0)(x)=R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})$.\par
-Možemo da odredimo integral $\int((f\circ g_0)g_0')(x)dx=\int R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})\frac{2}{1+x^2}dx=F(x)+C_0,\ C_0\in\mathbb{R}$,
+Možemo da odredimo integral $\int((f\circ g_0)g_0')(x)\text{dx}=\int R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})\frac{2}{1+x^2}\text{dx}=F(x)+C_0,\ C_0\in\mathbb{R}$,
 jer je to integral racionalne funkcije. Primenom \hyperref[teorema_1.3]{teoreme 1.3} dobijamo
-$\int f(x)dx=F(g_0^{-1}(x))+C_0$.\par
+$\int f(x)\text{dx}=F(g_0^{-1}(x))+C_0$.\par
 Rešili smo integral na intervalu $(-\pi,\pi)$. Posmatrajmo intervale
 oblika $((2m-1)\pi,(2m+1)\pi),\ m\in\mathbb{Z}$. Funkcija $g_m(x)=2arctg(x)+2m\pi$
 je diferencijabilna i ima inverz $g_m^{-1}(x)=\tg(\frac{x+2m\pi}{2})=\tg(\frac{x}{2})$. Analogno kao za
 $g_0$ dobijamo $(f\circ g_m)(x)=R(\sin(2\arctg(x)+2m\pi),\cos(2\arctg(x)+2m\pi))=R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})$.\par
-Dakle, analogno rešavanju integrala na intervalu $(-\pi,\pi)$ dobijamo  $\int f(x)dx=F(g_m^{-1}(x))+C_m$.\par
+Dakle, analogno rešavanju integrala na intervalu $(-\pi,\pi)$ dobijamo  $\int f(x)\text{dx}=F(g_m^{-1}(x))+C_m$.\par
 Rešili smo integrale na $\mathbb{R}\backslash\{(2l+1)\pi\ |\ l\in\mathbb{Z}\}$. Zbog neprekidnosti mora da važi da
-je $$(\forall l\in\mathbb{Z})(\lim_{x\to (2l+1)\pi^{-}}F(g_l^{-1}(x))+C_{l}=\lim_{x\to (2l+1)\pi^{+}}F(g_{l+1}^{-1}(x))+C_{l+1})$$
+je $$(\forall l\in\mathbb{Z})(\lim_{x\to (2l+1)\pi^{-}}F(g_l^{-1}(x))+C_{l}=\lim_{x\to (2l+1)\pi^{+}}F(g_{l+1}^{-1}(x))+C_{l+1}).$$
 Nalaženjem veze između konstanti $C_l$ i $C_{l+1}$ rešavamo integral i u tačkama $(2l+1)\pi$, gde je $l$ ceo broj, čime smo rešili integral
 na celom $\mathbb{R}$.\par
 Napomenimo da izvođenje zavisi od konkretne funkcije $f$. Za $f$ koje nije definisano na celom $\mathbb{R}$ ćemo raditi presek $\mathbb{R}$ sa $D_f$ i
@@ -895,8 +890,8 @@ posmatrati drugačije intervale, ali će postupak ostati analogan.
     $$(\forall l\in\mathbb{R})\ (f\circ g_l)(x)=R(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2})= \frac{1}{\frac{4x}{1+x^2}-\frac{1-x^2}{1+x^2}+5}=\frac{1+x^2}{6x^2+4x+4}$$
     Ima $l$ integrala oblika:
     \begin{align*}
-        \int ((f\circ g_l)g_l')(x)dx & =\int\frac{1+x^2}{6x^2+4x+4}\frac{2}{1+x^2}dx=\int \frac{dx}{3(x^2+2\frac{1}{3}x+\frac{1}{9}+\frac{5}{9})}=\int\frac{dx}{3(x+\frac{1}{3})^2+\frac{5}{3}} \\
-                                     & =\frac{3}{5}\int\frac{dx}{(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}})^2+1}=\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}})+C_l
+        \int ((f\circ g_l)g_l')(x)\text{dx} & =\int\frac{1+x^2}{6x^2+4x+4}\frac{2}{1+x^2}\text{dx}=\int \frac{\text{dx}}{3(x^2+2\frac{1}{3}x+\frac{1}{9}+\frac{5}{9})}=\int\frac{\text{dx}}{3(x+\frac{1}{3})^2+\frac{5}{3}} \\
+                                            & =\frac{3}{5}\int\frac{\text{dx}}{(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}})^2+1}=\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}})+C_l
     \end{align*}
     Dobijamo da je $I_l =\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+C_l$. Ostaje da nađemo leve i desne limese u nedefinisanim tačkama.
     \begin{align*}
@@ -907,39 +902,12 @@ posmatrati drugačije intervale, ali će postupak ostati analogan.
     Tada je $C_l=\frac{l\pi}{\sqrt{5}}+C_0$. Važi da je $(2l-1)\pi<x<(2l+1)\pi$ odakle je
     $\frac{x-\pi}{2\pi}<l<\frac{x+\pi}{2\pi}$, $l=[\frac{x+\pi}{2\pi}]$.
     Dobijamo da je rešenje integrala
-    $$\int f(x)dx=\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+[\frac{x+\pi}{2\pi}]\frac{\pi}{\sqrt{5}}+C_0$$
+    $$\int f(x)\text{dx}=\frac{1}{\sqrt{5}}\arctg(\frac{3}{\sqrt{5}}\tg(\frac{x}{2})+\frac{1}{\sqrt{5}})+[\frac{x+\pi}{2\pi}]\frac{\pi}{\sqrt{5}}+C_0$$
 \end{primbox}
 
 \section{Određeni integrali}
-Motivacija za uvođenje pojma određenog integrala je računanje površine figura
-ograničenih funkcijama $x=a$, $x=b$, $y=0$ i $f: [a,b]\longrightarrow$.
-$\varphi\in\{ (x,y)\in\mathbb{R}^2 | a\leq x\leq b, 0\leq y\leq f(x)\}$.
-
-Neka je $f: [a,b] \longrightarrow [0, +\infty)$ neprekidna funkcija, i neka je $\varphi = \{ (x, y) \in \mathbb{R}^2 | a \leq x \leq f(x)\}$\\
-P($\varphi$) je povrsina figure $\varphi$\\
-$f: [0, 1] \longrightarrow [0, +\infty)$\\
-$f(x) = x^2$\\
-$n \in \mathbb{N}, x_k = \frac{k}{n}, k \in \{0, ..., n\}$\\
-$x_0 = 0, x_1 = \frac{1}{n}, ..., x_n = 1$\\
-$P_k = [x_{k-1}, x_k]\times [0, f(x_k)], k=1,...,n$\\
-$S_n$ je suma površine svih pravougaonika $P_k$ pri čemu $k = 1,.., n$\\
-$\displaystyle S_n = \sum_{k=1}^{n} f(x_k)(x_k - x_{k-1}) = \sum_{k=1}^{n} (\frac{k}{n})^2\frac{1}{n} = \frac{1}{n^3}\sum_{k=1}^n k^2 = \frac{1}{n^3}\frac{(2n+1)n(n+1)}{6}$\\
-$n\longrightarrow\infty$ sledi da je $S_n = \frac{1}{3}$\\
-$P(\varphi) = \frac{1}{3}$ Kasnije ćemo zapisivati $\displaystyle \int_0^1 x^2\text{dx} = \frac{x^3}{3} \Bigg|^1_{x=0} = \frac{1}{3} - 0$\\
-$\displaystyle \int^b_a f(x)\text{dx} = F(b) - F(a)$\\
-$t \in [a, b],\ C(a_1, b_1),\ f: (a_1, b_1) \longrightarrow [0, +\infty)$ i definišemo $A(t) = \{(x, y) \in \mathbb{R}^2 | a\leq x \leq t, 0\leq y \leq f(x)\}$ i neka je P(t) površina figure A(t).\\
-Primetimo da je $P(t)$ funkcija koja slika $[a, b]$ u $[0, +\infty]$ tj. $P(a) = 0$ i $P(b)$ je površina figure $\varphi$.\\
-Dodatno pretpostavimo da $t \in [a, b)$ i da je $h > 0$ takvo da je $t + h \in [a, b)$.\\
-Neka je $\displaystyle M = \max_{t\leq x\leq t+ h} f(x)$ i $m = \min_{t \leq x leq t+h} f(x)$ zbog neprekidnosti funkcije f, postoje $\theta_1 = \theta_1(t, h)$ i $\theta_2 = \theta_2(t, h)$ takvi da je $0\leq \theta_1 \leq 1$ i $0\leq \theta_2 \leq 1$ i $M = f(t + \theta_1h)$ i $m = f(t + \theta_2h)$\\
-$m h \leq P(t + h) - P(t) \leq M h$ tj $f(t + \theta_2h)h \leq P(t+h) - P(t) \leq f(t + \theta_1h)h$\\
-$f(t+\theta_2h) \leq \frac{P(t + h) - P(t)}{h}\leq f(t+\theta_1h)$\\
-$\displaystyle \lim_{h\longrightarrow 0^+} f(t+\theta_2h) \leq \lim_{h\longrightarrow 0^+} \frac{P(t + h) - P(t)}{h} \leq \lim_{h\longrightarrow 0^+} f(t+\theta_1h)$\\
-$f(t) \leq P'(t) \leq f(t)$\\
-Dakle, za $t \in [a, b)$ imamo $P'(t) = f(t)$. Drugim rečima $P$ je primitivna funkcija za $f:$ na intervalu $(a, b)$.\\
-Neka je $F: (a, b) \longrightarrow \mathbb{R}$ proizvoljna primitvna funkcija funkcije f. Tada je $P(t) = F(t) + C$ gde je $C \in \mathbb{R}$. Ali kako je $P(a) = 0$. Imamo $C = -F(a)$.\\
-Dakle, $P(b) = \displaystyle \int^b_a f(x) \text{dx} = F(b) - F(a)$.
 \subsection{Definicija određenog integrala}
-Neka je $f:[a,b]\longrightarrow\mathbb{R}$. Želimo da definišemo $\displaystyle\int_{a}^{b}f(x)dx$.\par
+Neka je $f:[a,b]\longrightarrow\mathbb{R}$. Želimo da definišemo $\displaystyle\int_{a}^{b}f(x)\text{dx}$.\par
 \begin{defbox}
     \begin{definicija}
         Neka su $x_0,x_1,\dotsc,x_n\in[a,b]$ tačke takve da važi $a=x_0<x_1<\dotsc<x_n=b$. Tada:
@@ -961,7 +929,7 @@ Neka je $f:[a,b]\longrightarrow\mathbb{R}$. Želimo da definišemo $\displaystyl
 \begin{defbox}
     \begin{definicija}
         Neka je $f:[a,b]\longrightarrow\mathbb{R}$ i $(\mathcal{P},\xi)$ podela sa istaknutim tačkama intervala $[a,b]$. Tada zbir
-        $\sigma(f,\mathcal{P},\xi)=\sum_{i=1}^{n}f(\xi_i)\varDelta x_i$ nazivamo \textbf{integralna suma} funkije $f$ za datu podelu
+        $\displaystyle\sigma(f,\mathcal{P},\xi)=\sum_{i=1}^{n}f(\xi_i)\varDelta x_i$ nazivamo \textbf{integralna suma} funkije $f$ za datu podelu
         sa istaknutim tačkama $(\mathcal{P},\xi)$ intervala $[a,b]$.
     \end{definicija}
 \end{defbox}
@@ -971,7 +939,7 @@ Neka je $f:[a,b]\longrightarrow\mathbb{R}$. Želimo da definišemo $\displaystyl
         Ako za $f: [a,b]\longrightarrow\mathbb{R}$ i $I\in\mathbb{R}$ važi:
         $$(\forall\varepsilon>0)(\exists\delta>0)(\forall(\mathcal{P},\xi)\big|\mathcal{P}\in\mathcal{P}[a,b])\ \lambda(\mathcal{P})<\delta\implies|\sigma(f,\mathcal{P},\xi)-I|<\varepsilon$$
         tada kažemo da je $I$ \textbf{Rimanov integral funkcije $f$} na intervalu $[a,b]$ i pišemo:
-        $$I=\lim_{\lambda(\mathcal{P})\rightarrow 0}\sigma(f,\mathcal{P},\xi)=\int_{a}^{b}f(x)dx$$
+        $$I=\lim_{\lambda(\mathcal{P})\rightarrow 0}\sigma(f,\mathcal{P},\xi)=\int_{a}^{b}f(x)\text{dx}$$
         Rimanov integral nazivamo i \textbf{određeni integral}.
     \end{definicija}
 \end{defbox}
@@ -1037,44 +1005,47 @@ Ako za funkciju $f:[a,b]\longrightarrow\mathbb{R}$ postoji Rimanov integral, ka�
         skupa podeonih tačaka podele $\mathcal{P}'$, važi
         $$s(f,P)\leq s(f,P')\leq S(f,P')\leq S(f,P).$$
     \end{stav}
-    Dovoljno je dokazati slučaj kad je skup podeonih tačaka podele $\mathcal{P}$
-    $\{x_0,\dotsc,x_n\}$, a skup podeonih tačaka podele $\mathcal{P}'$
-    $\{x_0,\dotsc,x_{k-1},x',x_k,\dotsc,x_n\}$. Neka je $\displaystyle s'=\sum_{i=1}^{k-1}m_i\Delta x_i+\sum_{i=k+1}^{n}m_i\Delta x_i$ i neka su
-    $m_k'=inf\{f(x)\big|x\in[x_{k-1},x']\}$ i $m_k''=inf\{f(x)\big|x\in[x',x_k]$\}.
-    Tada je $$s(f,\mathcal{P})=s'+m_k(x_k-x_{k-1})$$
-    i
-    $$s(f,\mathcal{P}')=s'+m_k'(x'-x_{k-1})+x_k''(x_k-x').$$
-    Važi da je $m_k=min(m_k',m_k'')$, odakle dobijamo:
-    \begin{align*}
-        m_k(x_k-x')+m_k(x'-x_{k-1}) & \leq m_k''(x_k-x')+m_k'(x'-x_{k-1})    \\
-        s'+m_k(x_k-x_{k-1})         & \leq s'+m_k''(x_k-x')+m_k'(x'-x_{k-1}) \\
-        s(f,P)                      & \leq s(f,P').
-    \end{align*}
-    Treća nejednakost se slično dokazuje.
 \end{stavbox}
+\textit{Dokaz:} Dovoljno je dokazati slučaj kad je skup podeonih tačaka podele $\mathcal{P}$
+$\{x_0,\dotsc,x_n\}$, a skup podeonih tačaka podele $\mathcal{P}'$
+$\{x_0,\dotsc,x_{k-1},x',x_k,\dotsc,x_n\}$. Neka je $\displaystyle s'=\sum_{i=1}^{k-1}m_i\Delta x_i+\sum_{i=k+1}^{n}m_i\Delta x_i$ i neka su
+$m_k'=inf\{f(x)\big|x\in[x_{k-1},x']\}$ i $m_k''=inf\{f(x)\big|x\in[x',x_k]$\}.
+Tada je $$s(f,\mathcal{P})=s'+m_k(x_k-x_{k-1})$$
+i
+$$s(f,\mathcal{P}')=s'+m_k'(x'-x_{k-1})+x_k''(x_k-x').$$
+Važi da je $m_k=min(m_k',m_k'')$, odakle dobijamo:
+\begin{align*}
+    m_k(x_k-x')+m_k(x'-x_{k-1}) & \leq m_k''(x_k-x')+m_k'(x'-x_{k-1})    \\
+    s'+m_k(x_k-x_{k-1})         & \leq s'+m_k''(x_k-x')+m_k'(x'-x_{k-1}) \\
+    s(f,P)                      & \leq s(f,P').
+\end{align*}
+Treća nejednakost se slično dokazuje.
+\null\hfill $\blacksquare$\par
 
 \begin{stavbox}
     \label{stav_2.2}
     \begin{stav}
         Neka su $\mathcal{P}',\mathcal{P}''\in\mathcal{P}[a,b]$. Tada je $s(f,\mathcal{P}')\leq S(f,\mathcal{P}'')$.
     \end{stav}
-    \textit{Dokaz:} Neka je $\mathcal{P}$ superpozicija podela $\mathcal{P}'$ i $\mathcal{P}''$. Iz
-    \hyperref[Stav_2.1]{prethodnog stava} važi da je
-    $$s(f,P')\leq s(f,P)\leq S(f,P)$$
-    i da je
-    $$s(f,P)\leq S(f,P)\leq S(f,P'')$$
-    odakle dobijamo
-    $$s(f,P')\leq S(f,P'').$$
-\end{stavbox}
+
+\end{stavbox}\textit{Dokaz:} Neka je $\mathcal{P}$ superpozicija podela $\mathcal{P}'$ i $\mathcal{P}''$. Iz
+\hyperref[Stav_2.1]{prethodnog stava} važi da je
+$$s(f,P')\leq s(f,P)\leq S(f,P)$$
+i da je
+$$s(f,P)\leq S(f,P)\leq S(f,P'')$$
+odakle dobijamo
+$$s(f,P')\leq S(f,P'').$$
+
 Za $f: [a,b]\longrightarrow\mathbb{R}$ skup $\{s(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}$
 je neprazan i prema \hyperref[stav_2.2]{prethodnom stavu} ograničen odozgo brojem $S(f,\mathcal{P})$ za proizvoljno $\mathcal{P}\in\mathcal{P}[a,b]$,
 pa prema aksiomi o egzistenciji supremuma postoji supremum ovog
 skupa.
+\null\hfill $\blacksquare$\par
 
 \begin{defbox}
     \begin{definicija}
         \textbf{Donji Rimanov integral} funkcije $f: [a,b]\longrightarrow\mathbb{R}$ jeste
-        $$\underline{\int_{a}^{b}}f(x)dx=sup\{s(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}.$$
+        $$\underline{\int_{a}^{b}}f(x)\text{dx}=sup\{s(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}.$$
     \end{definicija}
 \end{defbox}
 Za $f: [a,b]\longrightarrow\mathbb{R}$ skup $\{S(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}$
@@ -1085,18 +1056,18 @@ skupa.
 \begin{defbox}
     \begin{definicija}
         \textbf{Gornji Rimanov integral} funkcije $f: [a,b]\longrightarrow\mathbb{R}$ jeste
-        $$\overline{\int_{a}^{b}}f(x)dx=inf\{S(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}.$$
+        $$\overline{\int_{a}^{b}}f(x)\text{dx}=inf\{S(f,P)\big|\mathcal{P}\in\mathcal{P}[a,b]\}.$$
     \end{definicija}
 \end{defbox}
 
-Jasno je da važi $\displaystyle\underline{\int_{a}^{b}}f(x)dx\leq\overline{\int_{a}^{b}}f(x)dx$.
+Jasno je da važi $\displaystyle\underline{\int_{a}^{b}}f(x)\text{dx}\leq\overline{\int_{a}^{b}}f(x)\text{dx}$.
 
 \begin{defbox}
     \label{definicija_2.8}
     \begin{definicija}
-        Ako važi da je $\displaystyle\underline{\int_{a}^{b}}f(x)dx=\overline{\int_{a}^{b}}f(x)dx=I$,
+        Ako važi da je $\displaystyle\underline{\int_{a}^{b}}f(x)\text{dx}=\overline{\int_{a}^{b}}f(x)\text{dx}=I$,
         onda broj $I$ nazivamo \textbf{Rimanov integral} funkcije $f$ na $[a,b]$ i pišemo:
-        $$I=\int_{a}^{b}f(x)dx.$$
+        $$I=\int_{a}^{b}f(x)\text{dx}.$$
     \end{definicija}
 \end{defbox}
 
@@ -1136,7 +1107,7 @@ Jasno je da važi $\displaystyle\underline{\int_{a}^{b}}f(x)dx\leq\overline{\int
         Neka je $f: [a, b] \longrightarrow \mathbb{R}$ monotona funkcija na $[a, b]$. Tada je funkcija Riman integrabilna na $[a, b]$.
     \end{teorema}
 \end{teoremabox}
-Bez umanjenja opštosti pretpostavimo da je funkcija monotono rastuća na $[a, b]$.
+\textit{Dokaz:} Bez umanjenja opštosti, pretpostavimo da je funkcija monotono rastuća na $[a, b]$.
 Primetimo najpre da je funkcija ograničena na $[a,b]$. Zaista, za svako $x \in [a, b]$ važi $f(a) \leq f(x) \leq f(b)$.
 Pretpostavimo da funkcija nije konstantna, za konstantne funkcije već znamo da su R-integrabilne.
 Neka je $\varepsilon > 0$ proizvoljno i neka je podela $\mathcal{P} \in \mathcal{P}[a, b]$ takva da je parametar podele
@@ -1149,6 +1120,7 @@ $\lambda(\mathcal{P}) < \frac{\varepsilon}{f(b) - f(a)}$. Tada je
 \end{align*}
 Dakle, važi $S(f, P) - s(f, P)<\varepsilon$ za proizvoljno $\varepsilon$, pa po \hyperref[Stav_2.3]{stavu 2.3} važi da je $f$
 R-integrabilna na $[a,b]$.
+\null\hfill $\blacksquare$\par
 \begin{teoremabox}
     \begin{teorema}
         Neka je $f:[a, b] \longrightarrow \mathbb{R}$ ograničena funkcija na $[a, b]$ takva da je skup tačaka u kojima nije neprekidna konačan. Tada je funkcija f Riman integrabilna na $[a, b]$.
@@ -1168,88 +1140,127 @@ R-integrabilna na $[a,b]$.
 \subsection{Svojstva određenog integrala}
 \begin{stavbox}
     \begin{stav}
-        Neka su $f, g \in R[a, b]$ i neka su $\alpha, \beta \in \mathbb{R}$ tada\\
+        Neka su $f, g \in R[a, b]$ i neka su $\alpha, \beta \in \mathbb{R}$. Tada
         $\alpha f +\beta g \in R[a, b]$ i važi:\\
         $\displaystyle \int^b_a(\alpha f + \beta g)(x)\text{dx} = \alpha\int^b_af(x)\text{dx} + \beta\int^b_ag(x)\text{dx}$
     \end{stav}
 \end{stavbox}
-Dokaz: Neka je $(P, \xi)$ proizvoljna podela sa istaknutim tačkama $[a, b]$ i formirajmo sledeće:\\
-$\sigma(f+g, P, \xi) = \displaystyle \sum^n_{i=1} (x_i - x_{i-1})(f+g)(\xi_i) = \sum^n_{i=1} (x_i - x_{i-1})(f(\xi_i) + g(\xi_1)) = \sigma(f, P, \xi) + \sigma(g, P, \xi)$\\
-Kako je $\displaystyle \lim_{\lambda(P)\longrightarrow0} \sigma(f, P, \xi) = \int^b_a f(x)\text{dx}$ i $\displaystyle \lim_{\lambda(P)\longrightarrow0} \sigma(g, P, \xi) = \int^b_a g(x)\text{dx}$ Tada postoji i važi: \\
-$\displaystyle \lim_{\lambda(P)\longrightarrow0} \sigma(f+g, P, \xi) = \lim_{\lambda(P)\longrightarrow0} \sigma(f, P, \xi) + \lim_{\lambda(P)\longrightarrow0} \sigma(g, P, \xi) = \int^b_a f(x)\text{dx} + \int^b_a g(x)\text{dx} = \int^b_a (f+g)(x)\text{dx}$\\
-Dokažimo da je $\alpha f \in R[a, b]$ i da je $\displaystyle \int^b_a (\alpha f)(x)\text{dx} = \alpha \int^b_a f(x) \text{dx}$.\\
-Neka je $(P, \xi)$ proizvoljna podela sa istanknutim tačkama na $[a, b]$.Tada je: \\
-$\sigma(\alpha f, P, \xi) = \displaystyle \sum^n_{i = 1} (x_i - x_{i-1})(\alpha f)(\xi_i) = \sum^n_{i = 1} (x_i - x_{i-1})\alpha f(\xi_i) = \alpha\sum^n_{i = 1} (x_i - x_{i-1})f(\xi_i) = \alpha\sigma(f, P, \xi) = \int^b_a f(x)\text{dx}$\\
-Tada važi sledeće:\\
-$\displaystyle \lim_{\lambda(P)\longrightarrow0} \sigma(\alpha f, P, \xi) = \alpha\lim_{\lambda(P)\longrightarrow 0}\sigma(f, P, \xi) = \alpha \int^b_a f(x)\text{dx}$
+\textit{Dokaz:} Neka je $(\mathcal{P}, \xi)$ proizvoljna podela sa istaknutim tačkama na $[a, b]$. Tada
+\begin{align*}
+    \sigma(\alpha f+\beta g, \mathcal{P}, \xi) & = \sum^n_{i=1} (x_i - x_{i-1})(\alpha f+\beta g)(\xi_i)                           = \sum^n_{i=1} (x_i - x_{i-1})((\alpha f)(\xi_i) + (\beta g)(\xi_1)) \\
+                                               & = \sum^n_{i=1} (x_i - x_{i-1})(\alpha f)(\xi_i) + \sum^n_{i=1} (x_i - x_{i-1})(\beta g)(\xi_1)                                                         \\
+                                               & = \alpha\sum^n_{i=1} (x_i - x_{i-1}) f(\xi_i) + \beta\sum^n_{i=1} (x_i - x_{i-1})g(\xi_1)                                                              \\
+                                               & = \alpha\sigma(f, \mathcal{P}, \xi) + \beta\sigma(g, \mathcal{P}, \xi)
+\end{align*}
+Po definiciji važi $\displaystyle \lim_{\lambda(\mathcal{P})\longrightarrow0} \sigma(f, \mathcal{P}, \xi) = \int^b_a f(x)\text{dx}$ i $\displaystyle \lim_{\lambda(\mathcal{P})\longrightarrow0} \sigma(g, \mathcal{P}, \xi) = \int^b_a g(x)\text{dx}$. Tada
+\begin{align*}
+    \int_{a}^{b}(\alpha f+\beta g)(x)\text{dx} & =\lim_{\lambda(\mathcal{P})\longrightarrow0} \sigma(\alpha f+\beta g, \mathcal{P}, \xi)                                                                     \\
+                                               & =\lim_{\lambda(\mathcal{P})\longrightarrow0}(\alpha\sigma(f, \mathcal{P}, \xi) + \beta\sigma(g, \mathcal{P}, \xi))                                          \\
+                                               & =\lim_{\lambda(\mathcal{P})\longrightarrow0}\alpha\sigma(f, \mathcal{P}, \xi) + \lim_{\lambda(\mathcal{P})\longrightarrow0}\beta\sigma(g, \mathcal{P}, \xi) \\
+                                               & =\alpha\lim_{\lambda(\mathcal{P})\longrightarrow0}\sigma(f, \mathcal{P}, \xi) + \beta\lim_{\lambda(\mathcal{P})\longrightarrow0}\sigma(g, \mathcal{P}, \xi) \\
+                                               & =\alpha \int^b_a f(x)\text{dx} +\beta\int^b_a g(x)\text{dx}.
+\end{align*}
+\null\hfill $\blacksquare$\par
 \begin{stavbox}
     \begin{stav}
-        Neka su $f, g \in R[a, b]$ Tada je:
-        \begin{enumerate}
-            \item $fg \in R[a, b]$ (Ne mora biti $\displaystyle \int^b_a (fg)(x)\text{dx} = \int^b_af(x)dx  \int^b_ag(x)dx$
-            \item $|f|\in R[a, b]$ (Ne mora biti $\displaystyle \int^b_a |f(x)|\text{dx} = |\int^b_a f(x)\text{dx}| $)
-            \item $\frac{1}{f} \in R[a, b]$ pod pretpostavkom da postoji $c > 0$ tako da za svako $x \in [a, b]$ važi $|f(x)| > c$
-        \end{enumerate}
+        Neka su $f, g \in R[a, b]$. Tada:
+        \begin{itemize}
+            \item ako je $fg \in R[a, b]$, ne mora da važi $\displaystyle \int^b_a (fg)(x)\text{dx} = \int^b_af(x)\text{dx}  \int^b_ag(x)\text{dx}$;
+            \item ako je $|f|\in R[a, b]$, ne mora da važi $\displaystyle \int^b_a \big|f(x)\big|\text{dx} = \bigg|\int^b_a f(x)\text{dx}\bigg| $;
+            \item $\frac{1}{f} \in R[a, b]$, pod pretpostavkom da postoji $c > 0$ takvo da za svako $x \in [a, b]$ važi $|f(x)| > c$.
+        \end{itemize}
     \end{stav}
 \end{stavbox}
 \begin{stavbox}
     \begin{stav}
-        Neka je $f\in R[a, b]$ i $[c, d] \subset [a, b]$. Tada je $f\in R[c,d]$.
+        Neka je $f\in R[a, b]$ i $[c, d] \subset [a, b]$. Tada $f\in R[c,d]$.
     \end{stav}
 \end{stavbox}
 \begin{stavbox}
     \begin{stav}
-        Neka je $f \in R[a, b]$ i $c \in (a, b)$. Tada je $f \in R[a, c]$ i $f\in R[c, b]$ i važi: $\displaystyle \int^b_a f(x)\text{dx} = \int^c_a f(x)\text{dx} + \int^b_c f(x)\text{dx}$
+        Neka je $f:[a,b] \longrightarrow \mathbb{R}$ i $c \in (a, b)$. Tada $f\in R[a,b]$ ako i samo ako $f \in R[a, c]$ i $f\in R[c, b]$ i važi
+        $\displaystyle\int^b_a f(x)\text{dx} = \int^c_a f(x)\text{dx} + \int^b_c f(x)\text{dx}$.
     \end{stav}
 \end{stavbox}
-$f:\{a\} \longrightarrow \mathbb{R}\quad\displaystyle\int^a_a =^{\text{def}}= 0$\\
-$f \in R[a, b]\quad\displaystyle\quad\int^a_b f(x)\text{dx} =^{\text{def}}= -\int^b_a f(x)\text{dx}$\\
-$a, b, c \in \mathbb{R}$\\
-$f:[\min\{a, b, c\}, \max\{a, b, c\}] \longrightarrow \mathbb{R}$\\
-$f\in R[\min\{a, b, c\}, \max\{a, b, c\}]$\\
-$\displaystyle \int^b_a f(x)\text{dx} = \int^c_a f(x)\text{dx} + \int^b_a f(x) \text{dx}$
+\begin{defbox}
+    \begin{definicija}
+        Neka je $f:\{a\} \longrightarrow \mathbb{R}$. Tada
+        $\displaystyle\int^a_a f(x)\text{dx} \overset{\text{def}}{=} 0$.
+    \end{definicija}
+\end{defbox}
+\begin{defbox}
+    \begin{definicija}
+        Neka je $f \in R[a, b]$. Tada $\displaystyle\int^a_b f(x)\text{dx} \overset{\text{def}}{=} -\int^b_a f(x)\text{dx}$.
+    \end{definicija}
+\end{defbox}
+\begin{defbox}
+    \begin{definicija} Neka su $a, b, c \in \mathbb{R}$ i $f:[\min\{a, b, c\}, \max\{a, b, c\}] \longrightarrow \mathbb{R}$. Tada je
+        $f$ Riman integrabilna na $[\min\{a, b, c\}, \max\{a, b, c\}]$ i važi
+        $\displaystyle \int^b_a f(x)\text{dx} = \int^c_a f(x)\text{dx} + \int^b_a f(x) \text{dx}$.
+    \end{definicija}
+\end{defbox}
 \begin{stavbox}
     \begin{stav}
-        Neka je $f \in R[a,b]$ i $f(x) \geq 0$ za svako $x \in [a,b]$. Tada je $\displaystyle \int^b_a f(x)\text{dx} \geq 0$
+        Neka je $f \in R[a,b]$ i $f(x) \geq 0$, za svako $x \in [a,b]$. Tada je $\displaystyle \int^b_a f(x)\text{dx} \geq 0$.
     \end{stav}
 \end{stavbox}
-Neka $(P, \xi)$ proizvoljna podela sa istaknutim tačkama na $[a, b]$. Tada je $\sigma(f, P, \xi) = \displaystyle \sum^n_{i=1}(x_i - x_{i-1})f(\xi_i) \geq 0$\\
-Otuda je $\displaystyle \lim_{\lambda(P)\longrightarrow 0} \sigma (f, P, \xi) \geq 0$ tj $\displaystyle \int^b_a f(x)\text{dx} \geq 0$
+\textit{Dokaz:} Neka $(\mathcal{P}, \xi)$ proizvoljna podela sa istaknutim tačkama na
+$[a, b]$. Tada je
+$$\sigma(f, \mathcal{P}, \xi) = \displaystyle \sum^n_{i=1}f(\xi_i)\Delta x_i \geq 0.$$
+Otuda je $\displaystyle \lim_{\lambda(\mathcal{P})\longrightarrow 0} \sigma (f, \mathcal{P}, \xi) \geq 0$, tačnije, $\displaystyle \int^b_a f(x)\text{dx} \geq 0$.
+\null\hfill $\blacksquare$\par
 \begin{stavbox}
     \begin{stav}
-        Neka je $f \in R[a, b]$. Tada je $\displaystyle |\int^b_a f(x)\text{dx}| \leq \int^b_a|f(x)|\text{dx}$
+        Neka je $f \in R[a, b]$. Tada je $\displaystyle \bigg|\int^b_a f(x)\text{dx}\bigg| \leq \int^b_a\big|f(x)\big|\text{dx}$.
     \end{stav}
 \end{stavbox}
-Kako je $|f(x)| - f(x) \geq 0 \quad\forall x\in [a, b]$ sledi $\displaystyle \int^b_a f(x)\text{dx} \leq \int^b_a |f(x)|\text{dx}$\\
-Kako je $|f(x)| + f(x) \geq 0 \quad\forall x\in [a, b]$ sledi $\displaystyle -\int^b_a f(x)\text{dx} \leq \int^b_a |f(x)|\text{dx}$
+\textit{Dokaz:} Kako važi $f(x) - |f(x)| \leq 0$, za svako $x\in [a, b]$, sledi $\displaystyle \int^b_a f(x)\text{dx} \leq \int^b_a |f(x)|\text{dx}$.
+Takođe, važi $0\leq|f(x)| + f(x)$, za svako $x\in [a, b]$, odakle je $\displaystyle -\int^b_a f(x)\text{dx} \leq \int^b_a |f(x)|\text{dx}$.
+Dakle, $\displaystyle \bigg|\int^b_a f(x)\text{dx}\bigg| \leq \int^b_a\big|f(x)\big|\text{dx}$.
+\null\hfill $\blacksquare$\par
 \begin{stavbox}
     \begin{stav}
-        Neka su $f, g \in R[a,b]$ i neka za svako $x \in [a, b]$ važi $f(x) \leq g(x)$. Tada je $\displaystyle \int^b_a f(x) \text{dx} \leq \int^b_a g(x)\text{dx}$. Tada je $\displaystyle \int^b_a f(x)\text{dx} \leq \int^b_a g(x)\text{dx}$
+        Neka su $f, g \in R[a,b]$ i neka za svako $x \in [a, b]$ važi $f(x) \leq g(x)$. Tada je $$\displaystyle \int^b_a f(x) \text{dx} \leq \int^b_a g(x)\text{dx}.$$
     \end{stav}
 \end{stavbox}
-Primetimo da je $g-f \in R[a, b]$ i da je $(g-f)(x) \geq 0\quad\forall x\in[a,b]$. Tada je $\displaystyle \int^b_a (g-f)(x)\text{dx} \geq 0$. Otuda je $\displaystyle \int^b_a f(x)\text{dx} - \int^b_a g(x)\text{dx} \geq 0$.
+\textit{Dokaz:} Primetimo da je $g-f \in R[a, b]$ i da je $(g-f)(x) \geq 0$, za svako $x\in[a,b]$. Tada je $\displaystyle \int^b_a (g-f)(x)\text{dx} \geq 0$, odakle dobijamo $\displaystyle \int^b_a g(x)\text{dx} \geq  \int^b_a f(x)\text{dx} $.
+\null\hfill $\blacksquare$\par
 \begin{stavbox}
     \begin{stav}
         Neka je $f \in R[a, b]$ i neka su $\displaystyle m = \inf_{x\in [a, b]} f(x)$ i $\displaystyle M = \sup_{x \in [a,b]} f(x)$. Tada postoji $\mu \in [m, M]$ takvo da je $\displaystyle \int^b_a f(x) \text{dx} = \mu(b-a)$.
     \end{stav}
 \end{stavbox}
-Kako za svako $x \in [a, b]$ važi $m \leq f(x) \leq M$\\
-$m(b-a) \leq \displaystyle\int^b_a f(x)\text{dx} \leq M(b-a)$. Otuda je\\
-$m \leq \displaystyle \frac{\int^b_a f(x)\text{dx}}{(b-a)} \leq M$ tj. $\displaystyle \frac{1}{b-a}\int^b_a f(x)\text{dx} \in [m, M]$\\
-Dakle $\exists\mu\in[m, M]$ takvo da je $\displaystyle \mu=\frac{1}{b-a}\int^b_a f(x)\text{dx}$
+\textit{Dokaz:} Za svako $x \in [a, b]$ važi:
+\begin{align*}
+    m \leq      & f(x) \leq M                                  \\
+    m(b-a) \leq & \int^b_a f(x)\text{dx} \leq M(b-a)           \\
+    m \leq      & \frac{1}{(b-a)}\int^b_a f(x)\text{dx} \leq M
+\end{align*}
+Dakle, postoji $\mu\in[m, M]$, takvo da je $\displaystyle \mu=\frac{1}{b-a}\int^b_a f(x)\text{dx}$.
+\null\hfill $\blacksquare$\par
+\begin{teoremabox}
+    \textbf{Podsetnik Vajerštrasove teoreme:} Ako je funkcija neprekidna na intervalu $[a,b]$, ona je ograničena i
+    dostiže svoj maksimum i minimum.
+
+\end{teoremabox}
 \begin{stavbox}
+    \label{Stav_2.12}
     \begin{stav}
-        Neka je $f: [a, b] \longrightarrow \mathbb{R}$ neprekidna funkcija na $[a, b]$. Tada postoji $c\in [a,b]$ takvo da je: $\displaystyle \int^b_a f(x)\text{dx} = f(c)(b-a)$
+        Neka je $f: [a, b] \longrightarrow \mathbb{R}$ neprekidna funkcija na $[a, b]$. Tada postoji $c\in [a,b]$ takvo da je
+        $$ \int^b_a f(x)\text{dx} = f(c)(b-a).$$
     \end{stav}
 \end{stavbox}
-Kako je funkcija f neprekidna na $[a, b]$ sledi da je f ograničena na $[a, b]$ i važi $\displaystyle \inf_{x\in[a,b]} f(x) = \min_{x \in [a, b] f(x)}$ i $\displaystyle \sup_{x\in[a,b]} f(x) = \max_{x \in [a, b] f(x)}$. Neka su $\displaystyle m = \min_{x\in[a,b]} f(x)$ i  $\displaystyle M = \max_{x\in[a,b]} f(x)$.\\
-Na osnovu prethodnog stava sledi da postoji $\mu \in [m, M]$ takvo da je $\displaystyle \int^b_a f(x) \text{dx} = \mu (b-a)$. Kako je funkcija f neprekidna na $[a, b]$ sledi da je $f([a,b]) = [m, M]$. Otuda za postojeće $\mu \in [m, M]$ postoji $c \in [a, b]$ takvo da je $f(c) = \mu$.
+\textit{Dokaz:} Kako je funkcija $f$ neprekidna na $[a, b]$ po Vajerštrasovoj teoremi važi da je $\displaystyle \inf_{x\in[a,b]} f(x) = \min_{x \in [a, b]} f(x)$ i
+$\displaystyle \sup_{x\in[a,b]} f(x) = \max_{x \in [a, b] f(x)}f(x)$. Neka su $\displaystyle m = \min_{x\in[a,b]} f(x)$ i  $\displaystyle M = \max_{x\in[a,b]} f(x)$.
+Na osnovu prethodnog stava sledi da postoji $\mu \in [m, M]$ takvo da je $\displaystyle \int^b_a f(x) \text{dx} = \mu (b-a)$. Kako je funkcija $f$ neprekidna
+na $[a, b]$ sledi da je $f([a,b]) = [m, M]$. Otuda za $\mu \in [m, M]$ postoji $c \in [a, b]$ takvo da je $f(c) = \mu$.
+\null\hfill $\blacksquare$\par
 
 \subsection{Veza određenog integrala i izvoda. Njutn-Lajbnicova formula}
 \begin{defbox}
     \begin{definicija}
         Neka je $f \in R[a, b]$. Ima smisla razmatrati funkciju $\varphi:[a, b] \longrightarrow \mathbb{R}$ definisanu sa $\varphi (x) = \displaystyle \int^x_a f(t)\text{dt}$. Tada funkciju
-        $\varphi$ nazivamo integral sa promenljivom gornjom granicom.
+        $\varphi$ nazivamo \textbf{integral sa promenljivom gornjom granicom}.
     \end{definicija}
 \end{defbox}
 
@@ -1265,50 +1276,65 @@ proizvoljno. Tada za $x\in[a,b]$ važi:
 \begin{equation*}
     \displaystyle |\varphi(x) - \varphi(x_0)| = \bigg|\int^x_a f(t)\text{dt} - \int^{x_0}_a f(t)\text{dt}\bigg| = \bigg|\int^x_{x_0}f(t)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f(t)|\text{dt}\bigg| \leq M|x - x_0|
 \end{equation*}
-Neka je $\delta=\frac{\varepsilon}{M}$. Tada na osnovu $\varepsilon - \delta$ definicije važi:
-\begin{equation*}
-    \displaystyle (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x\in [a, b])(|x-x_0| < \delta \longrightarrow |\varphi(x) - \varphi(x_0)| < \varepsilon)
-\end{equation*}
+Neka je $\delta=\frac{\varepsilon}{M}$. Tada na osnovu $\varepsilon - \delta$ definicije važi
+$$    \displaystyle (\forall \varepsilon > 0)(\exists \delta > 0)(\forall x\in [a, b])(|x-x_0| < \delta \longrightarrow |\varphi(x) - \varphi(x_0)| < \varepsilon),$$
 čime smo dokazali da je $\varphi$ neprekidna u proizvoljnoj tački, zbog čega je neprekidna i na celom intervalu.
+\null\hfill $\blacksquare$\par
 \begin{teoremabox}
     \begin{teorema}
-        Ako je funkcija $f$ neprekidna na $[a, b]$ onda je funkcija $\varphi$
-        diferencijabilna (i neprekidna) na $[a, b]$ i za svako $x \in (a, b)$ važi
-        $\varphi'(x) = f(x)$ i važi $\varphi_+'(a) = f(a)$ i $\varphi'_-(b) = f(b)$.
+        Ako je funkcija $f$ neprekidna na $[a, b]$ onda za funkciju $\varphi$
+        važi da je diferencijabilna na $(a,b)$ i važi $\varphi_+'(a) = f(a)$ i $\varphi'_-(b) = f(b)$.
     \end{teorema}
 \end{teoremabox}
-Neka je $x \in [a, b]$ proizvoljno i $h \in \mathbb{R}$ takvo da je $x+h\in[a,b]$. Tada  je:\\
-$\frac{\varphi(x+h) - \varphi(x)}{h} = \frac{1}{h} (\displaystyle \int^{x+h}_a f(t)\text{dt} - \int^x_a f(t)\text{dt}) = \frac{1}{h} \int^{x+h}_x f(t)\text{dt} = \frac{1}{h} f(x+\theta(x,h)h)(x+h-x)$\\
-$x+\theta(x,h)h \in [\min\{x, x+h\}, \max\{x, x+h\}]\quad 0 \leq \theta(x, h) \leq 1$\\
-$= f(x+\theta(x, h)h)$ Otuda je $\displaystyle \lim_{h\longrightarrow 0}\frac{\varphi(x+h) - \varphi(x)}{h} = \lim_{h\longrightarrow 0} f(x+\theta(x, h)h)$\\
-$\varphi'(x) = f(x)$
+\textit{Dokaz:} Neka je $x \in [a, b]$ proizvoljno i $h \in \mathbb{R}$,
+takvo da je $x+h\in[a,b]$. Tada je
+$$    \frac{\varphi(x+h) - \varphi(x)}{h}  = \frac{1}{h} ( \int^{x+h}_a f(t)\text{dt} - \int^x_a f(t)\text{dt}) = \frac{1}{h} \int^{x+h}_x f(t)\text{dt}.$$
+Po \hyperref[Stav_2.12]{stavu 2.12} postoji $c\in[\min\{x, x+h\}, \max\{x, x+h\}]$ takvo da
+$\displaystyle\int^{x+h}_x f(t)\text{dt}=f(c)(x+h-x)$.
+Neka je $c=x+h\theta(x,h)$, $\theta\in[0,1]$. Tada je
+$$ \frac{1}{h} \int^{x+h}_x f(t)\text{dt}=\frac{1}{h} f(x+h\theta(x,h))(x+h-x)=f(x+h\theta(x,h)).$$
+Odatle dobijamo $\displaystyle \varphi'(x) =\lim_{h\longrightarrow 0}\frac{\varphi(x+h) - \varphi(x)}{h} = \lim_{h\longrightarrow 0} f(x+h\theta(x, h))= f(x)$.
+Slično se dokazuje i za $\varphi'_+(a)$ i $\varphi'_-(b)$.
+\null\hfill $\blacksquare$\par
 \begin{tvrbox}
     \begin{tvr}
-        Neka je $f: (a, b) \longrightarrow \mathbb{R}$ neprekidna funkcija na $[a, b]$. Tada funkcija f ima primitivnu funkciju na $(a, b)$ tj postoji $F: (a, b) \longrightarrow \mathbb{R}$ takvo da je $F'(x) = f(x)\,\,\, \forall x\in (a, b)$.
+        Neka je $f: (a, b) \longrightarrow \mathbb{R}$ neprekidna funkcija na $(a,b)$. Tada funkcija $f$ ima primitivnu funkciju $F: (a,b)\longrightarrow\mathbb{R}$ na $(a, b)$.
     \end{tvr}
 \end{tvrbox}
-Neka je $x_0\in(a, b)$ fiksirana tačka i neka je $F:(a, b) \longrightarrow \mathbb{R}$ definisana sa $F(x) = \displaystyle\int^x_a f(t)\text{dt}$. Funkcija F je korektno definisana, jer je f neprekidna funkcija na $[\min\{x, x_0\}, \max\{x, x_0\}]\subset(a, b)$. Neka je $x\in(a, b)$ proizvoljno i neka je $h\in\mathbb{R}$ takvo da je $x+h\in(a, b)$ Tada je:\\
-$\displaystyle \frac{F(x+h)-F(x)}{h} = \frac{1}{h}\bigg(\int^{x+h}_{x_0} f(t)\text{dt} - \int^{x}_{x_0} f(t)\text{dt}\bigg) = \frac{1}{h}\int^{x+h}_x f(t)\text{dt}$\\
-Prema prethodnoj teoremi ovo je jednako: $f(x+\theta(x, h)h),\quad 0\leq \theta(x, h)\leq 1$\\
-Otuda je $\displaystyle \lim_{h\longrightarrow 0}\frac{F(x+h)-F(x)}{h} = \lim_{h\longrightarrow 0} f(x+\theta(x, h)h) = f(x)$ tj. $F'(x) = f(x)$.\\
-Primer funkcije koja nije neprekidna ali ima primitivnu funkciju:\\
-$F(x) = \begin{cases}
-        x^2\sin\frac{1}{x}, & x\in (-1,0)\cup(0, 1) \\
-        0,                  & x = 0
-    \end{cases}$\\
-$f(x) = \begin{cases}
-        2x\sin\frac{1}{x} - \cos\frac{1}{x}, & x\in(-1,0)\cup(0,1) \\
-        0,                                   & x = 0
-    \end{cases}$
+Neka je $x_0\in(a, b)$ fiksirana tačka i neka je $F:(a, b) \longrightarrow \mathbb{R}$ definisana sa $F(x) = \displaystyle\int^x_{x_0} f(t)\text{dt}$.
+Funkcija $F$ je korektno definisana, jer je $f$ neprekidna funkcija na $[\min\{x, x_0\}, \max\{x, x_0\}]\subset(a, b)$. Neka
+je $x\in(a, b)$ proizvoljno i neka je $h\in\mathbb{R}$ takvo da je $x+h\in(a, b)$. Tada analogono dokazu prethodne teoreme dobijamo
+$\displaystyle\frac{F(x+h)-F(x)}{h} = \frac{1}{h}\int^{x+h}_x f(t)\text{dt}$.
+Analogno prethodnoj teoremi dobijamo $f(x+h\theta(x, h))$, gde je $\theta(x, h)\in[0,1]$.
+Otuda je $\displaystyle \lim_{h\longrightarrow 0}\frac{F(x+h)-F(x)}{h} = \lim_{h\longrightarrow 0} f(x+h\theta(x, h)) = f(x)$, tačnije
+$F'(x) = f(x)$.
+\null\hfill $\blacksquare$\par
+\begin{primbox}
+    \begin{prim}
+        Navesti primer funkcije koja nije neprekidna, ali ima primitivnu funkciju.
+    \end{prim}
+
+    $f(x) = \begin{cases}
+            2x\sin\frac{1}{x} - \cos\frac{1}{x}, & x\in(-1,0)\cup(0,1) \\
+            0,                                   & x = 0
+        \end{cases}$
+\end{primbox}
 \begin{teoremabox}
     \begin{teorema}
-        (Njutn-Lajbnicova formula) Neka je $f:[a, b]\longrightarrow \mathbb{R}$ neprekidna funkcija na $[a,b]$ i neka je $F:[a, b]\longrightarrow\mathbb{R}$ primitivna funkcija funkcije f na $[a,b]$. Pri čemu važi $F'_+ (a) = f(a)\,\,\,F'_-(b) = f(b)$. Tada je: $\displaystyle \int^b_a f(x)\text{dx} = F(b) - F(a)$.
+        (Njutn-Lajbnicova formula) Neka je $f:[a, b]\longrightarrow \mathbb{R}$ neprekidna funkcija na $[a,b]$ i neka je $F:[a, b]\longrightarrow\mathbb{R}$ primitivna funkcija funkcije f na $[a,b]$. Pri čemu važi $F'_+ (a) = f(a)\,\,\,F'_-(b) = f(b)$. Tada je
+        $$ \int^b_a f(x)\text{dx} = F(b) - F(a).$$
     \end{teorema}
 \end{teoremabox}
-Neka je $\varphi: [a, b] \longrightarrow \mathbb{R}$ definisana sa $\varphi(x) = \displaystyle\int^x_a f(t)\text{dt}$. Na osnovu prethodnih teorema znamo da za svako $x\in [a, b]$ važi $\varphi'(x) = f(x)$ tj $\varphi$ je primitivna funkcija funkcije f. Stoga postoji $c \in \mathbb{R}$ takvo da za svako $x \in [a, b]$ važi:\\
-$\varphi(x) = F(x) + c$. Kako je $\varphi(a) = 0\quad \varphi(a) = F(a) +c$\\
-$\varphi(b) = \displaystyle\int^b_a f(t)\text{dt}$ i $\varphi(b) = F(b) + c$ Sledi da je:\\
-$\displaystyle\int^b_a f(t)\text{dt} = \varphi(b) = F(b) + c = F(b) + \varphi(a) - F(a) = F(b) - F(a)$
+\textit{Dokaz:} Neka je $\varphi: [a, b] \longrightarrow \mathbb{R}$ definisana sa
+$\varphi(x) = \displaystyle\int^x_a f(t)\text{dt}$. Na osnovu prethodnih teorema znamo da za svako $x\in [a, b]$ važi $\varphi'(x) = f(x)$,
+tačnije, $\varphi$ je primitivna funkcija funkcije $f$. Stoga, postoji
+$C \in \mathbb{R}$, takvo da za svako $x \in [a, b]$ važi
+$\varphi(x) = F(x) + C$ i $\displaystyle\varphi(a)=\int_{a}^{a} f(t)\text{dt}=0$. Sledi da je
+\begin{align*}
+    \displaystyle\int^b_a f(t)\text{dt} & = \varphi(b) = F(b) + C = F(b) +C+ \varphi(a) - \varphi(a) \\
+                                        & = F(b) +C+ \varphi(a) - F(a)-C = F(b) - F(a).
+\end{align*}
+\null\hfill $\blacksquare$\par
 \subsection{Smena promenljive i parcijalna integracija u određenom integralu}
 \begin{teoremabox}
     \begin{teorema}
@@ -1331,6 +1357,7 @@ Dakle, funkcija $\psi$ je primitivna funkcija funkcije $(f\circ\varphi)\varphi'$
     \label{Teorema2.8:ek2}
 \end{equation}
 Iz \eqref{Teorema2.8:ek1} i \eqref{Teorema2.8:ek2} dobijamo $\displaystyle\int^{\varphi(\beta)}_{\varphi(\alpha)} f(x)\text{dx} = \int^\beta_\alpha ((f\circ\varphi)\varphi')(t)\text{dt}$ što je kraj dokaza.
+\null\hfill $\blacksquare$\par
 \begin{teoremabox}
     \begin{teorema}
         (Teorema o parcijalnoj integraciji) Neka su $u, v: [a, b] \longrightarrow\mathbb{R}$ neprekidno diferencijabilne funkcije na $[a,b]$. Tada je:
@@ -1349,4 +1376,5 @@ Zbog linearnosti određenih integrala važi:
 \end{equation}
 Iz jednakosti \eqref{Teorema2.9:ek3} i \eqref{Teorema2.9:ek4} važi:
 $$\int^b_a(uv')(x)\text{dx}=\displaystyle\int^b_a (uv)'(x)\text{dx} - \int^b_a(u'v)(x)\text{dx}= (uv)(b) - (uv)(a) - \int^b_a(u'v)(x)\text{dx}$$
+\null\hfill $\blacksquare$\par
 \end{document}
