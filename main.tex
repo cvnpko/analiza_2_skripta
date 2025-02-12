@@ -960,8 +960,6 @@ Neka je $f:\left[a,b\right]\longrightarrow\mathbb{R}$. Želimo da definišemo $\
 
 Ako za funkciju $f:\left[a,b\right]\longrightarrow\mathbb{R}$ postoji Rimanov integral, kažemo da je funkcija $f$ \textbf{R-integrabilna} na intervalu $\left[a,b\right]$.
 
-\subsubsection{Uraditi}
-
 \begin{primbox}
     \label{primer_2.1}
     \begin{prim}
@@ -978,6 +976,8 @@ Ako za funkciju $f:\left[a,b\right]\longrightarrow\mathbb{R}$ postoji Rimanov in
 
 \end{primbox}
 
+\subsubsection{Uraditi}
+
 \begin{primbox}
     \label{primer_2.2}
     \begin{prim}
@@ -987,21 +987,22 @@ Ako za funkciju $f:\left[a,b\right]\longrightarrow\mathbb{R}$ postoji Rimanov in
                 0, & x \in \left(\mathbb{R} \setminus \mathbb{Q}\right) \cap \left[a,b\right]
             \end{cases}$, R-integrabilna i ako postoji, odrediti njen određeni integral.
     \end{prim}
-    Neka je $\mathcal{P}$ proizvoljna podela intervala $\left[a,b\right]$. Neka je $\xi'$ skup
-    istaknutih tačaka, takav da je za svako $i\in\left\{1,\dotsc,n\right\}$ $\xi_i'\in\mathbb{Q}$.
-    Tada je
+    Neka je $\mathcal{P}$ proizvoljna podela intervala $\left[a,b\right]$. Neka su $\xi'$ i $\xi''$ skupovi
+    istaknutih tačaka, takvi da je za svako $i\in\left\{1,\dotsc,n\right\}$ $\xi_i'\in\mathbb{Q}$ i
+    $\xi_i''\in\mathbb{Q}$. Tada je
     \begin{equation}
         \label{primer_2.2:eq1}
-        \sigma\left(f,\mathcal{P},\xi\right)=\sum_{i=1}^{n}f\left(\xi_i'\right)\Delta x_i=b-a
+        \sigma\left(f,\mathcal{P},\xi'\right)=\sum_{i=1}^{n}f\left(\xi_i'\right)\Delta x_i=b-a
     \end{equation}
-    Neka je $\xi''$ skup istaknutih tačaka, takav da je za svako $i\in\left\{1,\dotsc,n\right\}$ $\xi_i''\in\mathbb{R}\backslash\mathbb{Q}$.
-    Tada je
+    i
     \begin{equation}
         \label{primer_2.2:eq2}
-        \sigma\left(f,\mathcal{P},\xi\right)=\sum_{i=1}^{n}f\left(\xi_i''\right)\Delta x_i=0
+        \sigma\left(f,\mathcal{P},\xi''\right)=\sum_{i=1}^{n}f\left(\xi_i''\right)\Delta x_i=0
     \end{equation}
 
+
 \end{primbox}
+
 \begin{primbox}
     \label{primer_2.3}
     \begin{prim}
@@ -1417,16 +1418,24 @@ Otuda je $\displaystyle \lim\limits_{h\longrightarrow 0}\frac{F\left(x+h\right)-
 $F'\left(x\right) = f\left(x\right)$.
 \null\hfill $\blacksquare$\par
 
-\subsubsection{Uraditi}
 \begin{primbox}
     \label{primer_2.4}
     \begin{prim}
         Navesti primer funkcije koja nije neprekidna, ali ima primitivnu funkciju.
     \end{prim}
-    $f\left(x\right) = \begin{cases}
+    Posmatrajmo funkciju $F: \left(-1,0\right)\cup\left(0,1\right)\longrightarrow\mathbb{R}$ definisanu sa
+    $F\left(x\right) = \begin{cases}
+            x^2\sin\frac{1}{x}, & x\in\left(-1,0\right)\cup\left(0,1\right) \\
+            0,                  & x = 0
+        \end{cases}$.
+    Proverimo neprekidnost u tački $x_0=0$. Sinus je ograničena funkcija pa važi
+    $\lim\limits_{x\rightarrow 0^-}F\left(x\right)=0=\lim\limits_{x\rightarrow 0^+}F(x)$
+    odakle je $F\left(x\right)$ neprekidna. Odredimo njen izvod. Važi $$F'\left(x\right)=f\left(x\right) = \begin{cases}
             2x\sin\frac{1}{x} - \cos\frac{1}{x}, & x\in\left(-1,0\right)\cup\left(0,1\right) \\
             0,                                   & x = 0
-        \end{cases}$
+        \end{cases}.$$
+    Levi i desni izvod u nuli ne postoje, pa ova funkcija nije neprekidna.
+    Dakle, primer funkcije koja nije neprekidna, ali ima primitivnu funkciju je $f(x)$.
 \end{primbox}
 
 \begin{teoremabox}
