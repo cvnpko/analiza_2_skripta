@@ -136,10 +136,10 @@ $\lim\limits_{h \to 0} \frac{\left(x_0+h\right)^2 - \left(x_0\right)^2}{h} = $
 $\lim\limits_{h \to 0} 2 x_0 + h = 2 x_0$.
 Dakle, koeficijent pravca funkcije $f$ u tački $x_0$ jeste broj $2 x_0$.
 Na ovaj način imamo određenu novu funkciju
-$\phi : \mathbb{R} \longrightarrow \mathbb{R}$ definisanu
-sa $\phi\left(x\right) = 2 x$. Uobičajeno je da funkciju $\phi$ nazivamo
+$\varphi : \mathbb{R} \longrightarrow \mathbb{R}$ definisanu
+sa $\varphi\left(x\right) = 2 x$. Uobičajeno je da funkciju $\varphi$ nazivamo
 izvodna funkcija (izvod, prvi izvod) funkcije $f$.
-Funkciju $\phi$ drugačije označavamo sa $f'$.\par
+Funkciju $\varphi$ drugačije označavamo sa $f'$.\par
 Sada razmotrimo obratan problem. Odredimo funkciju $f: \mathbb{R} \longrightarrow \mathbb{R}$,
 ako je poznato da je funkcija
 $f': \mathbb{R} \longrightarrow \mathbb{R}$ definisana sa
@@ -1128,7 +1128,7 @@ Jasno je da važi $\displaystyle\underline{\int_{a}^{b}}f\left(x\right)\text{dx}
 \begin{teoremabox}
     \label{teorema_2.2}
     \begin{teorema}
-        \hyperref[definicija_2.3]{varepsilon-delta definicija Rimanovog integrala} i \hyperref[definicija_2.8]{definicija Rimanovog integrala preko gornjeg i donjeg Rimanovog integrala}
+        \hyperref[definicija_2.3]{$\varepsilon-\delta$ definicija Rimanovog integrala} i \hyperref[definicija_2.8]{definicija Rimanovog integrala preko gornjeg i donjeg Rimanovog integrala}
         su ekvivalentne.
     \end{teorema}
 \end{teoremabox}
@@ -1349,7 +1349,7 @@ Dakle, postoji $\mu\in\left[m, M\right]$, takvo da je $\displaystyle \mu=\frac{1
     \end{stav}
 \end{stavbox}
 
-\textit{Dokaz:} Kako je funkcija $f$ neprekidna na $\left[a, b\right]$ po Vajerštrasovoj teoremi važi da je $\displaystyle \inf_{x\in\left[a,b\right]} f\left(x\right) = \min_{x \in \left[a, b\right]} f\left(x\right)$ i
+\textit{Dokaz:} Kako je funkcija $f$ neprekidna na $\left[a, b\right]$ po \hyperref[podsetnik_teoreme_3]{Vajerštrasovoj teoremi} važi da je $\displaystyle \inf_{x\in\left[a,b\right]} f\left(x\right) = \min_{x \in \left[a, b\right]} f\left(x\right)$ i
 $\displaystyle \sup_{x\in\left[a,b\right]} f\left(x\right) = \max_{x \in \left[a, b\right] f\left(x\right)}f\left(x\right)$. Neka su $\displaystyle m = \min_{x\in\left[a,b\right]} f\left(x\right)$ i  $\displaystyle M = \max_{x\in\left[a,b\right]} f\left(x\right)$.
 Na osnovu prethodnog stava sledi da postoji $\mu \in \left[m, M\right]$ takvo da je $\displaystyle \int^b_a f\left(x\right) \text{dx} = \mu \left(b-a\right)$. Kako je funkcija $f$ neprekidna
 na $\left[a, b\right]$ sledi da je $f\left(\left[a,b\right]\right) = \left[m, M\right]$. Otuda za $\mu \in \left[m, M\right]$ postoji $c \in \left[a, b\right]$ takvo da je $f\left(c\right) = \mu$.
@@ -1360,47 +1360,47 @@ na $\left[a, b\right]$ sledi da je $f\left(\left[a,b\right]\right) = \left[m, M\
 \begin{defbox}
     \label{definicija_2.13}
     \begin{definicija}
-        Neka je $f \in R\left[a, b\right]$. Ima smisla razmatrati funkciju $\phi:\left[a, b\right] \longrightarrow \mathbb{R}$ definisanu sa $\phi \left(x\right) = \displaystyle \int^x_a f\left(t\right)\text{dt}$. Tada funkciju
-        $\phi$ nazivamo \textbf{integral sa promenljivom gornjom granicom}.
+        Neka je $f \in R\left[a, b\right]$. Ima smisla razmatrati funkciju $\varphi:\left[a, b\right] \longrightarrow \mathbb{R}$ definisanu sa $\varphi \left(x\right) = \displaystyle \int^x_a f\left(t\right)\text{dt}$. Tada funkciju
+        $\varphi$ nazivamo \textbf{integral sa promenljivom gornjom granicom}.
     \end{definicija}
 \end{defbox}
 
 \begin{teoremabox}
     \label{teorema_2.7}
     \begin{teorema}
-        Funkcija $\phi$ je neprekidna na $\left[a, b\right]$.
+        Funkcija $\varphi$ je neprekidna na $\left[a, b\right]$.
     \end{teorema}
 \end{teoremabox}
 
 \textit{Dokaz:} Neka je $x_0 \in \left[a ,b\right]$ proizvoljno.
-Dokažimo da je funkcija $\phi$ neprekidna u $x_0$.
+Dokažimo da je funkcija $\varphi$ neprekidna u $x_0$.
 Neka je $M = \displaystyle \sup_{x\in\left[a,b\right]} | f\left(x\right) |$ i neka je $\varepsilon > 0$
 proizvoljno. Tada za $x\in\left[a,b\right]$ važi:
 \begin{equation*}
-    \displaystyle |\phi\left(x\right) - \phi\left(x_0\right)| = \bigg|\int^x_a f\left(t\right)\text{dt} - \int^{x_0}_a f\left(t\right)\text{dt}\bigg| = \bigg|\int^x_{x_0}f\left(t\right)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f\left(t\right)|\text{dt}\bigg| \leq M|x - x_0|
+    \displaystyle |\varphi\left(x\right) - \varphi\left(x_0\right)| = \bigg|\int^x_a f\left(t\right)\text{dt} - \int^{x_0}_a f\left(t\right)\text{dt}\bigg| = \bigg|\int^x_{x_0}f\left(t\right)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f\left(t\right)|\text{dt}\bigg| \leq M|x - x_0|
 \end{equation*}
 Neka je $\delta=\frac{\varepsilon}{M}$. Tada na osnovu $\varepsilon - \delta$ definicije važi
-$$    \displaystyle \left(\forall \varepsilon > 0\right)\left(\exists \delta > 0\right)\left(\forall x\in \left[a, b\right]\right)\left(|x-x_0| < \delta \longrightarrow |\phi\left(x\right) - \phi\left(x_0\right)| < \varepsilon\right),$$
-čime smo dokazali da je $\phi$ neprekidna u proizvoljnoj tački, zbog čega je neprekidna i na celom intervalu.
+$$    \displaystyle \left(\forall \varepsilon > 0\right)\left(\exists \delta > 0\right)\left(\forall x\in \left[a, b\right]\right)\left(|x-x_0| < \delta \longrightarrow |\varphi\left(x\right) - \varphi\left(x_0\right)| < \varepsilon\right),$$
+čime smo dokazali da je $\varphi$ neprekidna u proizvoljnoj tački, zbog čega je neprekidna i na celom intervalu.
 \null\hfill $\blacksquare$\par
 
 \begin{teoremabox}
     \label{teorema_2.8}
     \begin{teorema}
-        Ako je funkcija $f$ neprekidna na $\left[a, b\right]$ onda za funkciju $\phi$
-        važi da je diferencijabilna na $\left(a,b\right)$ i važi $\varphi_+'\left(a\right) = f\left(a\right)$ i $\phi'_-\left(b\right) = f\left(b\right)$.
+        Ako je funkcija $f$ neprekidna na $\left[a, b\right]$ onda za funkciju $\varphi$
+        važi da je diferencijabilna na $\left(a,b\right)$ i važi $\varphi_+'\left(a\right) = f\left(a\right)$ i $\varphi'_-\left(b\right) = f\left(b\right)$.
     \end{teorema}
 \end{teoremabox}
 
 \textit{Dokaz:} Neka je $x \in \left[a, b\right]$ proizvoljno i $h \in \mathbb{R}$,
 takvo da je $x+h\in\left[a,b\right]$. Tada je
-$$    \frac{\phi\left(x+h\right) - \phi\left(x\right)}{h}  = \frac{1}{h} \left( \int^{x+h}_a f\left(t\right)\text{dt} - \int^x_a f\left(t\right)\text{dt}\right) = \frac{1}{h} \int^{x+h}_x f\left(t\right)\text{dt}.$$
+$$    \frac{\varphi\left(x+h\right) - \varphi\left(x\right)}{h}  = \frac{1}{h} \left( \int^{x+h}_a f\left(t\right)\text{dt} - \int^x_a f\left(t\right)\text{dt}\right) = \frac{1}{h} \int^{x+h}_x f\left(t\right)\text{dt}.$$
 Po \hyperref[stav_2.12]{stavu 2.12} postoji $c\in\left[\min\left\{x, x+h\right\}, \max\left\{x, x+h\right\}\right]$ takvo da
 $\displaystyle\int^{x+h}_x f\left(t\right)\text{dt}=f\left(c\right)\left(x+h-x\right)$.
 Neka je $c=x+h\theta\left(x,h\right)$, $\theta\in\left[0,1\right]$. Tada je
 $$ \frac{1}{h} \int^{x+h}_x f\left(t\right)\text{dt}=\frac{1}{h} f\left(x+h\theta\left(x,h\right)\right)\left(x+h-x\right)=f\left(x+h\theta\left(x,h\right)\right).$$
-Odatle dobijamo $\displaystyle \phi'\left(x\right) =\lim\limits_{h\longrightarrow 0}\frac{\phi\left(x+h\right) - \phi\left(x\right)}{h} = \lim\limits_{h\longrightarrow 0} f\left(x+h\theta\left(x, h\right)\right)= f\left(x\right)$.
-Slično se dokazuje i za $\phi'_+\left(a\right)$ i $\phi'_-\left(b\right)$.
+Odatle dobijamo $\displaystyle \varphi'\left(x\right) =\lim\limits_{h\longrightarrow 0}\frac{\varphi\left(x+h\right) - \varphi\left(x\right)}{h} = \lim\limits_{h\longrightarrow 0} f\left(x+h\theta\left(x, h\right)\right)= f\left(x\right)$.
+Slično se dokazuje i za $\varphi'_+\left(a\right)$ i $\varphi'_-\left(b\right)$.
 \null\hfill $\blacksquare$\par
 
 \begin{tvrbox}
@@ -1446,14 +1446,14 @@ $F'\left(x\right) = f\left(x\right)$.
     \end{teorema}
 \end{teoremabox}
 
-\textit{Dokaz:} Neka je $\phi: \left[a, b\right] \longrightarrow \mathbb{R}$ definisana sa
-$\phi\left(x\right) = \displaystyle\int^x_a f\left(t\right)\text{dt}$. Na osnovu prethodnih teorema znamo da za svako $x\in \left[a, b\right]$ važi $\phi'\left(x\right) = f\left(x\right)$,
-tačnije, $\phi$ je primitivna funkcija funkcije $f$. Stoga, postoji
+\textit{Dokaz:} Neka je $\varphi: \left[a, b\right] \longrightarrow \mathbb{R}$ definisana sa
+$\varphi\left(x\right) = \displaystyle\int^x_a f\left(t\right)\text{dt}$. Na osnovu prethodnih teorema znamo da za svako $x\in \left[a, b\right]$ važi $\varphi'\left(x\right) = f\left(x\right)$,
+tačnije, $\varphi$ je primitivna funkcija funkcije $f$. Stoga, postoji
 $C \in \mathbb{R}$, takvo da za svako $x \in \left[a, b\right]$ važi
-$\phi\left(x\right) = F\left(x\right) + C$ i $\displaystyle\phi\left(a\right)=\int_{a}^{a} f\left(t\right)\text{dt}=0$. Sledi da je
+$\varphi\left(x\right) = F\left(x\right) + C$ i $\displaystyle\varphi\left(a\right)=\int_{a}^{a} f\left(t\right)\text{dt}=0$. Sledi da je
 \begin{align*}
-    \displaystyle\int^b_a f\left(t\right)\text{dt} & = \phi\left(b\right) = F\left(b\right) + C = F\left(b\right) +C+ \phi\left(a\right) - \phi\left(a\right) \\
-                                                   & = F\left(b\right) +C+ \phi\left(a\right) - F\left(a\right)-C = F\left(b\right) - F\left(a\right).
+    \displaystyle\int^b_a f\left(t\right)\text{dt} & = \varphi\left(b\right) = F\left(b\right) + C = F\left(b\right) +C+ \varphi\left(a\right) - \varphi\left(a\right) \\
+                                                   & = F\left(b\right) +C+ \varphi\left(a\right) - F\left(a\right)-C = F\left(b\right) - F\left(a\right).
 \end{align*}
 \null\hfill $\blacksquare$\par
 
@@ -1462,26 +1462,26 @@ $\phi\left(x\right) = F\left(x\right) + C$ i $\displaystyle\phi\left(a\right)=\i
 \begin{teoremabox}
     \label{teorema_2.10}
     \begin{teorema}
-        (Teorema o smeni promenljive) Neka je $f:\left[a, b\right]\longrightarrow \mathbb{R}$ neprekidna funkcija na $\left[a,b\right]$ i neka je $\phi: \left[\alpha, \beta\right] \longrightarrow \left[a, b\right]$ neprekidna funkcija na $\left[\alpha, \beta\right]$. Tada je:
-        $$\displaystyle \int^{\phi\left(\beta\right)}_{\phi\left(\alpha\right)} f\left(x\right)\text{dx} = \int^\beta_\alpha \left(\left(f\circ\phi\right)\phi'\right)\left(t\right)\text{dt}$$
+        (Teorema o smeni promenljive) Neka je $f:\left[a, b\right]\longrightarrow \mathbb{R}$ neprekidna funkcija na $\left[a,b\right]$ i neka je $\varphi: \left[\alpha, \beta\right] \longrightarrow \left[a, b\right]$ neprekidna funkcija na $\left[\alpha, \beta\right]$. Tada je:
+        $$\displaystyle \int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)} f\left(x\right)\text{dx} = \int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt}$$
     \end{teorema}
 \end{teoremabox}
 
 \textit{Dokaz:} Neka je $F:\left[a,b\right]\longrightarrow \mathbb{R}$ primitivna funkcija funkcije $f:\left[a,b\right]\longrightarrow\mathbb{R}$. Tada je po Njutn-Lajbnicovoj formuli:
 \begin{equation}
     \label{teorema_2.10:ek1}
-    \displaystyle\int^{\phi\left(\beta\right)}_{\phi\left(\alpha\right)}f\left(x\right)\text{dx} = F\left(\phi\left(\beta\right)\right)-F\left(\phi\left(\alpha\right)\right)
+    \displaystyle\int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)}f\left(x\right)\text{dx} = F\left(\varphi\left(\beta\right)\right)-F\left(\varphi\left(\alpha\right)\right)
 \end{equation}
-S druge strane za funkciju $\psi:\left[\alpha,\beta\right]\longrightarrow\mathbb{R}$ definisanu sa $\psi\left(t\right) = F\left(\phi\left(t\right)\right)$ važi:
+S druge strane za funkciju $\psi:\left[\alpha,\beta\right]\longrightarrow\mathbb{R}$ definisanu sa $\psi\left(t\right) = F\left(\varphi\left(t\right)\right)$ važi:
 \begin{equation*}
-    \psi'\left(t\right) = F'\left(\phi\left(t\right)\right)\phi'\left(t\right) = \left(\left(f\circ\phi\right)\phi'\right)\left(t\right)
+    \psi'\left(t\right) = F'\left(\varphi\left(t\right)\right)\varphi'\left(t\right) = \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)
 \end{equation*}
-Dakle, funkcija $\psi$ je primitivna funkcija funkcije $\left(f\circ\phi\right)\phi'$ na intervalu $\left[\alpha,\beta\right]$, odakle važi:
+Dakle, funkcija $\psi$ je primitivna funkcija funkcije $\left(f\circ\varphi\right)\varphi'$ na intervalu $\left[\alpha,\beta\right]$, odakle važi:
 \begin{equation}
-    \displaystyle\int^\beta_\alpha \left(\left(f\circ\phi\right)\phi'\right)\left(t\right)\text{dt} = \psi\left(\beta\right) - \psi\left(\alpha\right) = F\left(\phi\left(\beta\right)\right) - F\left(\phi\left(\alpha\right)\right)
+    \displaystyle\int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt} = \psi\left(\beta\right) - \psi\left(\alpha\right) = F\left(\varphi\left(\beta\right)\right) - F\left(\varphi\left(\alpha\right)\right)
     \label{teorema_2.10:ek2}
 \end{equation}
-Iz \eqref{teorema_2.10:ek1} i \eqref{teorema_2.10:ek2} dobijamo $\displaystyle\int^{\phi\left(\beta\right)}_{\phi\left(\alpha\right)} f\left(x\right)\text{dx} = \int^\beta_\alpha \left(\left(f\circ\phi\right)\phi'\right)\left(t\right)\text{dt}$ što je kraj dokaza.
+Iz \eqref{teorema_2.10:ek1} i \eqref{teorema_2.10:ek2} dobijamo $\displaystyle\int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)} f\left(x\right)\text{dx} = \int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt}$ što je kraj dokaza.
 \null\hfill $\blacksquare$\par
 
 \begin{teoremabox}
