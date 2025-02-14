@@ -83,6 +83,7 @@
 \DeclareMathOperator{\arcctg}{arcctg}
 \DeclareMathOperator{\arctg}{arctg}
 \DeclareMathOperator{\dx}{dx}
+\DeclareMathOperator{\sgn}{sgn}
 
 \begin{document}
 
@@ -148,14 +149,14 @@ je takođe rešenje.\par
 Pokušajmo da odredimo funkciju $f: \mathbb{R} \longrightarrow \mathbb{R}$ ako je
 poznato da je
 $$
-    f'\left(x\right) = \text{sgn}\left(x\right)=
+    f'\left(x\right) = \sgn\left(x\right)=
     \begin{cases}
         1,\ x > 0 \\
         0,\ x = 0 \\
         -1,\ x < 0
     \end{cases}.
 $$
-Takvo $f$ ne postoji, jer funkcija $\text{sgn}$ ima prekid prve vrste.
+Takvo $f$ ne postoji, jer funkcija $\sgn$ ima prekid prve vrste.
 
 \begin{teoremabox}
     \label{podsetnik_teoreme_1}
@@ -225,11 +226,11 @@ $$G'\left(x\right) = F'_1\left(x\right) - F'_2\left(x\right) = f\left(x\right) -
 Izaberimo proizvoljne $x_1, x_2 \in \left(a, b\right)$ takve da važi
 $x_1 < x_2$. Dokažimo da je $G\left(x_1\right) = G\left(x_2\right)$.
 \begin{enumerate}[label=(\arabic*)]
-    \item $G$ je neprekidna na $\left[x_1, x_2\right] \subset \left(a, b\right)$
-    \item $G$ je diferencijabilna na $\left(x_1, x_2\right) \subset \left(a, b\right)$
+    \item $G$ je neprekidna na $\left[x_1, x_2\right] \subset \left(a, b\right)$.
+    \item $G$ je diferencijabilna na $\left(x_1, x_2\right) \subset \left(a, b\right)$.
 \end{enumerate}
 Iz $\left(1\right)$ i $\left(2\right)$, a na osnovu Lagranžove teoreme o srednjoj vrednosti,
-sledi da postoji $x_0 \in \left(x_1, x_2\right)$ takvo da:
+sledi da postoji $x_0 \in \left(x_1, x_2\right)$ takvo da
 $$G\left(x_1\right) - G\left(x_2\right) = G'\left(x_0\right)\left(x_2-x_1\right) = 0  \left(x_2-x_1\right) = 0.$$
 Dakle, $G\left(x_1\right) = G\left(x_2\right)$. Kako su $x_1$ i $x_2$
 proizvoljni, sledi da je $G$ konstantna funkcija. Važi
@@ -267,7 +268,7 @@ jednakost $C=G\left(x\right) =F_1\left(x\right) - F_2\left(x\right)$, odakle je 
     \begin{prim}
         Odrediti sve dvaput diferencijabilne funkcije
         $f: \mathbb{R} \longrightarrow \mathbb{R}$ takve da
-        za svako $x \in \mathbb{R}$ važi $f''\left(x\right) = 0$.\par
+        za svako $x \in \mathbb{R}$ važi $f''\left(x\right) = 0$.
     \end{prim}
     Ako je $\left(f'\left(x\right)\right)' = 0$ tada pogađanjem dobijamo $f'\left(x\right) = C_1$, $C_1 \in \mathbb{R}$
     i     $f\left(x\right) = C_1x+C_2,\ C_2 \in \mathbb{R}$. v  cv
@@ -286,14 +287,13 @@ jednakost $C=G\left(x\right) =F_1\left(x\right) - F_2\left(x\right)$, odakle je 
         $$\int f\left(x\right) \dx = \Bigl\{F\ \Big|\ F: \left(a, b\right) \longrightarrow \mathbb{R},\
             \bigl(\forall x\in\left(a,b\right)\bigr)\bigl(F'\left(x\right) = f\left(x\right)\bigr)\Bigr\}.$$
         Neka je $F: \left(a,b\right) \longrightarrow \mathbb{R}$ proizvoljna
-        primitivna funkcija za funkciju $f$ na $\left(a,b\right)$. Tada je:
-        \setcounter{equation}{0}
+        primitivna funkcija za funkciju $f$ na $\left(a,b\right)$. Tada je
         \begin{equation} \label{eq_1.1.1}
-            \int f\left(x\right) \, \dx =\Bigl\{G\ \Big|\ G: \left(a, b\right) \longrightarrow \mathbb{R},\ \left(\exists C \in \mathbb{R}\right) \bigl(\forall x \in \left(a, b\right)\bigr)\bigl(G\left(x\right) = F\left(x\right) + C\bigr)\Bigr\}
+            \int f\left(x\right) \, \dx =\Bigl\{G\ \Big|\ G: \left(a, b\right) \longrightarrow \mathbb{R},\ \left(\exists C \in \mathbb{R}\right) \bigl(\forall x \in \left(a, b\right)\bigr)\bigl(G\left(x\right) = F\left(x\right) + C\bigr)\Bigr\}.
         \end{equation}
         Jednakost \eqref{eq_1.1.1} skraćeno zapisujemo na sledeći način
         \begin{equation}\label{eq_1.1.2}
-            \int f\left(x\right)\dx = F\left(x\right) + C,\ C\in\mathbb{R}
+            \int f\left(x\right)\dx = F\left(x\right) + C,\ C\in\mathbb{R}.
         \end{equation}
     \end{definicija}
     Napomena: U jednakosti \eqref{eq_1.1.2} ne vidi se interval $\left(a, b\right)$ što
@@ -356,7 +356,7 @@ U sledećem primeru vidimo gde može da nastane problem.
             \ln \left(-x\right) + 1,\ x < 0
         \end{cases}.
     $$
-    Njen izvod je:
+    Njen izvod je
     $$f'\left(x\right) =
         \begin{cases}
             \frac{1}{x},\ x > 0 \\
@@ -385,13 +385,13 @@ primitivna funkcija za $f_1$ i neka je funkcija $F_2: \left(a, b\right)
     \longrightarrow \mathbb{R}$ primitivna funkcija za $f_2$.
 Tada, po definiciji primitivne funkcije, za svako $x\in\left(a,b\right)$ važe jednakosti
 $F'_1\left(x\right) = f_1\left(x\right)$ i $F'_2\left(x\right) = f_2\left(x\right)$.
-Odatle zaključujemo:
+Odatle zaključujemo
 $$\left(\lambda_1 F_1 + \lambda_2 F_2\right)'\left(x\right) =
     \lambda_1 F'_1\left(x\right) + \lambda_2 F'_2\left(x\right) =
     \lambda_1 f_1\left(x\right) + \lambda_2 f_2\left(x\right) =
     \left(\lambda_1 f_1 + \lambda_2 f_2\right)\left(x\right).$$
 Ako krenemo od desne strane jednakosti koju dokazujemo i
-primenimo prethodne jednakosti dobijamo:
+primenimo prethodne jednakosti dobijamo
 \begin{align*}
     \lambda_1\int f_1\left(x\right) \dx + \lambda_2\int f_2\left(x\right) \dx & =\lambda_1\left(F_1\left(x\right) + C_1\right) + \lambda_2\left(F_2\left(x\right) + C_2\right) \\
                                                                               & =\lambda_1  F_1\left(x\right) + \lambda_2  F_2\left(x\right) + \lambda_1  C_1 + \lambda_2  C_2 \\
@@ -450,9 +450,9 @@ gde su $C_1,C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završavamo
 \begin{teoremabox}
     \label{teorema_1.2}
     \begin{teorema}
-        (Teorema o smeni promenljive 1) Neka je $F: \left(a, b\right) \longrightarrow \mathbb{R}$ primitivna funkcija za funkciju $f:\left(a, b\right) \longrightarrow \mathbb{R}$ i neka je $g: \left(\alpha, \beta\right) \longrightarrow \left(a, b\right)$ diferencijablna funkcija na $\left(\alpha, \beta\right)$. Tada postoji primitivna funkcija za funkciju $\left(f\circ g\right) g' : \left(\alpha, \beta\right) \longrightarrow \mathbb{R}$ i važi:\par
+        (Teorema o smeni promenljive 1) Neka je $F: \left(a, b\right) \longrightarrow \mathbb{R}$ primitivna funkcija za funkciju $f:\left(a, b\right) \longrightarrow \mathbb{R}$ i neka je $g: \left(\alpha, \beta\right) \longrightarrow \left(a, b\right)$ diferencijablna funkcija na $\left(\alpha, \beta\right)$. Tada postoji primitivna funkcija za funkciju $\left(f\circ g\right) g' : \left(\alpha, \beta\right) \longrightarrow \mathbb{R}$ i važi
         \begin{equation*}
-            \int \left(\left(f\circ g\right) g'\right)\left(x\right)\dx = F\left(g\left(x\right)\right) + C,\ C\in\mathbb{R}
+            \int \left(\left(f\circ g\right) g'\right)\left(x\right)\dx = F\left(g\left(x\right)\right) + C,\ C\in\mathbb{R}.
         \end{equation*}
     \end{teorema}
 \end{teoremabox}
@@ -460,7 +460,7 @@ gde su $C_1,C_2\in\mathbb{R}$, a $C=\lambda_1C_1+\lambda_2C_2$. Ovim završavamo
 \begin{align*}
     \hspace*{1cm}    \left(F\left(g\left(x\right)\right) + C\right)' & = \left(\left(F \circ g\right)\left(x\right) + C\right)'  = \left(\left(F \circ g\right)\left(x\right)\right)' + 0 \\
                                                                      & = F'\left(g\left(x\right)\right)  g'\left(x\right)        = f\left(g\left(x\right)\right)  g'\left(x\right)        \\
-                                                                     & = \left(\left(f \circ g\right)  g'\right)\left(x\right)
+                                                                     & = \left(\left(f \circ g\right)  g'\right)\left(x\right).
 \end{align*}
 \null\hfill $\blacksquare$\par
 
@@ -544,8 +544,8 @@ koristimo \hyperref[teorema_1.3]{teoremu 1.3}.\par
         definisano sa $g^{-1}\left(x\right) = \sqrt[3]{x}$.
     \end{prim}
     Funkcija $g$ je diferencijabilna
-    na svom domenu. Ostaje da proverimo da li je i funkcija $g^{-1}$. Proverimo da li je ona diferencijabilna u nuli:
-    $\left(g^{-1}\right)'\left(0\right) = \lim\limits_{h\longrightarrow 0}\frac{g^{-1}\left(h\right) - g^{-1}\left(0\right)}{h} = \lim\limits_{h\longrightarrow 0}\frac{^3\sqrt{h} - 0}{h} = \lim\limits_{h\longrightarrow 0}\frac{1}{^3\sqrt{h^2}} = +\infty$.
+    na svom domenu. Proverimo da li je $g^{-1}$ diferencijabilna u nuli:
+    $$\left(g^{-1}\right)'\left(0\right) = \lim\limits_{h\longrightarrow 0}\frac{g^{-1}\left(h\right) - g^{-1}\left(0\right)}{h} = \lim\limits_{h\longrightarrow 0}\frac{^3\sqrt{h} - 0}{h} = \lim\limits_{h\longrightarrow 0}\frac{1}{^3\sqrt{h^2}} = +\infty.$$
     Dakle, nije diferencijabilno, zbog čega ne može primeniti teoremu.\par
 \end{primbox}
 
@@ -576,9 +576,9 @@ Sledi primer korišćenja \hyperref[teorema_1.3]{teoreme 1.3}.
     \begin{align*}
         \int  \sqrt{a^2 - x^2} \dx & = \int f\left(x\right) \dx=F\left(g^{-1}\left(x\right)\right)+C =\int \left(\left(f\circ g\right) g'\right)\left(t\right)dt = \int a\cos\left(t\right) \sqrt{a^2 - a^2\sin^2\left(t\right)} dt \\
                                    & = \int  a\cos\left(t\right)\sqrt{a^2\left(1 - \sin ^2\left(t\right)\right)} dt = \int a^2 \cos\left(t\right) \sqrt{1-\sin^2 \left(t\right)}dt = \int a^2 \cos ^2 \left(t\right) dt             \\
-                                   & =\int\frac{a^2}{2}\left(1+\cos \left(2 t\right)\right) dt= \int\frac{a^2}{2} + \frac{a^2}{2} \cos\left(2 t\right) dt= \frac{a^2}{2}t  + \frac{a^2}{4}\sin \left(2 t\right)+C                   \\
+                                   & =\int\frac{a^2}{2}\left(1+\cos \left(2 t\right)\right) dt= \int\frac{a^2}{2} + \frac{a^2}{2} \cos\left(2 t\right) dt= \frac{a^2}{2}t  + \frac{a^2}{4}\sin \left(2 t\right)+C.
     \end{align*}
-    Dobili smo rešenje integrala, ali ovo rešenje možemo još da sredimo.
+    Dobili smo rešenje integrala, ali ovo rešenje možemo još da sredimo:
     \begin{align*}
           & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{a^2}{4}\sin \left(2 \arcsin\frac{x}{a}\right)+C                                                                                         \\
         = & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{a^2}{4} 2sin\left(\arcsin\frac{x}{a}\right)cos\left(\arcsin\frac{x}{a}\right) + C & \textit{(formula za polovinu ugla sinusa)}          \\
@@ -586,7 +586,7 @@ Sledi primer korišćenja \hyperref[teorema_1.3]{teoreme 1.3}.
         = & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{a x}{2}\sqrt{cos^2\left(\arcsin\frac{x}{a}\right)} + C                            & \textit{(kosinus na domenu je pozitivan)}           \\
         = & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{a x}{2}\sqrt{1-\sin^2\left(\arcsin\frac{x}{a}\right)} + C                         &                                                     \\
         = & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{a x}{2}\sqrt{1-\frac{x^2}{a^2}} + C                                               &                                                     \\
-        = & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{x}{2}\sqrt{a^2-x^2} + C                                                           &                                                     \\
+        = & \frac{a^2}{2}\arcsin\frac{x}{a} + \frac{x}{2}\sqrt{a^2-x^2} + C.                                                          &
     \end{align*}
     \label{napomena_1_primer_1.9}Napomena: Iako važi da je $\sin\left(\arcsin\left(x\right)\right)=x$, ne mora da važi da je $\arcsin\left(\sin\left(x\right)\right)=x$.\par
     Na kraju možemo da proverimo da li smo dobili tačno rešenje tako što uradimo izvod primitivne funkcije.
@@ -611,12 +611,12 @@ Opisali smo kako se ponaša integral linearnih kombinacije funkcija i kako se uv
 \begin{equation}\label{teorema_jednakost_1_4_1}
     \left(uv\right)'\left(x\right) = \bigl(u\left(x\right) v\left(x\right)\bigr)' = u'\left(x\right)v\left(x\right) + u\left(x\right)v'\left(x\right)
 \end{equation}
-Pretpostavimo da $u'v$ ima primitivnu funkciju. Tada iz \eqref{teorema_jednakost_1_4_1} dobijamo:
+Pretpostavimo da $u'v$ ima primitivnu funkciju. Tada iz \eqref{teorema_jednakost_1_4_1} dobijamo
 \begin{equation}\label{teorema_jednakost_1_4_2}
     u\left(x\right)v'\left(x\right) = \bigl(u\left(x\right) v\left(x\right)\bigr)' - u'\left(x\right)v\left(x\right)
 \end{equation}
 Kako $\bigl(u\left(x\right)v\left(x\right)\bigr)'$ i $u'\left(x\right)v\left(x\right)$ imaju primitivne funkcije,
-iz \eqref{teorema_jednakost_1_4_2} sledi da je i $u\left(x\right)v'\left(x\right)$ ima. Osim toga važi:
+iz \eqref{teorema_jednakost_1_4_2} sledi da je i $u\left(x\right)v'\left(x\right)$ ima. Osim toga važi
 $$\int u\left(x\right)v'\left(x\right)\dx = \int\left(u\left(x\right)v\left(x\right)\right)'\dx - \int u'\left(x\right)v\left(x\right)\dx = u\left(x\right)v\left(x\right) -\int u'\left(x\right)v\left(x\right)\dx.$$
 Drugi smer dokaza je potpuno analogan.
 \null\hfill $\blacksquare$\par
@@ -626,16 +626,17 @@ Drugi smer dokaza je potpuno analogan.
     \begin{prim}
         Naći $\displaystyle\int e^x \sin x \dx$.
     \end{prim}
-    Primenjujemo \hyperref[teorema_1.4]{teoremu o parcijalnoj integraciji} za $u\left(x\right) = e^x$ i $v\left(x\right) = -\cos x$.
-    $$\displaystyle\int e^x\sin x \dx = -e^x\cos x + \int e^x \cos x\dx$$
-    Ostaje da se izračuna $\displaystyle\int e^x\cos x \dx$. Ponovo primenjujemo \hyperref[teorema_1.4]{teoremu o parcijalnoj integraciji}, ovaj
-    put za $u\left(x\right) = e^x$ i $ v\left(x\right) = \sin x$.
-    $$\displaystyle\int e^x\cos x \dx = e^x\sin x - \int e^x\sin x \dx$$
-    Uvrstimo dobijeni izraz u prethodnu jednakost.
+    Primenjujemo \hyperref[teorema_1.4]{teoremu o parcijalnoj integraciji} za $u\left(x\right) = e^x$ i $v\left(x\right) = -\cos x$:
+    $$\displaystyle\int e^x\sin x \dx = -e^x\cos x + \int e^x \cos x\dx.$$
+    Ostaje da se izračuna $\displaystyle\int e^x\cos x \dx$. Ponovo primenjujemo
+    \hyperref[teorema_1.4]{teoremu o parcijalnoj integraciji}, ovaj
+    put za $u\left(x\right) = e^x$ i $ v\left(x\right) = \sin x$:
+    $$\displaystyle\int e^x\cos x \dx = e^x\sin x - \int e^x\sin x \dx.$$
+    Uvrstimo dobijeni izraz u prethodnu jednakost:
     \begin{align*}
-        \int e^x \sin x \dx  & = -e^x\cos x + e^x \sin x - \int e^x \sin x \dx                       \\
-        2\int e^x \sin x \dx & = -e^x\cos x + e^x \sin x +C_1,\ C_1\in\mathbb{R}                     \\
-        \int e^x \sin x \dx  & = \frac{1}{2}\left(-e^x\cos x + e^x \sin x\right)+C,\ C=\frac{C_1}{2}
+        \int e^x \sin x \dx  & = -e^x\cos x + e^x \sin x - \int e^x \sin x \dx                        \\
+        2\int e^x \sin x \dx & = -e^x\cos x + e^x \sin x +C_1,\ C_1\in\mathbb{R}                      \\
+        \int e^x \sin x \dx  & = \frac{1}{2}\left(-e^x\cos x + e^x \sin x\right)+C,\ C=\frac{C_1}{2}.
     \end{align*}
 \end{primbox}
 
@@ -675,7 +676,7 @@ pokazati proces nalaženja ovih integrala.
 \textit{Dokaz:} Neka je funkcija $f:\mathbb{R}\backslash\left\{0\right\}\longrightarrow\mathbb{R}$ definisana sa
 $\displaystyle f\left(t\right)=\frac{A}{t}$ i funkcija $g:\mathbb{R}\backslash\left\{a\right\}\longrightarrow\mathbb{R}\backslash\left\{0\right\}$
 definisana sa $g\left(x\right)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'\left(x\right)=1$, a primitivna funkcija
-funkcije $f$ je funkcija $F\left(t\right)=A\ln|t|$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu}.
+funkcije $f$ je funkcija $F\left(t\right)=A\ln|t|$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}:
 $$ \int \frac{A}{x-a}\dx = \int \left(\left(f\circ g\right) g'\right)\left(x\right)\dx = F\left(g\left(x\right)\right) + C=A\ln|x-a| + C.$$
 Napomenimo da $C$ za $x > a$ i $C$ za $x < a$ mogu biti različiti.
 \null\hfill $\blacksquare$\par
@@ -690,7 +691,7 @@ Napomenimo da $C$ za $x > a$ i $C$ za $x < a$ mogu biti različiti.
 \textit{Dokaz:} Neka je funkcija $f:\mathbb{R}\backslash\left\{0\right\}\longrightarrow\mathbb{R}$ definisana sa
 $f\left(t\right)=\frac{A}{t^k}$ i funkcija $g:\mathbb{R}\backslash\left\{a\right\}\longrightarrow\mathbb{R}\backslash\left\{0\right\}$
 definisana sa $g\left(x\right)=x-a$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $g'\left(x\right)=1$, a primitivna funkcija
-funkcije $f$ je funkcija $F\left(t\right)=\frac{A}{\left(1-k\right)t^{k-1}}$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}.
+funkcije $f$ je funkcija $F\left(t\right)=\frac{A}{\left(1-k\right)t^{k-1}}$. Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu 1.2}:
 $$\int \frac{A}{\left(x-a\right)^k}\dx = \int \left(\left(f\circ g\right) g'\right)\left(x\right)\dx = F\left(g\left(x\right)\right) + C= \frac{A}{\left(1-k\right)\left(x-a\right)^{k-1}}+ C.$$
 \null\hfill$\blacksquare$\par
 
@@ -704,12 +705,12 @@ $$\int \frac{A}{\left(x-a\right)^k}\dx = \int \left(\left(f\circ g\right) g'\rig
 \textit{Dokaz:} Neka je funkcija $ f:\mathbb{R}\longrightarrow\mathbb{R}$ definisana sa
 $\displaystyle f\left(t\right)=\frac{Mt}{t^2+1}+\frac{2N-bM}{\left(t^2+1\right)\sqrt{4c-b^2}}$ i funkcija $g:\mathbb{R}\longrightarrow\mathbb{R}$
 definisana sa $\displaystyle g\left(x\right)=\frac{2x+b}{\sqrt{4c-b^2}}$. Funkcija $g$ je diferencijabilna na svom domenu, gde je $\displaystyle g'\left(x\right)=\frac{2}{\sqrt{4c-b^2}}$.
-Potrebno je da izračunamo primitivnu funkciju:
+Potrebno je da izračunamo primitivnu funkciju
 \begin{align*}
     \int f\left(t\right)dt & =\int \frac{Mt}{t^2+1}+\frac{2N-bM}{\left(t^2+1\right)\sqrt{4c-b^2}}dt                        \\
                            & =\frac{M}{2}\int \frac{2t}{t^2+1}dt+\frac{2N-bM}{\sqrt{4c-b^2}}\int\frac{1}{t^2+1}dt          \\
                            & =\frac{M}{2}\ln\left(t^2+1\right)+\frac{2N-bM}{\sqrt{4c-b^2}}\arctg{t}+C_1,\ C_1\in\mathbb{R} \\
-                           & =F\left(t\right)+C_1
+                           & =F\left(t\right)+C_1.
 \end{align*}
 Tada možemo da primenimo \hyperref[teorema_1.2]{teoremu o smeni promenljive 1}:
 \begin{align*}
@@ -741,10 +742,10 @@ funkcija $f: \mathbb{R}^{+}\longrightarrow\mathbb{R}^{+}$ definisana sa
 $\displaystyle f\left(t\right)=\frac{1}{t^k}$ i neka je funkcija $g: \mathbb{R}\longrightarrow\mathbb{R}^{+}$
 definisana sa $g\left(x\right)=x^2+bx+c$. Funkcija $g$ je diferencijabilna na svom domenu
 i važi $g'\left(x\right)=2x+b$. Jedna od primitivnih funkcija funkcije $f$ je $\displaystyle F\left(t\right)=\frac{1}{\left(1-k\right)t^{k-1}}$.
-Primenom \hyperref[teorema_1.2]{teoreme o smeni promenljive 1} dobijamo:
+Primenom \hyperref[teorema_1.2]{teoreme o smeni promenljive 1} dobijamo
 \begin{align*}
     \int \frac{2x+b}{\left(x^2+bx+c\right)^k}\dx & =\int\left(\left(f\circ g\right)g'\right)\left(x\right)\dx=F\left(g\left(x\right)\right)+C,\ C\in\mathbb{R} \\
-                                                 & =\frac{1}{\left(1-k\right)\left(x^2+bx+c\right)^{k-1}}+C
+                                                 & =\frac{1}{\left(1-k\right)\left(x^2+bx+c\right)^{k-1}}+C.
 \end{align*}
 Za drugi integral koristimo nov metod rešavanja.
 Neka je $\displaystyle I_k=\int\frac{1}{\left(x^2+bx+c\right)^k}\dx$. Želimo da nađemo vezu
@@ -753,7 +754,7 @@ rešimo integral $I_k$ (znamo rešenje $I_1$ iz \hyperref[lema_1.3]{leme 1.3}). 
 Neka su $u,v:\mathbb{R}\longrightarrow\mathbb{R}$ definisane sa $\displaystyle u\left(x\right)=\frac{1}{\left(x^2+bx+c\right)^k}$
 i $v\left(x\right)=x$. Funkcije $u$ i $v$ su diferencijabilne na svojim domenima i
 važe jednakosti $\displaystyle u'\left(x\right)=-\frac{\left(2x+b\right)k}{\left(x^2+bx+c\right)^{k+1}}$ i $v'\left(x\right)=1$.
-Primenom \hyperref[teorema_1.4]{teoereme o parcijalnoj integraciji} dobijamo:
+Primenom \hyperref[teorema_1.4]{teoereme o parcijalnoj integraciji} dobijamo
 \begin{align*}
     I_k                  & =\int\frac{1}{\left(x^2+bx+c\right)^k}\dx =\int u\left(x\right)v'\left(x\right)\dx =u\left(x\right)v\left(x\right)-\int u'\left(x\right)v\left(x\right)\dx    \\
                          & =\frac{x}{\left(x^2+bx+c\right)^k}+k\int\frac{2x^2+2bx+2c-bx-2c}{\left(x^2+bx+c\right)^{k+1}} \dx                                                             \\
@@ -761,12 +762,12 @@ Primenom \hyperref[teorema_1.4]{teoereme o parcijalnoj integraciji} dobijamo:
     \left(1-2k\right)I_k & =\frac{x}{\left(x^2+bx+c\right)^k}-k\int\frac{bx+2c}{\left(x^2+bx+c\right)^{k+1}} \dx                                                                         \\
                          & =\frac{x}{\left(x^2+bx+c\right)^k}-k\int\frac{\frac{b}{2}\left(2x+b\right)-\frac{b^2}{2}+2c}{\left(x^2+bx+c\right)^{k+1}} \dx                                 \\
                          & =\frac{x}{\left(x^2+bx+c\right)^k}+\frac{b}{2}\frac{1}{\left(x^2+bx+c\right)^{k}}-\left(2c-\frac{b^2}{2}\right)k\int\frac{1}{\left(x^2+bx+c\right)^{k+1}} \dx \\
-                         & =\frac{x+\frac{b}{2}}{\left(x^2+bx+c\right)^k}-\left(2c-\frac{b^2}{2}\right)kI_{k+1}
+                         & =\frac{x+\frac{b}{2}}{\left(x^2+bx+c\right)^k}-\left(2c-\frac{b^2}{2}\right)kI_{k+1}.
 \end{align*}
 Odredili smo vezu između $I_k$ i $I_{k+1}$, pomeranjem indeksa za jedan
 naniže dobijamo vezu između $I_{k-1}$ i $I_k$
 $$I_k =\frac{2x+b}{\left(4c-b^2\right)\left(x^2+bx+c\right)^k}-\frac{2-4k}{4c-b^2}I_{k-1}.$$
-Na kraju, vraćanjem svega u početni integral dobijamo:
+Na kraju, vraćanjem svega u početni integral dobijamo
 $$    \int \frac{Mx+N}{\left(x^2+bx+c\right)^k}\dx=\frac{M}{2}\frac{1}{\left(1-k\right)\left(x^2+bx+c\right)^{k-1}}+\left(N-\frac{Mb}{2}\right)I_k.$$
 \null\hfill $\blacksquare$\par
 
@@ -787,7 +788,7 @@ par takođe nula. Zbog toga važi sledeće tvrđenje.
     \label{tvrđenje_1.1}
     \begin{tvr}
         Svaki polinom $P:\mathbb{R}\longrightarrow\mathbb{R}$ stepena $n$
-        može se zapisati u obliku:
+        može se zapisati u obliku
         $$P\left(x\right)=p\left(x-a_1\right)^{s_1}\dotsc\left(x-a_k\right)^{s_k}\left(x-d_{11}\right)^{t_1}\left(x-d_{12}\right)^{t_1}\dotsc\left(x-d_{l1}\right)^{t_l}\left(x-d_{l2}\right)^{t_l}$$
         gde je $p$ koeficijent uz najstariji član,
         $a_i$, $i\in\left\{1\dotsc k\right\}$, realna nula polinoma $P$ višestrukosti $s_i$, važi $\left(\forall i_1,i_2\in\left\{1\dotsc k\right\}\right)\left(a_{i_1}=a_{i_2}\iff i_1=i_2\right)$,
@@ -829,8 +830,8 @@ integrale ovih vrsta.
 
         \item\label{algoritam_1_K2}
               U \hyperref[tvrđenje_1.1]{tvrđenju 1.1} smo naveli da se
-              svaki polinom, pa i polinom $Q$, može zapisati u obliku:
-              $$Q\left(x\right) = q\left(x - a_1\right)^{s_1}\dotsc\left(x-a_k\right)^{s_k}\left(x^2 + b_1x + c_1\right)^{t_1}\dotsc\left(x^2 + b_lx + c_l\right)^{t_l}$$
+              svaki polinom, pa i polinom $Q$, može zapisati u obliku
+              $$Q\left(x\right) = q\left(x - a_1\right)^{s_1}\dotsc\left(x-a_k\right)^{s_k}\left(x^2 + b_1x + c_1\right)^{t_1}\dotsc\left(x^2 + b_lx + c_l\right)^{t_l}.$$
               gde je $q$ koeficijent uz najstariji član,
               $a_i$, $i\in\left\{1\dotsc k\right\}$, realna nula polinoma $Q$ višestrukosti $s_i$, važi $\left(\forall i_1,i_2\in\left\{1\dotsc k\right\}\right)\left(a_{i_1}=a_{i_2}\iff i_1=i_2\right)$,
               a $x^2+b_jx+c_j$, $j\in\left\{1\dotsc l\right\}$,
@@ -840,8 +841,8 @@ integrale ovih vrsta.
               Takođe, zbog \hyperref[podsetnik_stava_1]{osnovnog stava algebre}, važi jednakost $n=s_1+\dotsc+s_k+2\left(t_1+\dotsc+t_l\right)$.
               Posle faktorizacije polinoma $Q$ prelazimo na \hyperref[algoritam_1_K3]{K3}.
         \item\label{algoritam_1_K3}
-              U ovom koraku je cilj da odredimo konstante u brojiocu takve da važi jednakost:
-              $$\frac{P\left(x\right)}{Q\left(x\right)}=\sum_{i = 1}^k\left(\frac{A_{i1}}{\left(x-a_i\right)}+\dotsc+\frac{A_{is_i}}{\left(x-a_i\right)^{s_i}}\right) + \sum_{j = 1}^l\left( \frac{M_{j1}x + N_{j1}}{\left(x^2+b_jx+c_j\right)}+\dotsc+\frac{M_{jt_j}x + N_{jt_j}}{\left(x^2 + b_jx + c_j\right)^{t_j}}\right)$$
+              U ovom koraku je cilj da odredimo konstante u brojiocu takve da važi jednakost
+              $$\frac{P\left(x\right)}{Q\left(x\right)}=\sum_{i = 1}^k\left(\frac{A_{i1}}{\left(x-a_i\right)}+\dotsc+\frac{A_{is_i}}{\left(x-a_i\right)^{s_i}}\right) + \sum_{j = 1}^l\left( \frac{M_{j1}x + N_{j1}}{\left(x^2+b_jx+c_j\right)}+\dotsc+\frac{M_{jt_j}x + N_{jt_j}}{\left(x^2 + b_jx + c_j\right)^{t_j}}\right).$$
               To postižemo rešavanjem linearnih jednačina koje
               nastaju svođenjem svih sabiraka na isti imenilac.
               Nakon nalaženja ovih konstanti prelazimo na \hyperref[algoritam_1_K4]{K4}.
@@ -865,12 +866,13 @@ definisana sa $g_0\left(x\right)=2\arctg{x}$. Funkcija $g_0$ je bijektivna
 pa postoji inverz $g_0^{-1}: \left(-\pi,\pi\right)\longrightarrow\mathbb{R}$ definisan
 sa $g_0^{-1}\left(x\right)=\tg{\frac{x}{2}}$. Važi i da su $g_0$ i $g_0^{-1}$ diferencijabilne.
 Potrebno je još da odredimo $\left(f\circ g_0\right)\left(x\right)$. Važe jednakosti
-$\left(f\circ g_0\right)\left(x\right)=f\left(g_0\left(x\right)\right)=R\left(\sin\left(g_0\left(x\right)\right),\cos\left(g_0\left(x\right)\right)\right)=R\left(\sin\left(2\arctg\left(x\right)\right), \cos\left(2\arctg\left(x\right)\right)\right)$. Ostaje da redukujemo izraze $\sin\left(2\arctg\left(x\right)\right)$ i $\cos\left(2\arctg\left(x\right)\right)$:
+$$\left(f\circ g_0\right)\left(x\right)=f\left(g_0\left(x\right)\right)=R\left(\sin\left(g_0\left(x\right)\right),\cos\left(g_0\left(x\right)\right)\right)=R\left(\sin\left(2\arctg\left(x\right)\right), \cos\left(2\arctg\left(x\right)\right)\right).$$
+Ostaje da redukujemo izraze $\sin\left(2\arctg\left(x\right)\right)$ i $\cos\left(2\arctg\left(x\right)\right)$.
 \begin{align*}
-    \sin\left(2\arctg\left(x\right)\right) & =2\sin\left(\arctg\left(x\right)\right)\cos\left(\arctg\left(x\right)\right)=2\tg\left(\arctg\left(x\right)\right)\cos^2\left(\arctg\left(x\right)\right)                                                                 \\
-                                           & =\frac{2x}{\frac{\sin^2\left(x\right)+\cos^2\left(x\right)}{\cos^2\left(x\right)}}=\frac{2x}{\tg^2\left(\arctg\left(x\right)\right)+1} =\frac{2x}{x^2+1}                                                                  \\
-    \cos\left(2\arctg\left(x\right)\right) & =\cos^2\left(\arctg\left(x\right)\right)-\sin^2\left(\arctg\left(x\right)\right)=\cos^2\left(\arctg\left(x\right)\right)\left(1-\tg^2\left(\arctg\left(x\right)\right)\right)                                             \\
-                                           & =\frac{1-x^2}{\frac{\sin^2\left(\arctg\left(x\right)\right)+\cos^2\left(\arctg\left(x\right)\right)}{\cos^2\left(\arctg\left(x\right)\right)}}=\frac{1-x^2}{\tg^2\left(\arctg\left(x\right)\right)+1}=\frac{1-x^2}{x^2+1}
+    \sin\left(2\arctg\left(x\right)\right) & =2\sin\left(\arctg\left(x\right)\right)\cos\left(\arctg\left(x\right)\right)=2\tg\left(\arctg\left(x\right)\right)\cos^2\left(\arctg\left(x\right)\right)                                                                   \\
+                                           & =\frac{2x}{\frac{\sin^2\left(x\right)+\cos^2\left(x\right)}{\cos^2\left(x\right)}}=\frac{2x}{\tg^2\left(\arctg\left(x\right)\right)+1} =\frac{2x}{x^2+1}                                                                  ; \\
+    \cos\left(2\arctg\left(x\right)\right) & =\cos^2\left(\arctg\left(x\right)\right)-\sin^2\left(\arctg\left(x\right)\right)=\cos^2\left(\arctg\left(x\right)\right)\left(1-\tg^2\left(\arctg\left(x\right)\right)\right)                                               \\
+                                           & =\frac{1-x^2}{\frac{\sin^2\left(\arctg\left(x\right)\right)+\cos^2\left(\arctg\left(x\right)\right)}{\cos^2\left(\arctg\left(x\right)\right)}}=\frac{1-x^2}{\tg^2\left(\arctg\left(x\right)\right)+1}=\frac{1-x^2}{x^2+1}.
 \end{align*}
 Odavde dobijamo $\displaystyle\left(f\circ g_0\right)\left(x\right)=R\left(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2}\right)$.\par
 Možemo da odredimo integral $\displaystyle\int\left(\left(f\circ g_0\right)g_0'\right)\left(x\right)\dx=\int R\left(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2}\right)\frac{2}{1+x^2}\dx=F\left(x\right)+C_0,\ C_0\in\mathbb{R}$,
@@ -894,22 +896,22 @@ posmatrati drugačije intervale, ali će postupak ostati analogan.
         Odrediti integral $\displaystyle\int\frac{1}{2\sin{x}-\cos{x}+5}\dx$.
     \end{prim}
     Neka je $\displaystyle f\left(x\right)=\frac{1}{2\sin{x}-\cos{x}+5}$. Domen funkcije je $\mathbb{R}$. Primenjujemo prethodnu diskusiju
-    $$\left(\forall l\in\mathbb{R}\right)\ \left(f\circ g_l\right)\left(x\right)=R\left(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2}\right)= \frac{1}{\frac{4x}{1+x^2}-\frac{1-x^2}{1+x^2}+5}=\frac{1+x^2}{6x^2+4x+4}$$
-    Ima $l$ integrala oblika:
+    $$\left(\forall l\in\mathbb{R}\right)\ \left(f\circ g_l\right)\left(x\right)=R\left(\frac{2x}{1+x^2},\frac{1-x^2}{1+x^2}\right)= \frac{1}{\frac{4x}{1+x^2}-\frac{1-x^2}{1+x^2}+5}=\frac{1+x^2}{6x^2+4x+4}.$$
+    Ima $l$ integrala oblika
     \begin{align*}
         \int \left(\left(f\circ g_l\right)g_l'\right)\left(x\right)\dx & =\int\frac{1+x^2}{6x^2+4x+4}\frac{2}{1+x^2}\dx=\int \frac{\dx}{3\left(x^2+2\frac{1}{3}x+\frac{1}{9}+\frac{5}{9}\right)}=\int\frac{\dx}{3\left(x+\frac{1}{3}\right)^2+\frac{5}{3}} \\
-                                                                       & =\frac{3}{5}\int\frac{\dx}{\left(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}}\right)^2+1}=\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}}\right)+C_l
+                                                                       & =\frac{3}{5}\int\frac{\dx}{\left(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}}\right)^2+1}=\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}x+\frac{1}{\sqrt{5}}\right)+C_l.
     \end{align*}
-    Dobijamo da je $I_l =\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}\tg\left(\frac{x}{2}\right)+\frac{1}{\sqrt{5}}\right)+C_l$. Ostaje da nađemo leve i desne limese u nedefinisanim tačkama.
+    Dobijamo da je $I_l =\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}\tg\left(\frac{x}{2}\right)+\frac{1}{\sqrt{5}}\right)+C_l$. Ostaje da nađemo leve i desne limese u nedefinisanim tačkama. Tada
     \begin{align*}
         \lim\limits_{x\to \left(2l+1\right)\pi^{-}}\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}\tg\left(\frac{x}{2}\right)+\frac{1}{\sqrt{5}}\right)+C_l & =\lim\limits_{x\to \left(2l+1\right)\pi^{+}}\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}\tg\left(\frac{x}{2}\right)+\frac{1}{\sqrt{5}}\right)+C_{l+1} \\
         \frac{\pi}{2\sqrt{5}}+C_l                                                                                                                            & =-\frac{\pi}{2\sqrt{5}}+C_{l+1}                                                                                                                           \\
-        C_{l+1}                                                                                                                                              & =C_l+\frac{\pi}{\sqrt{5}}
+        C_{l+1}                                                                                                                                              & =C_l+\frac{\pi}{\sqrt{5}}.
     \end{align*}
     Tada je $\displaystyle C_l=\frac{l\pi}{\sqrt{5}}+C_0$. Važi da je $\left(2l-1\right)\pi<x<\left(2l+1\right)\pi$, odakle je
     $\displaystyle\frac{x-\pi}{2\pi}<l<\frac{x+\pi}{2\pi}$, $\displaystyle l=\left[\frac{x+\pi}{2\pi}\right]$.
     Dobijamo da je rešenje integrala
-    $$\int f\left(x\right)\dx=\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}\tg\left(\frac{x}{2}\right)+\frac{1}{\sqrt{5}}\right)+\left[\frac{x+\pi}{2\pi}\right]\frac{\pi}{\sqrt{5}}+C_0$$
+    $$\int f\left(x\right)\dx=\frac{1}{\sqrt{5}}\arctg\left(\frac{3}{\sqrt{5}}\tg\left(\frac{x}{2}\right)+\frac{1}{\sqrt{5}}\right)+\left[\frac{x+\pi}{2\pi}\right]\frac{\pi}{\sqrt{5}}+C_0.$$
 \end{primbox}
 
 \section{Određeni integrali}
@@ -949,10 +951,10 @@ Neka je $f:\left[a,b\right]\longrightarrow\mathbb{R}$. Želimo da definišemo $\
 \begin{defbox}
     \label{definicija_2.3}
     \begin{definicija}
-        Ako za $f: \left[a,b\right]\longrightarrow\mathbb{R}$ i $I\in\mathbb{R}$ važi:
-        $$\left(\forall\varepsilon>0\right)\left(\exists\delta>0\right)\left(\forall\left(\mathcal{P},\xi\right)\big|\mathcal{P}\in\mathcal{P}\left[a,b\right]\right)\ \lambda\left(\mathcal{P}\right)<\delta\implies|\sigma\left(f,\mathcal{P},\xi\right)-I|<\varepsilon$$
-        tada kažemo da je $I$ \textbf{Rimanov integral funkcije $f$} na intervalu $\left[a,b\right]$ i pišemo:
-        $$I=\lim\limits_{\lambda\left(\mathcal{P}\right)\rightarrow 0}\sigma\left(f,\mathcal{P},\xi\right)=\int_{a}^{b}f\left(x\right)\dx$$
+        Ako za $f: \left[a,b\right]\longrightarrow\mathbb{R}$ i $I\in\mathbb{R}$ važi
+        $$\left(\forall\varepsilon>0\right)\left(\exists\delta>0\right)\left(\forall\left(\mathcal{P},\xi\right)\big|\mathcal{P}\in\mathcal{P}\left[a,b\right]\right)\ \lambda\left(\mathcal{P}\right)<\delta\implies|\sigma\left(f,\mathcal{P},\xi\right)-I|<\varepsilon.$$
+        tada kažemo da je $I$ \textbf{Rimanov integral funkcije $f$} na intervalu $\left[a,b\right]$ i pišemo
+        $$I=\lim\limits_{\lambda\left(\mathcal{P}\right)\rightarrow 0}\sigma\left(f,\mathcal{P},\xi\right)=\int_{a}^{b}f\left(x\right)\dx.$$
         Rimanov integral nazivamo i \textbf{određeni integral}.
     \end{definicija}
 \end{defbox}
@@ -967,7 +969,7 @@ Ako za funkciju $f:\left[a,b\right]\longrightarrow\mathbb{R}$ postoji Rimanov in
     Uzmimo proizvoljnu podelu $\mathcal{P}$ i proizvoljan skup istaknutih tačaka $\xi$ za podelu $\mathcal{P}$. Tada važi
     \begin{equation}
         \label{primer_2.1:eq1}
-        \sigma\left(f,\mathcal{P},\xi\right)=\sum_{i=1}^{n} f\left(\xi_i\right)\Delta x_i=\sum_{i=1}^{n} c\Delta x_i=c\left(b-a\right)
+        \sigma\left(f,\mathcal{P},\xi\right)=\sum_{i=1}^{n} f\left(\xi_i\right)\Delta x_i=\sum_{i=1}^{n} c\Delta x_i=c\left(b-a\right).
     \end{equation}
     Za svako $\varepsilon>0$ važi $\left|\sigma\left(f,\mathcal{P},\xi\right)-c(b-a)\right|=0<\varepsilon$, dakle možemo da
     izaberemo proizvoljno $\delta$ i važi
@@ -1056,7 +1058,7 @@ Ako za funkciju $f:\left[a,b\right]\longrightarrow\mathbb{R}$ postoji Rimanov in
         Tada:
         \begin{itemize}
             \item zbir $\displaystyle s\left(f,\mathcal{P}\right)=\sum_{i=1}^{n}m_i\Delta x_i$ nazivamo \textbf{donja Darbuova suma} funkcije $f$ za datu podelu $\mathcal{P}$ intervala $\left[a,b\right]$;
-            \item zbir $S\left(f,\mathcal{P}\right)=\sum_{i=1}^{n}M_i\Delta x_i$ nazivamo \textbf{gornja Darbuova suma} funkcije $f$ za datu podelu $\mathcal{P}$ intervala $\left[a,b\right]$.
+            \item zbir $\displaystyle S\left(f,\mathcal{P}\right)=\sum_{i=1}^{n}M_i\Delta x_i$ nazivamo \textbf{gornja Darbuova suma} funkcije $f$ za datu podelu $\mathcal{P}$ intervala $\left[a,b\right]$.
         \end{itemize}
     \end{definicija}
 \end{defbox}
@@ -1089,7 +1091,7 @@ $m_k'=inf\left\{f\left(x\right)\big|x\in\left[x_{k-1},x'\right]\right\}$ i $m_k'
 Tada je $$s\left(f,\mathcal{P}\right)=s'+m_k\left(x_k-x_{k-1}\right)$$
 i
 $$s\left(f,\mathcal{P}'\right)=s'+m_k'\left(x'-x_{k-1}\right)+x_k''\left(x_k-x'\right).$$
-Važi da je $m_k=min\left(m_k',m_k''\right)$, odakle dobijamo:
+Važi da je $m_k=min\left(m_k',m_k''\right)$, odakle dobijamo
 \begin{align*}
     m_k\left(x_k-x'\right)+m_k\left(x'-x_{k-1}\right) & \leq m_k''\left(x_k-x'\right)+m_k'\left(x'-x_{k-1}\right)    \\
     s'+m_k\left(x_k-x_{k-1}\right)                    & \leq s'+m_k''\left(x_k-x'\right)+m_k'\left(x'-x_{k-1}\right) \\
@@ -1109,7 +1111,7 @@ Treća nejednakost se slično dokazuje.
 \hyperref[stav_2.1]{prethodnog stava} važi da je
 $$s\left(f,P'\right)\leq s\left(f,P\right)\leq S\left(f,P\right)$$
 i da je
-$$s\left(f,P\right)\leq S\left(f,P\right)\leq S\left(f,P''\right)$$
+$$s\left(f,P\right)\leq S\left(f,P\right)\leq S\left(f,P''\right),$$
 odakle dobijamo
 $$s\left(f,P'\right)\leq S\left(f,P''\right).$$
 Za $f: \left[a,b\right]\longrightarrow\mathbb{R}$ skup $\left\{s\left(f,P\right)\big|\mathcal{P}\in\mathcal{P}\left[a,b\right]\right\}$
@@ -1256,7 +1258,7 @@ R-integrabilna na $\left[a,b\right]$.
 \begin{teoremabox}
     \label{teorema_2.6}
     \begin{teorema}
-        Neka su $f, g: \left[a, b\right] \longrightarrow \mathbb{R}$ R-integrabilne funkcije na $\left[a, b\right]$ koje se razlikuju samo u konačno mnogo tačaka. Tada je:
+        Neka su $f, g: \left[a, b\right] \longrightarrow \mathbb{R}$ R-integrabilne funkcije na $\left[a, b\right]$ koje se razlikuju samo u konačno mnogo tačaka. Tada je
         $$\displaystyle \int_a^b f\left(x\right)\text{d}x = \int_a^b g\left(x\right)\text{d}x.$$
     \end{teorema}
 \end{teoremabox}
@@ -1274,8 +1276,8 @@ R-integrabilna na $\left[a,b\right]$.
     \label{stav_2.4}
     \begin{stav}
         Neka su $f, g \in R\left[a, b\right]$ i neka su $\alpha, \beta \in \mathbb{R}$. Tada
-        $\alpha f +\beta g \in R\left[a, b\right]$ i važi:\\
-        $\displaystyle \int^b_a\left(\alpha f + \beta g\right)\left(x\right)\dx = \alpha\int^b_af\left(x\right)\dx + \beta\int^b_ag\left(x\right)\dx$
+        $\alpha f +\beta g \in R\left[a, b\right]$ i važi
+        $$\displaystyle \int^b_a\left(\alpha f + \beta g\right)\left(x\right)\dx = \alpha\int^b_af\left(x\right)\dx + \beta\int^b_ag\left(x\right)\dx.$$
     \end{stav}
 \end{stavbox}
 
@@ -1284,7 +1286,7 @@ R-integrabilna na $\left[a,b\right]$.
     \sigma\left(\alpha f+\beta g, \mathcal{P}, \xi\right) & = \sum^n_{i=1} \left(x_i - x_{i-1}\right)\left(\alpha f+\beta g\right)\left(\xi_i\right)                           = \sum^n_{i=1} \left(x_i - x_{i-1}\right)\left(\left(\alpha f\right)\left(\xi_i\right) + \left(\beta g\right)\left(\xi_1\right)\right) \\
                                                           & = \sum^n_{i=1} \left(x_i - x_{i-1}\right)\left(\alpha f\right)\left(\xi_i\right) + \sum^n_{i=1} \left(x_i - x_{i-1}\right)\left(\beta g\right)\left(\xi_1\right)                                                                                          \\
                                                           & = \alpha\sum^n_{i=1} \left(x_i - x_{i-1}\right) f\left(\xi_i\right) + \beta\sum^n_{i=1} \left(x_i - x_{i-1}\right)g\left(\xi_1\right)                                                                                                                     \\
-                                                          & = \alpha\sigma\left(f, \mathcal{P}, \xi\right) + \beta\sigma\left(g, \mathcal{P}, \xi\right)
+                                                          & = \alpha\sigma\left(f, \mathcal{P}, \xi\right) + \beta\sigma\left(g, \mathcal{P}, \xi\right).
 \end{align*}
 Po definiciji važi $\displaystyle\lim\limits_{\lambda\left(\mathcal{P}\right)\longrightarrow0} \sigma\left(f, \mathcal{P}, \xi\right) = \int^b_a f\left(x\right)\dx$ i $\displaystyle \lim\limits_{\lambda\left(\mathcal{P}\right)\longrightarrow0} \sigma\left(g, \mathcal{P}, \xi\right) = \int^b_a g\left(x\right)\dx$. Tada
 \begin{align*}
@@ -1362,7 +1364,8 @@ Otuda je $\displaystyle \lim\limits_{\lambda\left(\mathcal{P}\right)\longrightar
 \begin{stavbox}
     \label{stav_2.9}
     \begin{stav}
-        Neka je $f \in R\left[a, b\right]$. Tada je $\displaystyle \bigg|\int^b_a f\left(x\right)\dx\bigg| \leq \int^b_a\big|f\left(x\right)\big|\dx$.
+        Neka je $f \in R\left[a, b\right]$. Tada je
+        $$\displaystyle \bigg|\int^b_a f\left(x\right)\dx\bigg| \leq \int^b_a\big|f\left(x\right)\big|\dx.$$
     \end{stav}
 \end{stavbox}
 
@@ -1386,15 +1389,16 @@ odakle dobijamo $\displaystyle \int^b_a g\left(x\right)\dx \geq  \int^b_a f\left
 \begin{stavbox}
     \label{stav_2.11}
     \begin{stav}
-        Neka je $f \in R\left[a, b\right]$ i neka su $\displaystyle m = \inf_{x\in \left[a, b\right]} f\left(x\right)$ i $\displaystyle M = \sup_{x \in \left[a,b\right]} f\left(x\right)$. Tada postoji $\mu \in \left[m, M\right]$ takvo da je $\displaystyle \int^b_a f\left(x\right) \dx = \mu\left(b-a\right)$.
+        Neka je $f \in R\left[a, b\right]$ i neka su $\displaystyle m = \inf_{x\in \left[a, b\right]} f\left(x\right)$ i $\displaystyle M = \sup_{x \in \left[a,b\right]} f\left(x\right)$. Tada postoji $\mu \in \left[m, M\right]$ takvo da je
+        $$\displaystyle \int^b_a f\left(x\right) \dx = \mu\left(b-a\right).$$
     \end{stav}
 \end{stavbox}
 
 \textit{Dokaz:} Za svako $x \in \left[a, b\right]$ važi:
 \begin{align*}
-    m \leq                 & f\left(x\right) \leq M                                       \\
-    m\left(b-a\right) \leq & \int^b_a f\left(x\right)\dx \leq M\left(b-a\right)           \\
-    m \leq                 & \frac{1}{\left(b-a\right)}\int^b_a f\left(x\right)\dx \leq M
+    m \leq                 & f\left(x\right) \leq M                                        \\
+    m\left(b-a\right) \leq & \int^b_a f\left(x\right)\dx \leq M\left(b-a\right)            \\
+    m \leq                 & \frac{1}{\left(b-a\right)}\int^b_a f\left(x\right)\dx \leq M.
 \end{align*}
 Dakle, postoji $\mu\in\left[m, M\right]$, takvo da je $\displaystyle \mu=\frac{1}{b-a}\int^b_a f\left(x\right)\dx$.
 \null\hfill $\blacksquare$\par
@@ -1439,9 +1443,9 @@ na $\left[a, b\right]$ sledi da je $f\left(\left[a,b\right]\right) = \left[m, M\
 \textit{Dokaz:} Neka je $x_0 \in \left[a ,b\right]$ proizvoljno.
 Dokažimo da je funkcija $\varphi$ neprekidna u $x_0$.
 Neka je $M = \displaystyle \sup_{x\in\left[a,b\right]} | f\left(x\right) |$ i neka je $\varepsilon > 0$
-proizvoljno. Tada za $x\in\left[a,b\right]$ važi:
+proizvoljno. Tada za $x\in\left[a,b\right]$ važi
 \begin{equation*}
-    \displaystyle |\varphi\left(x\right) - \varphi\left(x_0\right)| = \bigg|\int^x_a f\left(t\right)\text{dt} - \int^{x_0}_a f\left(t\right)\text{dt}\bigg| = \bigg|\int^x_{x_0}f\left(t\right)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f\left(t\right)|\text{dt}\bigg| \leq M|x - x_0|
+    \displaystyle |\varphi\left(x\right) - \varphi\left(x_0\right)| = \bigg|\int^x_a f\left(t\right)\text{dt} - \int^{x_0}_a f\left(t\right)\text{dt}\bigg| = \bigg|\int^x_{x_0}f\left(t\right)\text{dt}\bigg| \leq \bigg|\int^x_{x_0}|f\left(t\right)|\text{dt}\bigg| \leq M|x - x_0|.
 \end{equation*}
 Neka je $\delta=\frac{\varepsilon}{M}$. Tada na osnovu $\varepsilon - \delta$ definicije važi
 $$    \displaystyle \left(\forall \varepsilon > 0\right)\left(\exists \delta > 0\right)\left(\forall x\in \left[a, b\right]\right)\left(|x-x_0| < \delta \longrightarrow |\varphi\left(x\right) - \varphi\left(x_0\right)| < \varepsilon\right),$$
@@ -1526,24 +1530,24 @@ $\varphi\left(x\right) = F\left(x\right) + C$ i $\displaystyle\varphi\left(a\rig
 \begin{teoremabox}
     \label{teorema_2.10}
     \begin{teorema}
-        (Teorema o smeni promenljive) Neka je $f:\left[a, b\right]\longrightarrow \mathbb{R}$ neprekidna funkcija na $\left[a,b\right]$ i neka je $\varphi: \left[\alpha, \beta\right] \longrightarrow \left[a, b\right]$ neprekidna funkcija na $\left[\alpha, \beta\right]$. Tada je:
-        $$\displaystyle \int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)} f\left(x\right)\dx = \int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt}$$
+        (Teorema o smeni promenljive) Neka je $f:\left[a, b\right]\longrightarrow \mathbb{R}$ neprekidna funkcija na $\left[a,b\right]$ i neka je $\varphi: \left[\alpha, \beta\right] \longrightarrow \left[a, b\right]$ neprekidna funkcija na $\left[\alpha, \beta\right]$. Tada je
+        $$\displaystyle \int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)} f\left(x\right)\dx = \int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt}.$$
     \end{teorema}
 \end{teoremabox}
 
-\textit{Dokaz:} Neka je $F:\left[a,b\right]\longrightarrow \mathbb{R}$ primitivna funkcija funkcije $f:\left[a,b\right]\longrightarrow\mathbb{R}$. Tada je po Njutn-Lajbnicovoj formuli:
+\textit{Dokaz:} Neka je $F:\left[a,b\right]\longrightarrow \mathbb{R}$ primitivna funkcija funkcije $f:\left[a,b\right]\longrightarrow\mathbb{R}$. Tada je po Njutn-Lajbnicovoj formuli
 \begin{equation}
     \label{teorema_2.10:ek1}
-    \displaystyle\int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)}f\left(x\right)\dx = F\left(\varphi\left(\beta\right)\right)-F\left(\varphi\left(\alpha\right)\right)
+    \displaystyle\int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)}f\left(x\right)\dx = F\left(\varphi\left(\beta\right)\right)-F\left(\varphi\left(\alpha\right)\right).
 \end{equation}
-S druge strane za funkciju $\psi:\left[\alpha,\beta\right]\longrightarrow\mathbb{R}$ definisanu sa $\psi\left(t\right) = F\left(\varphi\left(t\right)\right)$ važi:
+S druge strane za funkciju $\psi:\left[\alpha,\beta\right]\longrightarrow\mathbb{R}$ definisanu sa $\psi\left(t\right) = F\left(\varphi\left(t\right)\right)$ važi
 \begin{equation*}
-    \psi'\left(t\right) = F'\left(\varphi\left(t\right)\right)\varphi'\left(t\right) = \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)
+    \psi'\left(t\right) = F'\left(\varphi\left(t\right)\right)\varphi'\left(t\right) = \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right).
 \end{equation*}
-Dakle, funkcija $\psi$ je primitivna funkcija funkcije $\left(f\circ\varphi\right)\varphi'$ na intervalu $\left[\alpha,\beta\right]$, odakle važi:
+Dakle, funkcija $\psi$ je primitivna funkcija funkcije $\left(f\circ\varphi\right)\varphi'$ na intervalu $\left[\alpha,\beta\right]$, odakle važi
 \begin{equation}
-    \displaystyle\int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt} = \psi\left(\beta\right) - \psi\left(\alpha\right) = F\left(\varphi\left(\beta\right)\right) - F\left(\varphi\left(\alpha\right)\right)
     \label{teorema_2.10:ek2}
+    \displaystyle\int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt} = \psi\left(\beta\right) - \psi\left(\alpha\right) = F\left(\varphi\left(\beta\right)\right) - F\left(\varphi\left(\alpha\right)\right).
 \end{equation}
 Iz \eqref{teorema_2.10:ek1} i \eqref{teorema_2.10:ek2} dobijamo $\displaystyle\int^{\varphi\left(\beta\right)}_{\varphi\left(\alpha\right)} f\left(x\right)\dx = \int^\beta_\alpha \left(\left(f\circ\varphi\right)\varphi'\right)\left(t\right)\text{dt}$ što je kraj dokaza.
 \null\hfill $\blacksquare$\par
@@ -1551,23 +1555,23 @@ Iz \eqref{teorema_2.10:ek1} i \eqref{teorema_2.10:ek2} dobijamo $\displaystyle\i
 \begin{teoremabox}
     \label{teorema_2.11}
     \begin{teorema}
-        (Teorema o parcijalnoj integraciji) Neka su $u, v: \left[a, b\right] \longrightarrow\mathbb{R}$ neprekidno diferencijabilne funkcije na $\left[a,b\right]$. Tada je:
-        $$\displaystyle\int^b_a\left(uv'\right)\left(x\right)\dx = \left(uv\right)\left(b\right) - \left(uv\right)\left(a\right) - \int^b_a\left(u'v\right)\left(x\right)\dx$$
+        (Teorema o parcijalnoj integraciji) Neka su $u, v: \left[a, b\right] \longrightarrow\mathbb{R}$ neprekidno diferencijabilne funkcije na $\left[a,b\right]$. Tada je
+        $$\displaystyle\int^b_a\left(uv'\right)\left(x\right)\dx = \left(uv\right)\left(b\right) - \left(uv\right)\left(a\right) - \int^b_a\left(u'v\right)\left(x\right)\dx.$$
     \end{teorema}
 \end{teoremabox}
 
-\textit{Dokaz:} Po Njutn-Lajbnicovoj formuli važi:
+\textit{Dokaz:} Po Njutn-Lajbnicovoj formuli važi
 \begin{equation}
     \label{teorema_2.9:ek1}
-    \displaystyle\int^b_a \left(uv\right)'\left(x\right)\dx = \left(uv\right)\left(b\right) - \left(uv\right)\left(a\right)
+    \displaystyle\int^b_a \left(uv\right)'\left(x\right)\dx = \left(uv\right)\left(b\right) - \left(uv\right)\left(a\right).
 \end{equation}
-Zbog linearnosti određenih integrala važi:
+Zbog linearnosti određenih integrala važi
 \begin{equation}
     \label{teorema_2.9:ek2}
-    \displaystyle\int^b_a \left(uv\right)'\left(x\right)\dx = \int^b_a\left(u'v + uv'\right)\left(x\right)\dx = \int^b_a\left(u'v\right)\left(x\right)\dx + \int^b_a\left(uv'\right)\left(x\right)\dx
+    \displaystyle\int^b_a \left(uv\right)'\left(x\right)\dx = \int^b_a\left(u'v + uv'\right)\left(x\right)\dx = \int^b_a\left(u'v\right)\left(x\right)\dx + \int^b_a\left(uv'\right)\left(x\right)\dx.
 \end{equation}
-Iz jednakosti \eqref{teorema_2.9:ek1} i \eqref{teorema_2.9:ek2} važi:
-$$\int^b_a\left(uv'\right)\left(x\right)\dx=\displaystyle\int^b_a \left(uv\right)'\left(x\right)\dx - \int^b_a\left(u'v\right)\left(x\right)\dx= \left(uv\right)\left(b\right) - \left(uv\right)\left(a\right) - \int^b_a\left(u'v\right)\left(x\right)\dx$$
+Iz jednakosti \eqref{teorema_2.9:ek1} i \eqref{teorema_2.9:ek2} važi
+$$\int^b_a\left(uv'\right)\left(x\right)\dx=\displaystyle\int^b_a \left(uv\right)'\left(x\right)\dx - \int^b_a\left(u'v\right)\left(x\right)\dx= \left(uv\right)\left(b\right) - \left(uv\right)\left(a\right) - \int^b_a\left(u'v\right)\left(x\right)\dx.$$
 \null\hfill $\blacksquare$\par
 
 \end{document}
