@@ -1,9 +1,9 @@
-PWD /home/cwpko/Desktop/MATF/3_semestar/A2/analiza2_skripta
+PWD /home/cvnpko/Desktop/MATF/3_semestar/A2/analiza2_skripta
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/cwpko/Desktop/MATF/3_semestar/A2/analiza2_skripta/main.tex
+INPUT /home/cvnpko/Desktop/MATF/3_semestar/A2/analiza2_skripta/main.tex
 OUTPUT main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls

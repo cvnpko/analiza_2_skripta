@@ -775,10 +775,6 @@ $$    \int \frac{Mx+N}{\left(x^2+bx+c\right)^k}\dx=\frac{M}{2}\frac{1}{\left(1-k
     \end{stav}
 \end{stavbox}
 
-Dodatno, uz osnovni stav algebre važi da i ako je neki čisto imaginarni
-broj jedna nula polinoma, tada je i njegov kompleksno konjugovani
-par takođe nula. Zbog toga važi sledeće tvrđenje.
-
 \begin{tvrbox}
     \label{tvrđenje_1.1}
     \begin{tvr}
@@ -786,10 +782,11 @@ par takođe nula. Zbog toga važi sledeće tvrđenje.
         može se zapisati u obliku
         $$P\left(x\right)=p\left(x-a_1\right)^{s_1}\dotsc\left(x-a_k\right)^{s_k}\left(x-d_{11}\right)^{t_1}\left(x-d_{12}\right)^{t_1}\dotsc\left(x-d_{l1}\right)^{t_l}\left(x-d_{l2}\right)^{t_l}$$
         gde je $p$ koeficijent uz najstariji član,
-        $a_i$, $i\in\left\{1\dotsc k\right\}$, realna nula polinoma $P$ višestrukosti $s_i$, važi $\left(\forall i_1,i_2\in\left\{1\dotsc k\right\}\right)\left(a_{i_1}=a_{i_2}\iff i_1=i_2\right)$,
+        $a_i$, $i\in\left\{1\dotsc k\right\}$, realna nula polinoma $P$ višestrukosti $s_i$ za koju važi
+        $$\left(\forall i_1,i_2\in\left\{1\dotsc k\right\}\right)\left(a_{i_1}=a_{i_2}\iff i_1=i_2\right),$$
         a $d_{j1}$ i $d_{j2}$,
-        $j\in\left\{1\dotsc l\right\}$, konjugovano kompleksne nule polinoma $P$ koje nisu realne
-        višestrukosti $t_j$, važi
+        $j\in\left\{1\dotsc l\right\}$, konjugovano kompleksne nule polinoma $P$, koje nisu realne,
+        koje su višestrukosti $t_j$ i za koje važi
         $$\left(\forall j_1,j_2\in\left\{1\dotsc l\right\}\right)\left(\left(d_{j_11}=d_{j_21}\iff j_1=j_2\right)\land\left(d_{j_11}\neq d_{j_22}\right)\right).$$
         Takođe, zbog \hyperref[podsetnik_stava_1]{posledice osnovnog stava algebre}, važi jednakost $n=s_1+\dotsc+s_k+2\left(t_1+\dotsc+t_l\right)$. Dodatno,
         množenjem konjugovano kompleksnih nula dobijamo izraze oblika $x^2+bx+c$, $b,c\in{R}$, $b^2-4c<0$,
@@ -824,17 +821,9 @@ integrale ovih vrsta.
               na integral $\displaystyle\int \frac{R\left(x\right)}{Q\left(x\right)}\dx$.
 
         \item\label{algoritam_1_K2}
-              U \hyperref[tvrđenje_1.1]{tvrđenju 1.1} smo naveli da se
-              svaki polinom, pa i polinom $Q$, može zapisati u obliku
-              $$Q\left(x\right) = q\left(x - a_1\right)^{s_1}\dotsc\left(x-a_k\right)^{s_k}\left(x^2 + b_1x + c_1\right)^{t_1}\dotsc\left(x^2 + b_lx + c_l\right)^{t_l}.$$
-              gde je $q$ koeficijent uz najstariji član,
-              $a_i$, $i\in\left\{1\dotsc k\right\}$, realna nula polinoma $Q$ višestrukosti $s_i$, važi $\left(\forall i_1,i_2\in\left\{1\dotsc k\right\}\right)\left(a_{i_1}=a_{i_2}\iff i_1=i_2\right)$,
-              a $x^2+b_jx+c_j$, $j\in\left\{1\dotsc l\right\}$,
-              proizvod $\left(x-d_{j1}\right)$ i $\left(x-d_{j2}\right)$,
-              gde su $d_{j1}$ i $d_{j2}$ konjugovano kompleksne čisto imaginarne nule polinoma $Q$
-              višestrukosti $t_j$, važi $\left(\forall j_1,j_2\in\left\{1\dotsc l\right\}\right)\left(\left(d_{j_11}=d_{j_21}\iff j_1=j_2\right)\land\left(d_{j_11}\neq d_{j_22}\right)\right)$.
-              Takođe, zbog \hyperref[podsetnik_stava_1]{osnovnog stava algebre}, važi jednakost $n=s_1+\dotsc+s_k+2\left(t_1+\dotsc+t_l\right)$.
-              Posle faktorizacije polinoma $Q$ prelazimo na \hyperref[algoritam_1_K3]{K3}.
+              Koristimo \hyperref[tvrđenje_1.1]{tvrđenje 1.1} i zapisujemo polinom $Q$ u obliku
+              $$Q\left(x\right) = p\left(x - a_1\right)^{s_1}\dotsc\left(x-a_k\right)^{s_k}\left(x^2 + b_1x + c_1\right)^{t_1}\dotsc\left(x^2 + b_lx + c_l\right)^{t_l}.$$
+              Prelazimo na korak \hyperref[algoritam_1_K3]{K3}.
         \item\label{algoritam_1_K3}
               U ovom koraku je cilj da odredimo konstante u brojiocu takve da važi jednakost
               $$\frac{P\left(x\right)}{Q\left(x\right)}=\sum_{i = 1}^k\left(\frac{A_{i1}}{\left(x-a_i\right)}+\dotsc+\frac{A_{is_i}}{\left(x-a_i\right)^{s_i}}\right) + \sum_{j = 1}^l\left( \frac{M_{j1}x + N_{j1}}{\left(x^2+b_jx+c_j\right)}+\dotsc+\frac{M_{jt_j}x + N_{jt_j}}{\left(x^2 + b_jx + c_j\right)^{t_j}}\right).$$
