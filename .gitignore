@@ -16,4 +16,7 @@
 *.url 
 *.svn 
 *.toc
+*.fdb_latexmk
+*.fls
+*.gz
 IspitnaPitanjaAnaliza2_20242025v1.pdf
