@@ -1074,7 +1074,7 @@ $\left\{x_0,\dotsc,x_{k-1},x',x_k,\dotsc,x_n\right\}$. Neka je $\displaystyle s'
 $m_k'=inf\left\{f\left(x\right)\big|x\in\left[x_{k-1},x'\right]\right\}$ i $m_k''=inf\left\{f\left(x\right)\big|x\in\left[x',x_k\right]\right\}$.
 Tada je $$s\left(f,\mathcal{P}\right)=s'+m_k\left(x_k-x_{k-1}\right)$$
 i
-$$s\left(f,\mathcal{P}'\right)=s'+m_k'\left(x'-x_{k-1}\right)+x_k''\left(x_k-x'\right).$$
+$$s\left(f,\mathcal{P}'\right)=s'+m_k'\left(x'-x_{k-1}\right)+m_k''\left(x_k-x'\right).$$
 Važi da je $m_k=min\left(m_k',m_k''\right)$, odakle dobijamo
 \begin{align*}
     m_k\left(x_k-x'\right)+m_k\left(x'-x_{k-1}\right) & \leq m_k''\left(x_k-x'\right)+m_k'\left(x'-x_{k-1}\right)    \\
@@ -1162,7 +1162,7 @@ Na osnovu definicije supremuma skupa postoji $\mathcal{P}''\in\mathcal{P}\left[a
 takvo da je
 \begin{equation}
     \label{stav_2.3:eq2}
-    \int_{a}^{b}f\left(x\right)\dx-\frac{\varepsilon}{2}< s\left(f,\mathcal{P}'\right)\leq\int_{a}^{b}f\left(x\right)\dx.
+    \int_{a}^{b}f\left(x\right)\dx-\frac{\varepsilon}{2}< s\left(f,\mathcal{P}''\right)\leq\int_{a}^{b}f\left(x\right)\dx.
 \end{equation}
 Neka je $\mathcal{P}$ superpozicija podela $\mathcal{P}'$ i $\mathcal{P}''$. Tada je zbog posledice \hyperref[stav_2.1]{stava 2.1}
 \begin{equation}
